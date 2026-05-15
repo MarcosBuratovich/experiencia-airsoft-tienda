@@ -142,11 +142,8 @@ export function HeaderClient({
                 }`}
               />
             </span>
-            <span className="hidden md:flex flex-col leading-none gap-1">
+            <span className="hidden md:inline-flex">
               <span className="mil-tag bone">Tienda Oficial</span>
-              <span className="font-mono fluid-xs tracking-[.32em] text-smoke">
-                EQUIP / TÁCTICO
-              </span>
             </span>
           </Link>
 
