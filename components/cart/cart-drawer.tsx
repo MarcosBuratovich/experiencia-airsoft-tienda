@@ -83,11 +83,20 @@ export function CartDrawer() {
   return (
     <div
       aria-hidden={!isOpen}
-      className={`fixed inset-0 z-[100] pointer-events-${isOpen ? "auto" : "none"}`}
+      // Inline style: Tailwind v4 solo procesa clases literales en el código,
+      // las interpoladas dinamicamente nunca se generan. Si esto fuera
+      // `pointer-events-${isOpen ? "auto" : "none"}` el contenedor quedaria
+      // siempre interceptando clicks aunque el drawer este cerrado.
+      style={{
+        pointerEvents: isOpen ? "auto" : "none",
+        zIndex: 100,
+      }}
+      className="fixed inset-0"
     >
       {/* Backdrop */}
       <div
         onClick={close}
+        aria-hidden
         className={`absolute inset-0 bg-ink/70 backdrop-blur-sm transition-opacity duration-300 ${
           isOpen ? "opacity-100" : "opacity-0"
         }`}
