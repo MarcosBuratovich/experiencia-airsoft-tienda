@@ -30,7 +30,7 @@ export function ShopFooter() {
               Marcadoras, BBs, protección y accesorios para airsoft. Envíos a
               todo el país desde nuestro centro táctico en CABA.
             </p>
-            <p className="mt-4 mil-tag">Compra +18 · DNI obligatorio</p>
+            <p className="mt-4 mil-tag bone">Stock vivo · Despacho directo</p>
           </div>
 
           <div>

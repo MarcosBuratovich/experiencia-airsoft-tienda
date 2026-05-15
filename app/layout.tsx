@@ -37,7 +37,7 @@ const jetbrains = JetBrains_Mono({
 
 const TITLE = "Tienda Experiencia Airsoft — Marcadoras, BBs y equipamiento";
 const DESCRIPTION =
-  "Marcadoras AEG y GBB, BBs, protección, chalecos tácticos y accesorios para airsoft. Envíos a todo el país desde nuestro centro táctico en CABA. +18, DNI obligatorio.";
+  "Marcadoras AEG y GBB, BBs, protección, chalecos tácticos y accesorios para airsoft. Stock vivo y envíos a todo el país desde nuestro centro táctico en CABA.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SHOP_URL),

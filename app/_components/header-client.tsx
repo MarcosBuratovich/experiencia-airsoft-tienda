@@ -11,15 +11,10 @@ import {
   X,
   Crosshair,
   Send,
-  ShieldCheck,
   CreditCard,
+  Headphones,
 } from "lucide-react";
-import {
-  SHOP_NAV,
-  SITE_URL,
-  WHATSAPP_URL,
-  WHATSAPP_NUMBER,
-} from "./site-constants";
+import { SHOP_NAV, SITE_URL, WHATSAPP_URL } from "./site-constants";
 import { CartHeaderButton } from "./cart-header-button";
 
 interface CategoryLite {
@@ -30,9 +25,9 @@ interface CategoryLite {
 
 const TOP_BAR_ITEMS = [
   { icon: Send, label: "Envío a todo el país" },
-  { icon: ShieldCheck, label: "+18 · DNI obligatorio" },
   { icon: Crosshair, label: "Retiro en CABA · Conesa 1858" },
   { icon: CreditCard, label: "Pago seguro con MercadoPago" },
+  { icon: Headphones, label: "Asesoramiento por WhatsApp" },
 ];
 
 export function HeaderClient({
@@ -184,15 +179,6 @@ export function HeaderClient({
 
           {/* Cluster derecho */}
           <div className="flex items-center gap-2 md:gap-3 shrink-0">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener"
-              className="hidden xl:inline-flex items-center gap-2 fluid-xs uppercase tracking-widest text-bone hover:text-orange transition-colors"
-            >
-              <span className="size-1.5 bg-orange rounded-full pulse-dot" />
-              {WHATSAPP_NUMBER}
-            </a>
             <a
               href={SITE_URL}
               rel="noopener"
@@ -392,7 +378,7 @@ export function HeaderClient({
                 className="w-full btn-wa clip-tag uppercase tracking-wider fluid-sm px-5 py-3 inline-flex items-center justify-center gap-2"
               >
                 <span className="size-1.5 bg-ink rounded-full" aria-hidden />
-                WhatsApp {WHATSAPP_NUMBER}
+                Escribir por WhatsApp
               </a>
               <a
                 href={SITE_URL}
