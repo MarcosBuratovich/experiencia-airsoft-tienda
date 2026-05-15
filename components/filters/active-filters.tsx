@@ -6,7 +6,7 @@ import { X } from "lucide-react";
 import { useTransition } from "react";
 
 interface ActiveFilter {
-  key: "categoria" | "precio_min" | "precio_max" | "orden";
+  key: "categoria" | "precio_min" | "precio_max" | "orden" | "q";
   label: string;
 }
 

@@ -17,6 +17,7 @@ export interface ParsedProductsSearch {
   page: number;
   sortBy: ProductSortBy;
   rawOrden?: string;
+  q?: string;
 }
 
 function toIntPositive(s: string | undefined): number | undefined {
@@ -41,6 +42,8 @@ export function parseProductsSearch(
   const rawOrden = get("orden");
   const mapped = rawOrden ? SORT_MAP[rawOrden] : undefined;
   const sortBy: ProductSortBy = mapped ?? "default";
+  const rawQ = get("q");
+  const q = rawQ ? rawQ.trim().slice(0, 80) : undefined;
 
   return {
     categoryHandle: get("categoria") || undefined,
@@ -49,6 +52,7 @@ export function parseProductsSearch(
     page: Math.max(1, page),
     sortBy,
     rawOrden,
+    q: q || undefined,
   };
 }
 
@@ -59,9 +63,11 @@ export function buildProductsHref(
     precio_max: number;
     orden: string;
     page: number;
+    q: string;
   }>,
 ): string {
   const params = new URLSearchParams();
+  if (current.q) params.set("q", current.q);
   if (current.categoria) params.set("categoria", current.categoria);
   if (current.precio_min !== undefined)
     params.set("precio_min", String(current.precio_min));

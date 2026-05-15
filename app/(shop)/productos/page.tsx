@@ -17,6 +17,7 @@ type SearchParams = {
   precio_max?: string;
   orden?: string;
   page?: string;
+  q?: string;
 };
 
 export const metadata: Metadata = {
@@ -41,6 +42,7 @@ export default async function ProductsListPage({
 
   const items = await getProducts({
     category: category?.id,
+    q: parsed.q,
     page: parsed.page,
     per_page: PER_PAGE,
     sort_by: parsed.sortBy,
@@ -55,9 +57,11 @@ export default async function ProductsListPage({
   });
 
   const activeFilters: {
-    key: "categoria" | "precio_min" | "precio_max" | "orden";
+    key: "categoria" | "precio_min" | "precio_max" | "orden" | "q";
     label: string;
   }[] = [];
+  if (parsed.q)
+    activeFilters.push({ key: "q", label: `Búsqueda: "${parsed.q}"` });
   if (category)
     activeFilters.push({ key: "categoria", label: `Categoría: ${category.name}` });
   if (parsed.priceMinCents !== undefined)
@@ -81,9 +85,15 @@ export default async function ProductsListPage({
       />
 
       <div className="mt-6 mb-2">
-        <p className="sect-label">{category ? "Categoría" : "Catálogo"}</p>
+        <p className="sect-label">
+          {parsed.q ? "Resultados" : category ? "Categoría" : "Catálogo"}
+        </p>
         <h1 className="sect-title fluid-5xl mt-2">
-          {category ? category.name : "Todos los productos"}
+          {parsed.q
+            ? `“${parsed.q}”`
+            : category
+              ? category.name
+              : "Todos los productos"}
         </h1>
         <p className="text-ash fluid-base mt-3">
           {filtered.length}{" "}
@@ -107,6 +117,7 @@ export default async function ProductsListPage({
         hasNext={items.length === PER_PAGE}
         buildHref={(p) =>
           buildProductsHref({
+            q: parsed.q,
             categoria: parsed.categoryHandle,
             precio_min: parsed.priceMinCents
               ? parsed.priceMinCents / 100

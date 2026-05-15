@@ -363,3 +363,17 @@ section {
     0 0 0 1px #ff6b1a,
     0 30px 80px -30px rgba(255, 107, 26, 0.45);
 }
+
+/* Esconder scrollbar horizontal en el nav de categorias del header */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Marquee ligeramente mas rapido para el top bar de tienda */
+.marquee-track {
+  animation-duration: 50s;
+}
