@@ -29,4 +29,5 @@ export const SHOP_NAV = [
   { href: "/", label: "Tienda" },
   { href: "/productos", label: "Productos" },
   { href: "/categorias", label: "Categorías" },
+  { href: "/pedidos-exterior", label: "Pedidos del exterior" },
 ] as const;

@@ -251,6 +251,19 @@ export function HeaderClient({
             >
               Ver todas <ChevronDown size={12} aria-hidden />
             </Link>
+            <span aria-hidden className="mx-2 text-rail">
+              |
+            </span>
+            <Link
+              href="/pedidos-exterior"
+              className="group relative px-3 py-2 text-orange hover:text-orange/80 transition-colors inline-flex items-center gap-1.5 whitespace-nowrap"
+            >
+              <span
+                className="size-1.5 bg-orange rounded-full pulse-dot"
+                aria-hidden
+              />
+              Pedidos del exterior
+            </Link>
           </div>
         </nav>
 
@@ -266,7 +279,7 @@ export function HeaderClient({
             >
               Todos
             </Link>
-            {categories.slice(0, 6).map((c) => (
+            {categories.slice(0, 5).map((c) => (
               <Link
                 key={c.id}
                 href={`/categorias/${c.handle}`}
@@ -280,6 +293,16 @@ export function HeaderClient({
               className="text-smoke hover:text-orange transition-colors shrink-0"
             >
               Más →
+            </Link>
+            <Link
+              href="/pedidos-exterior"
+              className="text-orange hover:text-orange/80 transition-colors shrink-0 inline-flex items-center gap-1.5"
+            >
+              <span
+                className="size-1.5 bg-orange rounded-full pulse-dot"
+                aria-hidden
+              />
+              Pedidos exterior
             </Link>
           </div>
         </nav>
