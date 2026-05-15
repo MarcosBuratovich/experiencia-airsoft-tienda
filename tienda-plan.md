@@ -67,25 +67,36 @@ cliente API tipado, listados, detalle de producto, categorías, SEO técnico.
 
 ---
 
-## Fase 2 — Carrito + checkout delegado (3-5 días)
+## Fase 2 — Carrito + checkout delegado 🟢 **UI/handoff lista, falta E2E**
 
 Mínimo viable: carrito UI completo + handoff al checkout de Tiendanube.
 
-- [ ] Carrito UI: `/carrito` con resumen, cantidades editables, eliminación
-  por item, subtotal, link "seguir comprando".
-- [ ] Mini-carrito drawer (slide-over desde la derecha) abierto desde el
-  ícono del header. Trigger: `useCart().count() > 0`.
-- [ ] Sync con Tiendanube: `POST /api/cart/checkout` que crea un `cart` en
-  TN con los items locales y devuelve `cart_url`. Redirige al checkout
-  hospedado (que ya tiene MP integrado).
+- [x] Carrito UI: `/carrito` con resumen, cantidades editables (clampeadas
+  a `snapshot.maxQty`), eliminación por item, subtotal, link "seguir
+  comprando", panel resumen sticky en desktop.
+- [x] Mini-carrito drawer (slide-over desde la derecha) montado en el
+  layout (`components/cart/cart-drawer.tsx`), abierto desde
+  `<CartHeaderButton>` con badge contador. AddToCart dispara
+  `pulseOpen()` con auto-close a 4s si el user no interactúa
+  (`isPinned`).
+- [x] `POST /api/cart/checkout` valida items con Zod y arma deeplink al
+  storefront nativo de TN con el patrón
+  `?_cart_action=add_multiple&variants[ID]=QTY`. El cliente hace
+  `window.location.href = data.url`. El cobro lo maneja TN con MP.
+- [x] Páginas `/checkout/exito` (limpia el carrito local con
+  `<CartClearOnMount>`) y `/checkout/error` (CTA a `/carrito` y WA). Ambas
+  `robots: { index: false, follow: false }`.
+- [ ] **Bloqueante producción**: setear `TIENDANUBE_STORE_URL` en
+  `.env.local` y en Vercel (subdominio nativo TN tipo
+  `https://<nombre>.mitiendanube.com`). Sin esa var, `/api/cart/checkout`
+  responde 500 con mensaje claro.
 - [ ] En el panel TN configurar URLs de retorno post-pago apuntando a
-  `/checkout/exito` y `/checkout/error`.
-- [ ] Páginas `/checkout/exito` (limpia el carrito local, agradece) y
-  `/checkout/error` (mensaje + link a contacto WhatsApp).
-- [ ] Validación de stock pre-checkout: refetchear cada variante del carrito
-  antes de enviarla a TN; si alguna está OOS, alertar y bloquear.
-- [ ] Test de end-to-end: agregar producto → ir a `/carrito` → checkout →
-  paypal sandbox / MP test → return → carrito vacío.
+  `https://tienda.experienciaairsoft.com/checkout/{exito,error}`.
+- [ ] Validación de stock pre-checkout (nice-to-have): hoy confiamos en el
+  `maxQty` snapshot al agregar; sumar refetch contra TN antes de redirigir
+  para evitar OOS-en-checkout.
+- [ ] Test E2E manual: agregar producto → drawer abre → "Iniciar compra" →
+  checkout TN con MP test → return a `/checkout/exito` → carrito vacío.
 
 ---
 

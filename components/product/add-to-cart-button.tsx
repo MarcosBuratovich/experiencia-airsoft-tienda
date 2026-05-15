@@ -12,6 +12,7 @@ export function AddToCartButton({
   variantLabelText,
   priceCents,
   imageSrc,
+  maxQty,
   disabled,
 }: {
   variantId: number;
@@ -21,9 +22,12 @@ export function AddToCartButton({
   variantLabelText: string;
   priceCents: number | null;
   imageSrc: string | null;
+  // null = stock infinito (stock_management=false en TN)
+  maxQty: number | null;
   disabled?: boolean;
 }) {
   const add = useCart((s) => s.add);
+  const pulseOpen = useCart((s) => s.pulseOpen);
   const [justAdded, setJustAdded] = useState(false);
 
   const handleClick = () => {
@@ -37,8 +41,10 @@ export function AddToCartButton({
         variantLabel: variantLabelText,
         priceCents,
         imageSrc,
+        maxQty,
       },
     });
+    pulseOpen();
     setJustAdded(true);
     setTimeout(() => setJustAdded(false), 1800);
   };

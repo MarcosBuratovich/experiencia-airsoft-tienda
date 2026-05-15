@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ShoppingBag, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { SITE_URL, SHOP_NAV } from "./site-constants";
+import { CartHeaderButton } from "./cart-header-button";
 
 export function ShopHeader({ activeHref }: { activeHref?: string }) {
   return (
@@ -45,14 +46,7 @@ export function ShopHeader({ activeHref }: { activeHref?: string }) {
           </a>
         </nav>
 
-        <Link
-          href="/carrito"
-          aria-label="Carrito"
-          className="btn-ghost clip-tag px-4 py-2 uppercase tracking-wider fluid-xs inline-flex items-center gap-2"
-        >
-          <ShoppingBag size={16} aria-hidden />
-          <span className="hidden sm:inline">Carrito</span>
-        </Link>
+        <CartHeaderButton />
       </div>
 
       <nav className="md:hidden border-t border-bone/10">

@@ -6,6 +6,9 @@ export interface CartItemSnapshot {
   variantLabel: string;
   priceCents: number;
   imageSrc: string | null;
+  // null = stock infinito (stock_management false en TN). Si es number,
+  // es el cap al momento de agregar — se valida en checkout final.
+  maxQty: number | null;
 }
 
 export interface CartItem {
@@ -16,11 +19,24 @@ export interface CartItem {
 }
 
 export interface CartState {
+  // Datos persistidos
   items: CartItem[];
+
+  // UI ephemeral (no se persiste)
+  isOpen: boolean;
+  isPinned: boolean;
+
+  // Acciones de items
   add: (item: Omit<CartItem, "qty"> & { qty?: number }) => void;
   remove: (variantId: number) => void;
   setQty: (variantId: number, qty: number) => void;
   clear: () => void;
   count: () => number;
   subtotalCents: () => number;
+
+  // Acciones del drawer
+  open: () => void;        // user-initiated, queda abierto
+  close: () => void;
+  pulseOpen: () => void;   // auto-trigger desde AddToCart, se cierra solo a los 4s si no se interactua
+  pin: () => void;         // marca como interactuado (cancela auto-close)
 }

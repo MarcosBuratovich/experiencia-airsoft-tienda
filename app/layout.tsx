@@ -5,6 +5,7 @@ import "./globals.css";
 import { ShopHeader } from "./_components/shop-header";
 import { ShopFooter } from "./_components/shop-footer";
 import { SHOP_URL } from "./_components/site-constants";
+import { CartDrawer } from "@/components/cart/cart-drawer";
 
 const anton = Anton({
   variable: "--font-anton",
@@ -114,6 +115,7 @@ export default function RootLayout({
         <ShopHeader />
         <main className="flex-1">{children}</main>
         <ShopFooter />
+        <CartDrawer />
         <Analytics />
       </body>
     </html>

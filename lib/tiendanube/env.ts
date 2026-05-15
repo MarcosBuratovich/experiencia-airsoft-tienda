@@ -7,12 +7,17 @@ const EnvSchema = z.object({
     .string()
     .min(1)
     .default("Experiencia Airsoft Store (hola@experienciaairsoft.com)"),
+  // URL publica del storefront nativo de TN (ej: https://experienciaairsoft.mitiendanube.com).
+  // Solo necesaria para el endpoint /api/cart/checkout que construye el deeplink al checkout hospedado.
+  // Si no esta configurada, el endpoint falla con mensaje claro.
+  TIENDANUBE_STORE_URL: z.string().url().optional(),
 });
 
 const parsed = EnvSchema.safeParse({
   TIENDANUBE_STORE_ID: process.env.TIENDANUBE_STORE_ID,
   TIENDANUBE_ACCESS_TOKEN: process.env.TIENDANUBE_ACCESS_TOKEN,
   TIENDANUBE_USER_AGENT: process.env.TIENDANUBE_USER_AGENT,
+  TIENDANUBE_STORE_URL: process.env.TIENDANUBE_STORE_URL,
 });
 
 if (!parsed.success) {

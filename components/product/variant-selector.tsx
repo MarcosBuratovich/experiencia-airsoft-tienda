@@ -90,6 +90,7 @@ export function VariantSelector({
         variantLabelText={variantLabel(selected, attributes)}
         priceCents={selected.price}
         imageSrc={snapshot.imageSrc}
+        maxQty={selected.stock_management ? (selected.stock ?? 0) : null}
         disabled={!variantHasStock(selected) || selected.price === null}
       />
     </div>
