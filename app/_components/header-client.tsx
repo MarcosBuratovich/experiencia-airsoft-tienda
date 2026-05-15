@@ -38,13 +38,25 @@ export function HeaderClient({
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  // Scroll detection con rAF para no thrashear el main thread.
+  // Scroll detection con rAF + histeresis (dos thresholds).
+  //
+  // Bug que arregla: con un solo threshold (ej. 60px), al pasar a "scrolled"
+  // la top bar se contrae unos 48px, lo cual ACORTA el documento y baja
+  // scrollY → el flag vuelve a false → top bar reaparece → documento crece
+  // → scrollY sube → flickering infinito en una zona angosta del scroll.
+  //
+  // Fix: para activar pedimos scrollY > 100, para desactivar < 20. La zona
+  // muerta de 80px es mucho mas grande que el delta de altura que produce
+  // el cambio, asi que es imposible que oscile.
+  const SCROLL_ON = 100;
+  const SCROLL_OFF = 20;
   useEffect(() => {
     let raf: number | null = null;
     const onScroll = () => {
       if (raf !== null) return;
       raf = window.requestAnimationFrame(() => {
-        setScrolled(window.scrollY > 60);
+        const y = window.scrollY;
+        setScrolled((prev) => (prev ? y > SCROLL_OFF : y > SCROLL_ON));
         raf = null;
       });
     };
