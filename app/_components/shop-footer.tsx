@@ -16,8 +16,8 @@ export function ShopFooter() {
   return (
     <footer className="relative bg-ink border-t border-bone/10">
       <div className="max-w-[1400px] mx-auto fluid-gutter-x py-12">
-        <div className="grid md:grid-cols-4 gap-8 md:gap-10">
-          <div className="md:col-span-2">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-10">
+          <div className="col-span-2">
             <Image
               src="/img/logo.png"
               alt="Logo Experiencia Airsoft"
@@ -49,7 +49,10 @@ export function ShopFooter() {
                 </Link>
               </li>
             </ul>
-            <p className="sect-label mt-6 mb-3">Experiencia</p>
+          </div>
+
+          <div>
+            <p className="sect-label mb-3">Experiencia</p>
             <ul className="space-y-2 font-mono fluid-xs tracking-[.22em] uppercase text-ash">
               {MAIN_NAV.map((it) => (
                 <li key={it.href}>
@@ -65,7 +68,7 @@ export function ShopFooter() {
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <p className="sect-label mb-3">Contacto</p>
             <ul className="space-y-2 font-mono fluid-xs uppercase tracking-[.18em] text-ash">
               <li className="text-bone">{ADDRESS_STREET}</li>
