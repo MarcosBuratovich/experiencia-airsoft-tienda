@@ -1,0 +1,32 @@
+export const SITE_URL = "https://experienciaairsoft.com";
+export const SHOP_URL = "https://tienda.experienciaairsoft.com";
+
+export const WHATSAPP_NUMBER = "+54 9 11 3868-9783";
+export const WHATSAPP_URL = "https://wa.me/5491138689783";
+export const INSTAGRAM_URL = "https://www.instagram.com/experienciaairsoft/";
+export const YOUTUBE_URL = "https://www.youtube.com/@experienciaairsoft8250";
+
+export const ADDRESS_STREET = "Gral. Conesa 1858";
+export const ADDRESS_CITY = "Ciudad Autónoma de Buenos Aires";
+export const ADDRESS_POSTAL = "C1870";
+export const ADDRESS_COUNTRY = "Argentina";
+export const MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Gral.+Conesa+1858,+CABA";
+
+export const SHOP_EMAIL = "hola@experienciaairsoft.com";
+
+// Cross-domain nav: links al sitio principal (absolutos).
+export const MAIN_NAV = [
+  { href: `${SITE_URL}/`, label: "Inicio" },
+  { href: `${SITE_URL}/precios`, label: "Precios" },
+  { href: `${SITE_URL}/buenos-aires`, label: "Buenos Aires" },
+  { href: `${SITE_URL}/primera-vez`, label: "Primera vez" },
+  { href: `${SITE_URL}/blog`, label: "Blog" },
+] as const;
+
+// Nav interna de la tienda (rutas relativas dentro del subdomain).
+export const SHOP_NAV = [
+  { href: "/", label: "Tienda" },
+  { href: "/productos", label: "Productos" },
+  { href: "/categorias", label: "Categorías" },
+] as const;
