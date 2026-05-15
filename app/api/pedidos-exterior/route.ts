@@ -15,6 +15,16 @@ import type { NextRequest } from "next/server";
 // Cuando crezca el volumen se puede sumar Notion/Sheet/KV.
 // ──────────────────────────────────────────────────────────────────────
 
+function isArsenalSportsUrl(value: string): boolean {
+  try {
+    const url = new URL(value);
+    const host = url.hostname.toLowerCase().replace(/^www\./, "");
+    return host === "arsenalsports.com";
+  } catch {
+    return false;
+  }
+}
+
 const PedidoSchema = z.object({
   nombre: z.string().min(2, "nombre muy corto").max(120),
   email: z.string().email("email invalido").max(200),
@@ -23,14 +33,10 @@ const PedidoSchema = z.object({
     .string()
     .url("url invalida")
     .max(500)
-    .refine((v) => /^https?:\/\//i.test(v), "debe empezar con http(s)"),
+    .refine(isArsenalSportsUrl, "el link tiene que ser de arsenalsports.com"),
   productName: z.string().min(2).max(200),
   qty: z.coerce.number().int().positive().max(20).default(1),
   variant: z.string().max(200).optional(),
-  budgetUsd: z
-    .union([z.coerce.number().positive().max(100_000), z.literal("")])
-    .optional()
-    .transform((v) => (v === "" || v === undefined ? undefined : v)),
   notes: z.string().max(2000).optional(),
   terms: z.literal(true, {
     errorMap: () => ({ message: "debes aceptar las condiciones" }),
@@ -69,8 +75,6 @@ function buildEmail(pedido: Pedido) {
     `Cantidad: ${pedido.qty}`,
   ];
   if (pedido.variant) lines.push(`Variante: ${pedido.variant}`);
-  if (pedido.budgetUsd !== undefined)
-    lines.push(`Presupuesto maximo USD: ${pedido.budgetUsd}`);
   if (pedido.notes) {
     lines.push(``, `NOTAS`, pedido.notes);
   }
@@ -95,7 +99,6 @@ function buildEmail(pedido: Pedido) {
     <tr><td style="padding: 6px 8px; color: #6e6e6e;">URL</td><td style="padding: 6px 8px;"><a href="${escapeHtml(pedido.productUrl)}" style="color: #ff6b1a; word-break: break-all;">${escapeHtml(pedido.productUrl)}</a></td></tr>
     <tr><td style="padding: 6px 8px; color: #6e6e6e;">Cantidad</td><td style="padding: 6px 8px;">${pedido.qty}</td></tr>
     ${pedido.variant ? `<tr><td style="padding: 6px 8px; color: #6e6e6e;">Variante</td><td style="padding: 6px 8px;">${escapeHtml(pedido.variant)}</td></tr>` : ""}
-    ${pedido.budgetUsd !== undefined ? `<tr><td style="padding: 6px 8px; color: #6e6e6e;">Presupuesto USD</td><td style="padding: 6px 8px;">${pedido.budgetUsd}</td></tr>` : ""}
   </table>
   ${pedido.notes ? `<div style="margin-top: 16px; padding: 12px 16px; background: #f5f5f0; border-left: 3px solid #ff6b1a;"><strong style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #6e6e6e;">Notas del cliente</strong><br/><br/>${escapeHtml(pedido.notes).replace(/\n/g, "<br/>")}</div>` : ""}
   <p style="margin-top: 24px; font-size: 11px; color: #6e6e6e;">tienda.experienciaairsoft.com · ${new Date().toLocaleString("es-AR", { timeZone: "America/Argentina/Buenos_Aires" })}</p>

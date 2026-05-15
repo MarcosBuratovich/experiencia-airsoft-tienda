@@ -30,9 +30,6 @@ export function PedidoForm() {
       productName: String(formData.get("productName") ?? "").trim(),
       qty: Number(formData.get("qty") ?? 1) || 1,
       variant: String(formData.get("variant") ?? "").trim() || undefined,
-      budgetUsd: formData.get("budgetUsd")
-        ? Number(formData.get("budgetUsd"))
-        : undefined,
       notes: String(formData.get("notes") ?? "").trim() || undefined,
       terms: formData.get("terms") === "on",
       website: String(formData.get("website") ?? ""), // honeypot
@@ -164,9 +161,10 @@ export function PedidoForm() {
         <Field
           name="productUrl"
           type="url"
-          label="URL del producto"
+          label="URL del producto en arsenalsports.com"
           placeholder="https://www.arsenalsports.com/..."
-          hint="Pegá el link de arsenalsports.com o de cualquier otra tienda de Brasil."
+          hint="Pegá el link del producto en arsenalsports.com — solo aceptamos pedidos de ese sitio."
+          pattern="https?://(www\.)?arsenalsports\.com/.+"
           required
           error={fieldErrors.productUrl}
         />
@@ -196,16 +194,6 @@ export function PedidoForm() {
             className="md:col-span-2"
           />
         </div>
-        <Field
-          name="budgetUsd"
-          type="number"
-          min={0}
-          max={100000}
-          step={1}
-          label="Presupuesto máximo en USD (opcional)"
-          hint="Si lo dejás en blanco, te cotizamos sin tope y vos decidís."
-          error={fieldErrors.budgetUsd}
-        />
         <Field
           name="notes"
           label="Notas o aclaraciones"
@@ -282,6 +270,7 @@ function Field({
   min,
   max,
   step,
+  pattern,
   className,
 }: {
   name: string;
@@ -297,6 +286,7 @@ function Field({
   min?: number;
   max?: number;
   step?: number;
+  pattern?: string;
   className?: string;
 }) {
   const baseInput =
@@ -332,6 +322,7 @@ function Field({
           min={min}
           max={max}
           step={step}
+          pattern={pattern}
           className={`${baseInput} ${borderCls}`}
         />
       )}
