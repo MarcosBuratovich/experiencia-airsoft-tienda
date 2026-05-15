@@ -84,22 +84,36 @@ export function HeaderClient({
           aria-hidden
           className="absolute inset-0 diag-lines pointer-events-none"
         />
-        <div className="relative flex items-center marquee-track whitespace-nowrap py-2 font-mono fluid-xs uppercase tracking-[.25em] text-orange/90">
-          {/* Duplicamos los items para que el loop sea continuo (marquee va 0 → -50%). */}
-          {[...TOP_BAR_ITEMS, ...TOP_BAR_ITEMS].map((it, i) => {
-            const Icon = it.icon;
-            return (
-              <span
-                key={i}
-                className="px-8 flex items-center gap-2.5 shrink-0"
-                aria-hidden={i >= TOP_BAR_ITEMS.length}
-              >
-                <Icon size={12} className="text-orange" aria-hidden />
-                <span>{it.label}</span>
-                <span className="text-orange/40">·</span>
-              </span>
-            );
-          })}
+        {/*
+          Marquee infinito: dos grupos identicos con min-width 100vw cada uno
+          aseguran que el ancho total del track sea >= 2*viewport. La animacion
+          va de 0 a -50% (un grupo entero), y al loopear muestra el segundo
+          grupo en el mismo lugar — sin gaps porque son iguales.
+          Si en una pantalla muy ancha el contenido natural quedara corto, el
+          min-w-[100vw] lo extiende; los items se distribuyen via justify-around.
+        */}
+        <div className="relative flex marquee-track whitespace-nowrap font-mono fluid-xs uppercase tracking-[.25em] text-orange/90">
+          {[0, 1].map((groupIdx) => (
+            <ul
+              key={groupIdx}
+              aria-hidden={groupIdx === 1}
+              className="flex items-center justify-around shrink-0 min-w-[100vw] py-2 list-none m-0 p-0"
+            >
+              {TOP_BAR_ITEMS.map((it, i) => {
+                const Icon = it.icon;
+                return (
+                  <li
+                    key={`${groupIdx}-${i}`}
+                    className="px-8 flex items-center gap-2.5 shrink-0"
+                  >
+                    <Icon size={12} className="text-orange" aria-hidden />
+                    <span>{it.label}</span>
+                    <span className="text-orange/40">·</span>
+                  </li>
+                );
+              })}
+            </ul>
+          ))}
         </div>
       </div>
 
