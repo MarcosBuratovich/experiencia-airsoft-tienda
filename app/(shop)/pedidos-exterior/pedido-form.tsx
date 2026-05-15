@@ -81,9 +81,8 @@ export function PedidoForm() {
         <h3 className="sect-title fluid-3xl mt-3">¡Gracias!</h3>
         <p className="text-ash fluid-base mt-3 max-w-prose mx-auto">
           Recibimos tu pedido. Te respondemos por email o WhatsApp con la
-          cotización exacta en las próximas <strong>24–48 hs hábiles</strong>.
-          Si te conviene, te mandamos un link de pago para señar y arrancar
-          el proceso.
+          cotización detallada. Si te conviene, te mandamos un link de pago
+          para señar y arrancar el proceso.
         </p>
         <button
           type="button"
@@ -167,7 +166,7 @@ export function PedidoForm() {
           type="url"
           label="URL del producto"
           placeholder="https://www.arsenalsports.com/..."
-          hint="Pegá el link de arsenalsports.com (o de otra tienda USA — Evike, AirsoftGI, etc.)."
+          hint="Pegá el link de arsenalsports.com o de cualquier otra tienda de Brasil."
           required
           error={fieldErrors.productUrl}
         />
@@ -226,11 +225,10 @@ export function PedidoForm() {
             className="mt-1 accent-orange w-4 h-4 shrink-0"
           />
           <span>
-            Entiendo que el <strong className="text-bone">30%</strong> es solo
-            la gestión y no incluye impuestos de Aduana ni AFIP, que el tiempo
-            estimado es <strong className="text-bone">4–8 semanas</strong> y
-            que la cotización final depende del USD del día y del aforo de
-            Aduana.
+            Entiendo que se cobra un{" "}
+            <strong className="text-bone">30% mínimo</strong> sobre el valor
+            del producto, que la seña equivale al valor del producto en el
+            exterior y que el saldo se abona cuando llega.
           </span>
         </label>
         {fieldErrors.terms ? (

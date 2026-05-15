@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  Check,
-  X,
-  Clock,
   PackageSearch,
   Calculator,
   Send,
   Truck,
-  AlertCircle,
 } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { WHATSAPP_URL } from "@/app/_components/site-constants";
@@ -17,7 +13,7 @@ import { PedidoForm } from "./pedido-form";
 export const metadata: Metadata = {
   title: "Pedidos del exterior",
   description:
-    "Encargá productos de USA: óptica, accesorios, protección, ropa táctica. Te traemos lo que no se consigue en Argentina. Cotización sin compromiso.",
+    "Encargá productos de Brasil que no se consiguen en Argentina: marcadoras, BBs, óptica, repuestos, ropa táctica y más. Cotización sin compromiso.",
   alternates: { canonical: "/pedidos-exterior" },
 };
 
@@ -25,78 +21,41 @@ const STEPS = [
   {
     icon: Send,
     title: "Enviás el link",
-    desc: "Pegás la URL del producto (arsenalsports.com u otra tienda USA) y nos contás qué necesitás.",
+    desc: "Pegás la URL del producto (arsenalsports.com u otra tienda de Brasil) y nos contás qué necesitás.",
   },
   {
     icon: Calculator,
     title: "Te cotizamos",
-    desc: "En 24–48 hs te respondemos con el valor final estimado en pesos: producto + envío + gestión.",
+    desc: "Te respondemos con el valor estimado en pesos y todos los detalles para que decidas si avanzás.",
   },
   {
     icon: PackageSearch,
     title: "Señás y compramos",
-    desc: "Si te conviene, señás con un link de MercadoPago. Compramos y embarcamos al hub en Florida.",
+    desc: "Señás el valor del producto en el exterior por MercadoPago o transferencia y arrancamos la compra.",
   },
   {
     icon: Truck,
-    title: "Llega y te avisamos",
-    desc: "En 4–8 semanas el producto pasa Aduana y te lo entregamos por courier o retiro en CABA.",
+    title: "Llega y abonás el resto",
+    desc: "Cuando el producto llega te avisamos, pagás lo que falta y coordinamos entrega o retiro en CABA.",
   },
-];
-
-const COVERED = [
-  "Compra del producto en la tienda USA",
-  "Envío al hub de consolidación en Florida",
-  "Embarque internacional y courier al país",
-  "Gestión aduanera + tracking",
-];
-
-const NOT_COVERED = [
-  "Impuestos de Aduana (50% sobre CIF + adicionales)",
-  "Percepción de AFIP cuando corresponda",
-  "Diferencia por variación del USD entre cotización y embarque",
-  "Devoluciones (riesgo de Aduana queda con el cliente)",
-];
-
-const BRING = [
-  "Óptica · miras red dot · scopes",
-  "Protección · anteojos · cascos",
-  "Accesorios · grips · slings · pouches",
-  "Ropa táctica · BDU · botas",
-  "Repuestos · gearbox · barriles · hop-up",
-  "BBs · gases · baterías compatibles courier",
-];
-
-const NO_BRING = [
-  "Marcadoras potentes (revisamos caso a caso por ANMAC)",
-  "Productos > USD 3.000 (cupo anual courier por DNI)",
-  "Sustancias peligrosas (gases / litio sin certificación)",
 ];
 
 const FAQS = [
   {
-    q: "¿Por qué el 30% es solo el mínimo?",
-    a: "Depende del peso, del valor del producto y de qué courier termine cursando el envío (DHL/FedEx/UPS). Productos chicos y livianos suelen quedar en 30–35%, los voluminosos o caros pueden ir hasta 45–50% según ese mix.",
+    q: "¿Qué productos puedo pedir?",
+    a: "Lo que necesites: marcadoras, BBs, repuestos, gearbox, óptica, protección, accesorios, ropa táctica. Si tenés un link, te cotizamos.",
   },
   {
-    q: "¿Y los impuestos de Aduana?",
-    a: "Van aparte del 30% y los pagás vos. Aduana cobra ~50% sobre el valor declarado (CIF) cuando el courier ingresa el paquete; te avisamos antes para que decidas si avanzar o no. Si el envío se queda en franquicia chica (< USD 50, una sola vez al año), no aplica.",
+    q: "¿Cómo se paga?",
+    a: "Seña = valor del producto en el exterior, vía MercadoPago o transferencia. El resto lo abonás cuando el producto llega y antes de la entrega.",
   },
   {
-    q: "¿Cuánto tarda?",
-    a: "Entre 4 y 8 semanas desde que señás hasta que te lo entregamos. El cuello suele ser Aduana — si entra rápido sale en 4 semanas, si queda revisado puede irse a 6–8.",
+    q: "¿Cuánto cuesta el servicio?",
+    a: "Cobramos un mínimo del 30% sobre el valor del producto. La cotización final te la pasamos por escrito antes de que sences cualquier cosa.",
   },
   {
-    q: "¿Qué pasa si Aduana lo retiene o lo rechaza?",
-    a: "Te explicamos qué documentación pide y la conseguimos juntos. Si el producto cae en una categoría que Aduana directamente no libera (ej: una marcadora sin habilitación ANMAC previa), te devolvemos el dinero del producto menos los gastos ya ejecutados (compra USA + envío internacional).",
-  },
-  {
-    q: "¿Puedo pedir una marcadora?",
-    a: "Lo conversamos antes de cotizar. La mayoría requiere habilitación de ANMAC y muchos couriers directamente no cursan armas tipo airsoft. Si ya tenés tu credencial de legítimo usuario o vas por una categoría no controlada, lo hacemos.",
-  },
-  {
-    q: "¿Pago todo al principio?",
-    a: "No. Primero seña del 50% para que arranquemos la compra. El otro 50% lo pagás cuando Aduana libera y antes de la entrega final. Todo por MercadoPago o transferencia.",
+    q: "¿Y si no llega o tengo un problema?",
+    a: "Te acompañamos en todo el proceso y resolvemos juntos cualquier inconveniente. Cualquier duda, escribinos por WhatsApp antes o durante el pedido.",
   },
 ];
 
@@ -139,14 +98,11 @@ export default function PedidosExteriorPage() {
               </span>
             </h1>
             <p className="hero-fade hero-fade-4 text-ash fluid-lg mt-6 max-w-prose">
-              Productos de USA que no se consiguen en Argentina: óptica,
-              accesorios, repuestos, ropa táctica. Mandás el link, te
-              cotizamos sin compromiso y si te cierra, compramos.
+              Productos de Brasil que no se consiguen en Argentina: marcadoras,
+              BBs, repuestos, óptica, ropa táctica y todo lo que necesites.
+              Mandás el link, te cotizamos sin compromiso y si te cierra,
+              compramos.
             </p>
-            <div className="hero-fade hero-fade-5 mt-6 inline-flex items-center gap-3 mil-tag bone">
-              <Clock size={12} aria-hidden /> 4 – 8 semanas
-              <span className="text-rail">·</span> Cotización en 24–48 hs
-            </div>
           </div>
         </div>
       </section>
@@ -179,104 +135,6 @@ export default function PedidosExteriorPage() {
             );
           })}
         </ol>
-      </section>
-
-      {/* Qué incluye / Qué no */}
-      <section className="max-w-[1400px] mx-auto fluid-gutter-x fluid-section-y border-t border-bone/10">
-        <div className="mb-10">
-          <p className="sect-label">Transparencia</p>
-          <h2 className="sect-title fluid-4xl mt-2">
-            Qué incluye el <span className="text-orange">30%</span>
-          </h2>
-          <p className="text-ash fluid-base mt-3 max-w-prose">
-            El 30% mínimo es la gestión nuestra. Los impuestos van aparte y
-            los pagás vos cuando Aduana los liquida.
-          </p>
-        </div>
-        <div className="grid lg:grid-cols-2 gap-4">
-          <div className="border border-orange/30 bg-orange/[0.04] clip-notch p-6 md:p-8">
-            <p className="mil-tag mb-4 w-fit">Cubre</p>
-            <ul className="space-y-3">
-              {COVERED.map((it) => (
-                <li
-                  key={it}
-                  className="flex items-start gap-3 fluid-sm text-bone"
-                >
-                  <Check
-                    size={16}
-                    className="text-orange shrink-0 mt-0.5"
-                    aria-hidden
-                  />
-                  <span>{it}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="border border-bone/15 bg-carbon clip-notch p-6 md:p-8">
-            <p className="mil-tag bone mb-4 w-fit">No cubre</p>
-            <ul className="space-y-3">
-              {NOT_COVERED.map((it) => (
-                <li
-                  key={it}
-                  className="flex items-start gap-3 fluid-sm text-ash"
-                >
-                  <X
-                    size={16}
-                    className="text-smoke shrink-0 mt-0.5"
-                    aria-hidden
-                  />
-                  <span>{it}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Qué traemos / qué no */}
-      <section className="max-w-[1400px] mx-auto fluid-gutter-x fluid-section-y border-t border-bone/10">
-        <div className="mb-10">
-          <p className="sect-label">Productos</p>
-          <h2 className="sect-title fluid-4xl mt-2">Qué cursamos</h2>
-        </div>
-        <div className="grid lg:grid-cols-2 gap-4">
-          <div className="border border-bone/10 bg-carbon clip-notch p-6 md:p-8">
-            <p className="sect-label mb-4">Sí — sale tranquilo</p>
-            <ul className="space-y-2.5">
-              {BRING.map((it) => (
-                <li
-                  key={it}
-                  className="flex items-start gap-3 fluid-sm text-bone"
-                >
-                  <Check
-                    size={14}
-                    className="text-orange shrink-0 mt-1"
-                    aria-hidden
-                  />
-                  <span>{it}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="border border-bone/10 bg-carbon clip-notch p-6 md:p-8">
-            <p className="sect-label mb-4">Ojo — hablalo antes</p>
-            <ul className="space-y-2.5">
-              {NO_BRING.map((it) => (
-                <li
-                  key={it}
-                  className="flex items-start gap-3 fluid-sm text-ash"
-                >
-                  <AlertCircle
-                    size={14}
-                    className="text-orange shrink-0 mt-1"
-                    aria-hidden
-                  />
-                  <span>{it}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
       </section>
 
       {/* Form */}
@@ -346,7 +204,7 @@ export default function PedidosExteriorPage() {
         <div className="max-w-[1400px] mx-auto fluid-gutter-x py-12 text-center">
           <p className="sect-label">¿Listo?</p>
           <h2 className="sect-title fluid-3xl mt-2">
-            Tirá el link, te cotizamos hoy
+            Tirá el link y te cotizamos
           </h2>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Link
