@@ -1,11 +1,12 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Variant } from "@/lib/tiendanube/types";
 import { PriceTag } from "./price-tag";
 import { StockBadge } from "./stock-badge";
 import { variantHasStock, variantLabel } from "@/lib/tiendanube/normalize";
 import { AddToCartButton } from "./add-to-cart-button";
+import { QuantityStepper } from "./quantity-stepper";
 
 interface ProductSnapshotForCart {
   handle: string;
@@ -24,6 +25,7 @@ export function VariantSelector({
   snapshot: ProductSnapshotForCart;
 }) {
   const [selectedId, setSelectedId] = useState<number>(variants[0]?.id);
+  const [qty, setQty] = useState(1);
   const selected = useMemo(
     () => variants.find((v) => v.id === selectedId) ?? variants[0],
     [variants, selectedId],
@@ -32,6 +34,17 @@ export function VariantSelector({
   const hasOptions =
     variants.length > 1 ||
     (selected && (selected.values ?? []).some((v) => v));
+
+  const stockLimited = selected?.stock_management === true;
+  const maxQty = stockLimited ? selected?.stock ?? 0 : null;
+  const inStock = variantHasStock(selected);
+
+  // Si cambia la variante y la cantidad excede el nuevo stock, ajustar.
+  useEffect(() => {
+    if (maxQty !== null && qty > maxQty) {
+      setQty(Math.max(1, maxQty));
+    }
+  }, [maxQty, qty]);
 
   return (
     <div className="space-y-5">
@@ -82,6 +95,26 @@ export function VariantSelector({
         </div>
       ) : null}
 
+      {inStock ? (
+        <div>
+          <p className="sect-label mb-3">Cantidad</p>
+          <div className="flex items-center gap-4">
+            <QuantityStepper
+              value={qty}
+              onChange={setQty}
+              max={maxQty}
+            />
+            {maxQty !== null ? (
+              <span className="font-mono fluid-xs uppercase tracking-widest text-smoke">
+                {maxQty === 1
+                  ? "Última disponible"
+                  : `${maxQty} disponibles`}
+              </span>
+            ) : null}
+          </div>
+        </div>
+      ) : null}
+
       <AddToCartButton
         variantId={selected.id}
         productId={snapshot.productId}
@@ -90,8 +123,9 @@ export function VariantSelector({
         variantLabelText={variantLabel(selected, attributes)}
         priceCents={selected.price}
         imageSrc={snapshot.imageSrc}
-        maxQty={selected.stock_management ? (selected.stock ?? 0) : null}
-        disabled={!variantHasStock(selected) || selected.price === null}
+        maxQty={maxQty}
+        qty={qty}
+        disabled={!inStock || selected.price === null}
       />
     </div>
   );

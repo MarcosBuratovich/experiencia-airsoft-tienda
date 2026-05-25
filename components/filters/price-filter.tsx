@@ -30,8 +30,8 @@ export function PriceFilter({
   };
 
   return (
-    <form onSubmit={submit} className="flex items-center gap-2 fluid-xs uppercase tracking-widest text-smoke">
-      <span>Precio ARS</span>
+    <form onSubmit={submit} className="flex flex-wrap items-center gap-2 fluid-xs uppercase tracking-widest text-smoke">
+      <span className="basis-full sm:basis-auto">Precio ARS</span>
       <input
         type="number"
         inputMode="numeric"
@@ -39,7 +39,7 @@ export function PriceFilter({
         min="0"
         value={min}
         onChange={(e) => setMin(e.target.value)}
-        className="w-20 bg-carbon border border-bone/15 text-bone fluid-xs px-2 py-2 focus:border-orange outline-none"
+        className="w-20 sm:w-24 bg-carbon border border-bone/15 text-bone fluid-xs px-2 py-2 focus:border-orange outline-none"
         aria-label="Precio minimo"
       />
       <span aria-hidden>–</span>
@@ -50,7 +50,7 @@ export function PriceFilter({
         min="0"
         value={max}
         onChange={(e) => setMax(e.target.value)}
-        className="w-20 bg-carbon border border-bone/15 text-bone fluid-xs px-2 py-2 focus:border-orange outline-none"
+        className="w-20 sm:w-24 bg-carbon border border-bone/15 text-bone fluid-xs px-2 py-2 focus:border-orange outline-none"
         aria-label="Precio maximo"
       />
       <button

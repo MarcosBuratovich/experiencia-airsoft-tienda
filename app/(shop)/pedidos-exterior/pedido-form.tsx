@@ -162,7 +162,7 @@ export function PedidoForm() {
           name="productUrl"
           type="url"
           label="URL del producto en arsenalsports.com"
-          placeholder="https://www.arsenalsports.com/..."
+          placeholder="https://arsenalsports.com/..."
           hint="Pegá el link del producto en arsenalsports.com — solo aceptamos pedidos de ese sitio."
           pattern="https?://(www\.)?arsenalsports\.com/.+"
           required

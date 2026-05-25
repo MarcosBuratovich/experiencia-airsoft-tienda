@@ -8,6 +8,7 @@ import {
 } from "@/lib/tiendanube/normalize";
 import { ProductGallery } from "@/components/product/product-gallery";
 import { VariantSelector } from "@/components/product/variant-selector";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import { ProductJsonLd } from "@/components/seo/product-jsonld";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Badge } from "@/components/ui/badge";
@@ -81,8 +82,10 @@ export default async function ProductPage({
 
         <div className="md:col-span-5 space-y-6">
           <div className="space-y-3">
-            {product.brand ? (
-              <p className="sect-label">{product.brand}</p>
+            {product.brand && product.brand !== "Genérico" ? (
+              <div className="h-7 flex items-center">
+                <BrandLogo brand={product.brand} size="md" />
+              </div>
             ) : null}
             <h1 className="sect-title fluid-4xl">{product.name}</h1>
             {firstCategory ? (

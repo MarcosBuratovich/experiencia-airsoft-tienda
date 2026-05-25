@@ -110,7 +110,7 @@ export default async function CategoryPage({
             <a
               key={sc.id}
               href={`/categorias/${sc.handle}`}
-              className="px-3 py-1.5 fluid-xs uppercase tracking-widest border border-bone/15 text-bone hover:border-orange hover:text-orange transition-colors clip-tag"
+              className="inline-flex items-center px-3 min-h-[2.5rem] fluid-xs uppercase tracking-widest border border-bone/15 text-bone hover:border-orange hover:text-orange transition-colors clip-tag"
             >
               {sc.name}
             </a>

@@ -49,7 +49,10 @@ export async function getProducts(
   const items = await tnFetch({
     path: "products",
     query: {
-      category: params.category,
+      // TN espera "category_id" (no "category"). Si pasas el param mal,
+      // el endpoint lo ignora y devuelve el listado completo igual para
+      // todas las categorías. Verificado contra la API en vivo.
+      category_id: params.category,
       handle: params.handle,
       q: params.q,
       page: params.page ?? 1,

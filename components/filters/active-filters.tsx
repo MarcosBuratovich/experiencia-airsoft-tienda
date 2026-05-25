@@ -34,7 +34,7 @@ export function ActiveFilters({ items }: { items: ActiveFilter[] }) {
         <button
           key={it.key}
           onClick={() => remove(it.key)}
-          className="inline-flex items-center gap-2 mil-tag bone hover:border-orange hover:text-orange transition-colors"
+          className="inline-flex items-center gap-2 mil-tag bone min-h-[2.5rem] hover:border-orange hover:text-orange transition-colors"
           aria-label={`Quitar filtro ${it.label}`}
         >
           {it.label}
@@ -43,7 +43,7 @@ export function ActiveFilters({ items }: { items: ActiveFilter[] }) {
       ))}
       <Link
         href={pathname}
-        className="fluid-xs uppercase tracking-widest text-smoke hover:text-orange transition-colors"
+        className="inline-flex items-center px-2 min-h-[2.5rem] fluid-xs uppercase tracking-widest text-smoke hover:text-orange transition-colors"
       >
         Limpiar todo
       </Link>

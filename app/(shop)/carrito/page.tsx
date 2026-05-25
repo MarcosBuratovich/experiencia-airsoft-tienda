@@ -37,6 +37,10 @@ export default function CartPage() {
           items: items.map((it) => ({
             variantId: it.variantId,
             qty: it.qty,
+            productName: it.snapshot.productName,
+            variantLabel: it.snapshot.variantLabel,
+            unitPriceCents: it.snapshot.priceCents,
+            handle: it.snapshot.handle,
           })),
         }),
       });
@@ -49,7 +53,8 @@ export default function CartPage() {
         setSubmitting(false);
         return;
       }
-      window.location.href = data.url;
+      window.open(data.url, "_blank", "noopener");
+      setSubmitting(false);
     } catch (err) {
       console.error("[cart] checkout failed", err);
       setErrorMsg("No hay conexion con el servidor. Probá en un rato.");
@@ -99,11 +104,11 @@ export default function CartPage() {
               return (
                 <li
                   key={it.variantId}
-                  className="flex flex-col sm:flex-row gap-4 p-5"
+                  className="flex flex-row gap-3 sm:gap-4 p-4 sm:p-5"
                 >
                   <Link
                     href={`/productos/${it.snapshot.handle}`}
-                    className="relative w-full sm:w-28 h-28 shrink-0 bg-ink border border-bone/10 block"
+                    className="relative w-20 h-20 sm:w-28 sm:h-28 shrink-0 bg-ink border border-bone/10 block"
                   >
                     {it.snapshot.imageSrc ? (
                       <Image
@@ -196,13 +201,13 @@ export default function CartPage() {
             </div>
             <div className="pt-3 border-t border-bone/10 flex items-baseline justify-between">
               <span className="sect-label">Subtotal</span>
-              <span className="fluid-2xl text-orange font-semibold">
+              <span className="fluid-2xl text-bone font-semibold tabular-nums">
                 {formatARS(subtotalCents())}
               </span>
             </div>
             <p className="fluid-xs text-smoke">
-              Envío y descuentos se calculan en el checkout. Pago seguro con
-              MercadoPago.
+              Coordinamos el pago (transferencia / MercadoPago) y el envío por
+              WhatsApp. Te abrimos el chat con el pedido ya cargado.
             </p>
             {errorMsg ? (
               <p className="fluid-xs text-orange border border-orange/40 bg-orange/10 px-3 py-2">
@@ -215,7 +220,7 @@ export default function CartPage() {
               disabled={submitting}
               className="w-full btn-wa clip-tag uppercase tracking-wider fluid-base px-5 py-4 inline-flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-wait"
             >
-              {submitting ? "Redirigiendo..." : "Iniciar compra"}
+              {submitting ? "Abriendo WhatsApp..." : "Finalizar por WhatsApp"}
               {submitting ? null : <ShoppingBag size={16} aria-hidden />}
             </button>
             <Link

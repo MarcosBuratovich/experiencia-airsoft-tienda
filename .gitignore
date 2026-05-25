@@ -40,3 +40,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Imágenes derivadas de migración (Rediredi → TN). Pesado (~360MB) y
+# regenerables con scripts/process-images.mjs si hace falta.
+/scripts/images/
+
+# Claude Code state (local)
+.claude/

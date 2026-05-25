@@ -13,6 +13,7 @@ export function AddToCartButton({
   priceCents,
   imageSrc,
   maxQty,
+  qty = 1,
   disabled,
 }: {
   variantId: number;
@@ -24,6 +25,7 @@ export function AddToCartButton({
   imageSrc: string | null;
   // null = stock infinito (stock_management=false en TN)
   maxQty: number | null;
+  qty?: number;
   disabled?: boolean;
 }) {
   const add = useCart((s) => s.add);
@@ -35,6 +37,7 @@ export function AddToCartButton({
     add({
       productId,
       variantId,
+      qty,
       snapshot: {
         handle,
         productName,

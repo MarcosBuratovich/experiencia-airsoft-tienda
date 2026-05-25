@@ -59,6 +59,10 @@ export function CartDrawer() {
           items: items.map((it) => ({
             variantId: it.variantId,
             qty: it.qty,
+            productName: it.snapshot.productName,
+            variantLabel: it.snapshot.variantLabel,
+            unitPriceCents: it.snapshot.priceCents,
+            handle: it.snapshot.handle,
           })),
         }),
       });
@@ -71,8 +75,9 @@ export function CartDrawer() {
         setSubmitting(false);
         return;
       }
-      // Externa (subdominio TN). No usar router.push.
-      window.location.href = data.url;
+      // Abre WhatsApp en nueva pestaña / app nativa.
+      window.open(data.url, "_blank", "noopener");
+      setSubmitting(false);
     } catch (err) {
       console.error("[cart] checkout failed", err);
       setErrorMsg("No hay conexion con el servidor. Probá en un rato.");
@@ -125,7 +130,7 @@ export function CartDrawer() {
             type="button"
             onClick={close}
             aria-label="Cerrar carrito"
-            className="text-ash hover:text-orange transition-colors"
+            className="text-ash hover:text-orange transition-colors inline-flex items-center justify-center w-11 h-11 -mr-2"
           >
             <X size={20} aria-hidden />
           </button>
@@ -191,11 +196,11 @@ export function CartDrawer() {
                             type="button"
                             onClick={() => setQty(it.variantId, it.qty - 1)}
                             aria-label="Disminuir cantidad"
-                            className="p-1.5 hover:bg-rail transition-colors"
+                            className="inline-flex items-center justify-center w-9 h-9 hover:bg-rail transition-colors"
                           >
-                            <Minus size={12} aria-hidden />
+                            <Minus size={14} aria-hidden />
                           </button>
-                          <span className="px-3 fluid-xs font-mono">
+                          <span className="min-w-[2rem] text-center fluid-xs font-mono tabular-nums">
                             {it.qty}
                           </span>
                           <button
@@ -203,12 +208,12 @@ export function CartDrawer() {
                             onClick={() => setQty(it.variantId, it.qty + 1)}
                             disabled={!canIncrement}
                             aria-label="Aumentar cantidad"
-                            className="p-1.5 hover:bg-rail disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                            className="inline-flex items-center justify-center w-9 h-9 hover:bg-rail disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                           >
-                            <Plus size={12} aria-hidden />
+                            <Plus size={14} aria-hidden />
                           </button>
                         </div>
-                        <span className="fluid-sm text-orange font-semibold">
+                        <span className="fluid-sm text-bone font-semibold tabular-nums">
                           {formatARS(it.snapshot.priceCents * it.qty)}
                         </span>
                       </div>
@@ -222,7 +227,7 @@ export function CartDrawer() {
                       type="button"
                       onClick={() => remove(it.variantId)}
                       aria-label={`Quitar ${it.snapshot.productName}`}
-                      className="text-smoke hover:text-orange transition-colors self-start"
+                      className="text-smoke hover:text-orange transition-colors inline-flex items-center justify-center w-9 h-9 self-start -mr-2 -mt-2"
                     >
                       <X size={16} aria-hidden />
                     </button>
@@ -234,12 +239,12 @@ export function CartDrawer() {
             <footer className="border-t border-bone/10 p-5 space-y-3">
               <div className="flex items-baseline justify-between">
                 <span className="sect-label">Subtotal</span>
-                <span className="fluid-2xl text-orange font-semibold">
+                <span className="fluid-2xl text-bone font-semibold tabular-nums">
                   {formatARS(subtotal)}
                 </span>
               </div>
               <p className="fluid-xs text-smoke">
-                Envío y descuentos se calculan en el checkout.
+                Coordinamos el pago y envío por WhatsApp.
               </p>
               {errorMsg ? (
                 <p className="fluid-xs text-orange border border-orange/40 bg-orange/10 px-3 py-2">
@@ -252,7 +257,7 @@ export function CartDrawer() {
                 disabled={submitting}
                 className="w-full btn-wa clip-tag uppercase tracking-wider fluid-base px-5 py-4 inline-flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-wait"
               >
-                {submitting ? "Redirigiendo..." : "Iniciar compra"}
+                {submitting ? "Abriendo WhatsApp..." : "Finalizar por WhatsApp"}
                 {submitting ? null : (
                   <ChevronRight size={16} aria-hidden />
                 )}

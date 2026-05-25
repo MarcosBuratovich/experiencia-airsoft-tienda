@@ -1,0 +1,755 @@
+[
+  {
+    "sku": "RR0001",
+    "title": "Novritsch - SSR77 A2 (Negro)",
+    "brand": "Novritsch",
+    "tnId": 346427392,
+    "was": null
+  },
+  {
+    "sku": "RR0005",
+    "title": "Novritsch - SSR 90 Gen 2",
+    "brand": "Novritsch",
+    "tnId": 346427394,
+    "was": null
+  },
+  {
+    "sku": "RR0003",
+    "title": "Novritsch - SSG 10 A3 - Rifle de Francotirador",
+    "brand": "Novritsch",
+    "tnId": 346427396,
+    "was": null
+  },
+  {
+    "sku": "RR0044",
+    "title": "ZTAC – U94 Kenwood 113 – Baofeng",
+    "brand": "ZTAC",
+    "tnId": 346427398,
+    "was": null
+  },
+  {
+    "sku": "RR0043",
+    "title": "ZTAC – Comtac II Headset Sordinas 044 GEN6",
+    "brand": "ZTAC",
+    "tnId": 346427401,
+    "was": null
+  },
+  {
+    "sku": "RR0093",
+    "title": "Triple Pouch IDOgear",
+    "brand": "IDOgear",
+    "tnId": 346427404,
+    "was": null
+  },
+  {
+    "sku": "RR0021",
+    "title": "Tracer Unit Flare Smoky",
+    "brand": "Eshooter",
+    "tnId": 346427408,
+    "was": "ESHOOTER"
+  },
+  {
+    "sku": "RR0100",
+    "title": "Tracer Brighter R",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0018",
+    "title": "Tracer Brighter C Titanium",
+    "brand": "Acetech",
+    "tnId": 346427414,
+    "was": "ACETECH"
+  },
+  {
+    "sku": "RR0017",
+    "title": "Tracer Blaster C",
+    "brand": "Acetech",
+    "tnId": 346427416,
+    "was": "ACETECH"
+  },
+  {
+    "sku": "RR0019",
+    "title": "Tracer Bifrost R",
+    "brand": "Acetech",
+    "tnId": 346427417,
+    "was": "ACETECH"
+  },
+  {
+    "sku": "RR0117",
+    "title": "Tokyo Marui GBB Hi-Capa 5.1 Governament Blowback",
+    "brand": "Tokyo Marui",
+    "tnId": 346427418,
+    "was": null
+  },
+  {
+    "sku": "RR0120",
+    "title": "Taran Tactical Jag Precision Army Armament GBB Hi-Capa JW4 TTI Sand Viper CNC Blowback",
+    "brand": "JAG Arms",
+    "tnId": 346427421,
+    "was": null
+  },
+  {
+    "sku": "RR0119",
+    "title": "Taran Tactical Jag Precision Army Armament GBB Hi-Capa JW4 TTI Alpha Combat Master Blowback",
+    "brand": "JAG Arms",
+    "tnId": 346427424,
+    "was": null
+  },
+  {
+    "sku": "RR0118",
+    "title": "Taran Tactical GBB Hi-Capa JW4 TTI Pit Viper Blowback",
+    "brand": "Taran Tactical Innovations",
+    "tnId": 346427425,
+    "was": null
+  },
+  {
+    "sku": "RR0099",
+    "title": "SSR4 MK1 Gen 2 Novritsch",
+    "brand": "Novritsch",
+    "tnId": 346427426,
+    "was": "NOVRITSCH"
+  },
+  {
+    "sku": "RR0101",
+    "title": "Rifle KWA MP9 Gas Submachine Negra",
+    "brand": "KWA",
+    "tnId": 346427427,
+    "was": null
+  },
+  {
+    "sku": "RR0121",
+    "title": "Resorte M90 Spring",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0110",
+    "title": "Radio Baofeng UV-5R",
+    "brand": "Baofeng",
+    "tnId": 346427432,
+    "was": null
+  },
+  {
+    "sku": "RR0030",
+    "title": "Puff Dino Verde Gas 600ML",
+    "brand": "Puff Dino",
+    "tnId": 346433585,
+    "was": null
+  },
+  {
+    "sku": "RR0065",
+    "title": "Protector de Mira",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0064",
+    "title": "Pouch Radio",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0063",
+    "title": "Pouch Bolsa de Descarte",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0050",
+    "title": "Pistola WE Gen 5 Tan",
+    "brand": "WE",
+    "tnId": 346427445,
+    "was": "We"
+  },
+  {
+    "sku": "RR0048",
+    "title": "Pistola WE GBB G17 Ivory",
+    "brand": "WE",
+    "tnId": 346427447,
+    "was": null
+  },
+  {
+    "sku": "RR0051",
+    "title": "Pistola SIG Sauer F226 Negra",
+    "brand": "WE",
+    "tnId": 346427449,
+    "was": "We"
+  },
+  {
+    "sku": "RR0077",
+    "title": "Pistola Glock WE Gen 4 Bicolor",
+    "brand": "WE",
+    "tnId": 346427451,
+    "was": null
+  },
+  {
+    "sku": "RR0056",
+    "title": "Parches",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0109",
+    "title": "Odin PTS",
+    "brand": "PTS",
+    "tnId": 346427457,
+    "was": null
+  },
+  {
+    "sku": "RR0012",
+    "title": "Novritsch TP22",
+    "brand": "Novritsch",
+    "tnId": 346427460,
+    "was": "NOVRITSCH"
+  },
+  {
+    "sku": "RR0008",
+    "title": "Novritsch SSP5",
+    "brand": "Novritsch",
+    "tnId": 346427462,
+    "was": "NOVRITSCH"
+  },
+  {
+    "sku": "RR0011",
+    "title": "Novritsch SSP28",
+    "brand": "Novritsch",
+    "tnId": 346427464,
+    "was": "NOVRITSCH"
+  },
+  {
+    "sku": "RR0007",
+    "title": "Novritsch SSP18",
+    "brand": "Novritsch",
+    "tnId": 346427466,
+    "was": "NOVRITSCH"
+  },
+  {
+    "sku": "RR0006",
+    "title": "Novritsch SSP 1",
+    "brand": "Novritsch",
+    "tnId": 346427469,
+    "was": "NOVRITSCH"
+  },
+  {
+    "sku": "RR0004",
+    "title": "Novritsch - SSR9 – Dsg",
+    "brand": "Novritsch",
+    "tnId": 346427471,
+    "was": null
+  },
+  {
+    "sku": "RR0002",
+    "title": "Novritsch - SSR 4 Mk 2",
+    "brand": "Novritsch",
+    "tnId": 346427472,
+    "was": null
+  },
+  {
+    "sku": "RR0104",
+    "title": "Mira Red Dot Romeo 5 SIG Sauer",
+    "brand": "SIG Sauer",
+    "tnId": 346427475,
+    "was": null
+  },
+  {
+    "sku": "RR0039",
+    "title": "Mira Red Dot - V3",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0054",
+    "title": "Mira de Punto Rojo Armadillo 1X20 mm Romeo5 Negro",
+    "brand": "SIG Sauer",
+    "tnId": 346427481,
+    "was": null
+  },
+  {
+    "sku": "RR0103",
+    "title": "Mesh",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0062",
+    "title": "Máscara Profesional",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0061",
+    "title": "Máscara Cubrejeta",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0060",
+    "title": "Máscara Clasica",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0059",
+    "title": "Máscara Bucal",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0055",
+    "title": "Magnificador Armadillo 2X G45 Negro",
+    "brand": "Armadillo",
+    "tnId": 346427496,
+    "was": null
+  },
+  {
+    "sku": "RR0116",
+    "title": "Mag PTS 250 Rondas para M4 y M16",
+    "brand": "PTS",
+    "tnId": 346427498,
+    "was": null
+  },
+  {
+    "sku": "RR0098",
+    "title": "Mag PTS 150 Rondas para M4 y M16 Negro",
+    "brand": "PTS",
+    "tnId": 346427501,
+    "was": null
+  },
+  {
+    "sku": "RR0102",
+    "title": "Mag KWA MP9",
+    "brand": "KWA",
+    "tnId": 346427502,
+    "was": null
+  },
+  {
+    "sku": "RR0085",
+    "title": "Luz Tactica de Rifle 1800 lúmenes con Interruptor EZShoot",
+    "brand": "EZShoot",
+    "tnId": 346427504,
+    "was": null
+  },
+  {
+    "sku": "RR0089",
+    "title": "Luz de Pistola 800 lúmenes, Linterna Compacta Ajustable GMConn",
+    "brand": "GMConn",
+    "tnId": 346427507,
+    "was": null
+  },
+  {
+    "sku": "RR0082",
+    "title": "Luz de Baja DLXArsot",
+    "brand": "DLXArsot",
+    "tnId": 346427508,
+    "was": null
+  },
+  {
+    "sku": "RR0113",
+    "title": "Linterna Votatu para Rifle PL50S 1450 lúmenes",
+    "brand": "Votatu",
+    "tnId": 346433611,
+    "was": null
+  },
+  {
+    "sku": "RR0086",
+    "title": "Linterna Tactica de 1700 lúmenes Recargable Magnetico, para Rifle EZShoot",
+    "brand": "EZShoot",
+    "tnId": 346427512,
+    "was": null
+  },
+  {
+    "sku": "RR0090",
+    "title": "Linterna Tactica de 1600 lúmenes Compatible con Riel Mlok/Picatinny para Rifle Defentac",
+    "brand": "Defentac",
+    "tnId": 346427514,
+    "was": null
+  },
+  {
+    "sku": "RR0079",
+    "title": "Linterna Tactica 800 lúmenes Gazeshot",
+    "brand": "Gazeshot",
+    "tnId": 346427515,
+    "was": "GAZESHOOT"
+  },
+  {
+    "sku": "RR0091",
+    "title": "Linterna Tactica 1450 lúmenes Picatinny Rail, Estroboscopica, Toughsol",
+    "brand": "Toughsol",
+    "tnId": 346427516,
+    "was": null
+  },
+  {
+    "sku": "RR0087",
+    "title": "Linterna para Rifle de 1450 lúmenes con Interruptor Votatu ML40",
+    "brand": "Votatu",
+    "tnId": 346427519,
+    "was": null
+  },
+  {
+    "sku": "RR0078",
+    "title": "Linterna para Marcadora Primaria 3000 lúmenes",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0083",
+    "title": "Linterna para Casco Ultra Compacta Ezaiming",
+    "brand": "Ezaiming",
+    "tnId": 346427523,
+    "was": null
+  },
+  {
+    "sku": "RR0084",
+    "title": "Linterna Mini Vtiger 1000 lúmenes para Glock y Riel Picatinny",
+    "brand": "Vtiger",
+    "tnId": 346427524,
+    "was": null
+  },
+  {
+    "sku": "RR0106",
+    "title": "Linterna Defentac 2400 lúmenes",
+    "brand": "Defentac",
+    "tnId": 346427527,
+    "was": null
+  },
+  {
+    "sku": "RR0107",
+    "title": "Linterna Defentac 1750 lúmenes",
+    "brand": "Defentac",
+    "tnId": 346427530,
+    "was": null
+  },
+  {
+    "sku": "RR0081",
+    "title": "Linterna de Pistola Recargable 700 lúmenes Cronhawk",
+    "brand": "Cronhawk",
+    "tnId": 346427532,
+    "was": null
+  },
+  {
+    "sku": "RR0088",
+    "title": "Linterna Compacta de Pistola 1000 lúmenes Ezaiming",
+    "brand": "Ezaiming",
+    "tnId": 346427533,
+    "was": null
+  },
+  {
+    "sku": "RR0038",
+    "title": "Lentes High Lander Pyramex Gris",
+    "brand": "Pyramex",
+    "tnId": 346427534,
+    "was": null
+  },
+  {
+    "sku": "RR0071",
+    "title": "Lentes Dropzone Ballistic Kit",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0072",
+    "title": "Lente Pyramex Modelo I-Force Ambar",
+    "brand": "Pyramex",
+    "tnId": 346427540,
+    "was": null
+  },
+  {
+    "sku": "RR0037",
+    "title": "Lente High Lander Pyramex Ambar",
+    "brand": "Pyramex",
+    "tnId": 346427542,
+    "was": null
+  },
+  {
+    "sku": "RR0075",
+    "title": "Krytac Trident Mk III Pdw Negra",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0111",
+    "title": "Juego de Rieles Picatinny",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0096",
+    "title": "IDOgear Pouch Single",
+    "brand": "IDOgear",
+    "tnId": 346427548,
+    "was": null
+  },
+  {
+    "sku": "RR0095",
+    "title": "IDOgear Pouch Doble",
+    "brand": "IDOgear",
+    "tnId": 346427550,
+    "was": null
+  },
+  {
+    "sku": "RR0025",
+    "title": "Guantes Tácticos Negros y Tan",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0092",
+    "title": "Guantes",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0067",
+    "title": "Go Pro Hero",
+    "brand": "Go Pro",
+    "tnId": 346427559,
+    "was": "GO PRO"
+  },
+  {
+    "sku": "RR0112",
+    "title": "Gancho para Monturas",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0035",
+    "title": "EZShoot Linterna Láser Recargable de 800 Lúmenes",
+    "brand": "EZShoot",
+    "tnId": 346427573,
+    "was": null
+  },
+  {
+    "sku": "RR0034",
+    "title": "EZShoot Linterna de Pistola de 800 Lúmenes",
+    "brand": "EZShoot",
+    "tnId": 346427574,
+    "was": null
+  },
+  {
+    "sku": "RR0046",
+    "title": "Estuche Armadillo Impermeable Rígido Protector para Pistola",
+    "brand": "Armadillo",
+    "tnId": 346427577,
+    "was": null
+  },
+  {
+    "sku": "RR0045",
+    "title": "Estuche Armadillo Impermeable para Fusil de Asalto",
+    "brand": "Armadillo",
+    "tnId": 346427579,
+    "was": null
+  },
+  {
+    "sku": "RR0032",
+    "title": "Emerson Gear – Upgraded Version G3 Combat Shirt／muticam",
+    "brand": "Emerson Gear",
+    "tnId": 346427581,
+    "was": "EMERSON"
+  },
+  {
+    "sku": "RR0031",
+    "title": "Emerson Gear – G3 Combat Pants-Upgraded Version ／Multicam",
+    "brand": "Emerson Gear",
+    "tnId": 346427583,
+    "was": "EMERSON"
+  },
+  {
+    "sku": "RR0123",
+    "title": "Cuchillo de Goma Dumi",
+    "brand": "Dumi",
+    "tnId": 346427586,
+    "was": null
+  },
+  {
+    "sku": "RR0057",
+    "title": "Correa 2 Puntos Alta Tenacidad",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0122",
+    "title": "Correa 1 Punto",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0058",
+    "title": "Chest Rig Profesional",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0114",
+    "title": "Chalecos Varios Colores sin Pouchs",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0074",
+    "title": "Chaleco",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0042",
+    "title": "Casco PTS Airsoft MTEK Flux (Negro)",
+    "brand": "PTS Airsoft",
+    "tnId": 346427601,
+    "was": null
+  },
+  {
+    "sku": "RR0097",
+    "title": "Casco Emerson Sf Ultra High Cut",
+    "brand": "Emerson Gear",
+    "tnId": 346427603,
+    "was": null
+  },
+  {
+    "sku": "RR0027",
+    "title": "Cargadora de Velocidad WoSport 1000R",
+    "brand": "WoSport",
+    "tnId": 346427604,
+    "was": null
+  },
+  {
+    "sku": "RR0026",
+    "title": "Cargadora de Velocidad CYMA 100R",
+    "brand": "CYMA",
+    "tnId": 346427607,
+    "was": null
+  },
+  {
+    "sku": "RR0115",
+    "title": "Cargador Tokyo Marui 31R para GBB Hi-Capa 5.1 Negro",
+    "brand": "Tokyo Marui",
+    "tnId": 346427608,
+    "was": null
+  },
+  {
+    "sku": "RR0052",
+    "title": "Cargador Glock 17 Extendido",
+    "brand": "WE",
+    "tnId": 346427610,
+    "was": "We"
+  },
+  {
+    "sku": "RR0073",
+    "title": "Cargador de Baterías Gen Ace",
+    "brand": "Gens Ace",
+    "tnId": 346427613,
+    "was": null
+  },
+  {
+    "sku": "RR0108",
+    "title": "Cargador de Batería Titan",
+    "brand": "Titan",
+    "tnId": 346427618,
+    "was": null
+  },
+  {
+    "sku": "RR0047",
+    "title": "Cargador Glock 17",
+    "brand": "Glock",
+    "tnId": 346427619,
+    "was": null
+  },
+  {
+    "sku": "RR0066",
+    "title": "Camara Go Pro Hero 13 Black",
+    "brand": "Go Pro",
+    "tnId": 346427621,
+    "was": "GO PRO"
+  },
+  {
+    "sku": "RR0040",
+    "title": "Cámara de Alcance Runcam 2 – 4K",
+    "brand": "Runcam",
+    "tnId": 346427622,
+    "was": "NOVRITSH"
+  },
+  {
+    "sku": "RR0033",
+    "title": "Bolso Rifle 85 Tan",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0125",
+    "title": "Bolsa de Descarte IDOgear",
+    "brand": "IDOgear",
+    "tnId": 346427628,
+    "was": null
+  },
+  {
+    "sku": "RR0076",
+    "title": "Bengalas Negras y Azules",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0068",
+    "title": "BBs Tracers BLS 1 kg 0.28",
+    "brand": "BLS",
+    "tnId": 346427631,
+    "was": null
+  },
+  {
+    "sku": "RR0049",
+    "title": "BBs, Botella de 0.45 g",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0069",
+    "title": "BBs BLS .20 1 kg",
+    "brand": "BLS",
+    "tnId": 346427634,
+    "was": null
+  },
+  {
+    "sku": "RR0053",
+    "title": "Batería 11.1 V 1200 a",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0080",
+    "title": "Balaclava Varios Colores",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0126",
+    "title": "Antiparras Tácticas de Alto Rendimiento con Sistema de Ventilación Anti-Empañamiento (Kit de 2 Lentes)",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0124",
+    "title": "Antiparras con Ventilador Incorporado",
+    "brand": null,
+    "status": "no-brand-detected"
+  },
+  {
+    "sku": "RR0070",
+    "title": "Antiparra Venture Gear Loadout",
+    "brand": "Venture Gear",
+    "tnId": 346427648,
+    "was": null
+  },
+  {
+    "sku": "RR0041",
+    "title": "Antifog Novritsch",
+    "brand": "Novritsch",
+    "tnId": 346433648,
+    "was": null
+  },
+  {
+    "sku": "RR0094",
+    "title": "5.56 Pistol Triple Mag Pouch Negro IDOgear",
+    "brand": "IDOgear",
+    "tnId": 346427653,
+    "was": null
+  }
+]

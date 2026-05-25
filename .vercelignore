@@ -1,0 +1,7 @@
+# Migration tooling — no necesario en runtime. La app NO importa nada de
+# scripts/ y excluirlo evita 350MB+ en el bundle de deploy.
+scripts/
+
+# Locales / cache derivadas de tooling local
+*.log
+.DS_Store

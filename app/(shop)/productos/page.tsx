@@ -88,7 +88,7 @@ export default async function ProductsListPage({
         <p className="sect-label">
           {parsed.q ? "Resultados" : category ? "Categoría" : "Catálogo"}
         </p>
-        <h1 className="sect-title fluid-5xl mt-2">
+        <h1 className="sect-title fluid-4xl md:fluid-5xl mt-2">
           {parsed.q
             ? `“${parsed.q}”`
             : category

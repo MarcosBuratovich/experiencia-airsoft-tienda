@@ -42,7 +42,7 @@ export function ProductGallery({
         />
       </div>
       {sorted.length > 1 ? (
-        <div className="grid grid-cols-5 gap-2">
+        <div className="grid grid-cols-4 sm:grid-cols-5 gap-2">
           {sorted.slice(0, 5).map((img, i) => (
             <button
               key={img.id}

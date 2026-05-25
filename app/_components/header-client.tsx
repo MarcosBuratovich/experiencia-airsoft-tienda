@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ArrowLeft,
   ChevronDown,
   Menu,
+  Plane,
   Search,
   X,
   Crosshair,
@@ -32,11 +33,34 @@ const TOP_BAR_ITEMS = [
 
 export function HeaderClient({
   categories,
+  promoted,
 }: {
   categories: CategoryLite[];
+  promoted: CategoryLite[];
 }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [catDropdownOpen, setCatDropdownOpen] = useState(false);
+  const catDropdownRef = useRef<HTMLDivElement | null>(null);
+
+  // Cerrar el dropdown al hacer click fuera o presionar Escape.
+  useEffect(() => {
+    if (!catDropdownOpen) return;
+    const handleClick = (e: MouseEvent) => {
+      if (catDropdownRef.current && !catDropdownRef.current.contains(e.target as Node)) {
+        setCatDropdownOpen(false);
+      }
+    };
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setCatDropdownOpen(false);
+    };
+    document.addEventListener("mousedown", handleClick);
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, [catDropdownOpen]);
 
   // Scroll detection con rAF + histeresis (dos thresholds).
   //
@@ -242,38 +266,93 @@ export function HeaderClient({
         {/* Category nav desktop: se oculta al scrollear */}
         <nav
           aria-label="Categorías"
-          className={`hidden md:block border-t border-bone/10 transition-[max-height,opacity] duration-300 overflow-hidden ${
+          className={`hidden md:block border-t border-bone/10 transition-[max-height,opacity] duration-300 overflow-visible ${
             scrolled
-              ? "max-h-0 opacity-0 border-t-0"
+              ? "max-h-0 opacity-0 border-t-0 pointer-events-none"
               : "max-h-14 opacity-100"
           }`}
         >
-          <div className="max-w-[1400px] mx-auto fluid-gutter-x flex items-center gap-1 overflow-x-auto py-1 fluid-xs uppercase tracking-[.22em] no-scrollbar">
-            <CatLink href="/productos" label="Todos" />
-            {categories.map((c) => (
-              <CatLink
-                key={c.id}
-                href={`/categorias/${c.handle}`}
-                label={c.name}
-              />
-            ))}
-            <Link
-              href="/categorias"
-              className="group relative px-3 py-2 text-smoke transition-colors hover:text-orange inline-flex items-center gap-1 whitespace-nowrap"
-            >
-              Ver todas <ChevronDown size={12} aria-hidden />
-            </Link>
-            <span aria-hidden className="mx-2 text-rail">
+          <div className="relative max-w-[1400px] mx-auto fluid-gutter-x flex items-center gap-1 py-1 fluid-xs uppercase tracking-[.22em]">
+            {/* Categorías dropdown */}
+            <div ref={catDropdownRef} className="relative">
+              <button
+                type="button"
+                onClick={() => setCatDropdownOpen((v) => !v)}
+                aria-expanded={catDropdownOpen}
+                aria-haspopup="true"
+                className={`px-3 py-2 inline-flex items-center gap-1.5 transition-colors whitespace-nowrap ${
+                  catDropdownOpen
+                    ? "text-orange"
+                    : "text-bone hover:text-orange"
+                }`}
+              >
+                <Menu size={13} aria-hidden /> Categorías
+                <ChevronDown
+                  size={12}
+                  aria-hidden
+                  className={`transition-transform ${catDropdownOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              {catDropdownOpen ? (
+                <div
+                  role="menu"
+                  className="absolute left-0 top-[calc(100%+0.25rem)] z-50 min-w-[280px] border border-bone/15 bg-ink/95 backdrop-blur-md clip-notch shadow-[0_18px_40px_-12px_rgba(0,0,0,0.9)]"
+                >
+                  <Link
+                    href="/productos"
+                    role="menuitem"
+                    onClick={() => setCatDropdownOpen(false)}
+                    className="block px-4 py-3 border-b border-bone/10 text-bone hover:text-orange hover:bg-carbon transition-colors"
+                  >
+                    Todos los productos
+                  </Link>
+                  <ul className="py-1 max-h-[60vh] overflow-y-auto">
+                    {categories.map((c) => (
+                      <li key={c.id}>
+                        <Link
+                          href={`/categorias/${c.handle}`}
+                          role="menuitem"
+                          onClick={() => setCatDropdownOpen(false)}
+                          className="block px-4 py-2 text-ash hover:text-bone hover:bg-carbon transition-colors"
+                        >
+                          {c.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href="/categorias"
+                    role="menuitem"
+                    onClick={() => setCatDropdownOpen(false)}
+                    className="block px-4 py-3 border-t border-bone/10 text-smoke hover:text-orange hover:bg-carbon transition-colors text-center"
+                  >
+                    Ver todas →
+                  </Link>
+                </div>
+              ) : null}
+            </div>
+
+            {/* 3 categorías promovidas (las primeras del orden curado) */}
+            <span aria-hidden className="mx-1 text-rail">
               |
             </span>
+            <ul className="flex items-center gap-1 list-none m-0 p-0">
+              {promoted.map((c) => (
+                <li key={c.id}>
+                  <CatLink
+                    href={`/categorias/${c.handle}`}
+                    label={c.name}
+                  />
+                </li>
+              ))}
+            </ul>
+
+            {/* Pedidos del exterior pegado a la derecha */}
             <Link
               href="/pedidos-exterior"
-              className="group relative px-3 py-2 text-orange hover:text-orange/80 transition-colors inline-flex items-center gap-1.5 whitespace-nowrap"
+              className="ml-auto group relative px-3 py-2 text-orange hover:text-orange/80 transition-colors inline-flex items-center gap-1.5 whitespace-nowrap"
             >
-              <span
-                className="size-1.5 bg-orange rounded-full pulse-dot"
-                aria-hidden
-              />
+              <Plane size={13} aria-hidden />
               Pedidos del exterior
             </Link>
           </div>
@@ -287,7 +366,7 @@ export function HeaderClient({
           <div className="max-w-[1400px] mx-auto fluid-gutter-x flex items-center gap-4 overflow-x-auto py-2 fluid-xs uppercase tracking-[.22em] text-ash whitespace-nowrap no-scrollbar">
             <Link
               href="/productos"
-              className="text-bone hover:text-orange transition-colors shrink-0"
+              className="text-bone hover:text-orange transition-colors shrink-0 py-2"
             >
               Todos
             </Link>
@@ -295,20 +374,20 @@ export function HeaderClient({
               <Link
                 key={c.id}
                 href={`/categorias/${c.handle}`}
-                className="hover:text-orange transition-colors shrink-0"
+                className="hover:text-orange transition-colors shrink-0 py-2"
               >
                 {c.name}
               </Link>
             ))}
             <Link
               href="/categorias"
-              className="text-smoke hover:text-orange transition-colors shrink-0"
+              className="text-smoke hover:text-orange transition-colors shrink-0 py-2"
             >
               Más →
             </Link>
             <Link
               href="/pedidos-exterior"
-              className="text-orange hover:text-orange/80 transition-colors shrink-0 inline-flex items-center gap-1.5"
+              className="text-orange hover:text-orange/80 transition-colors shrink-0 inline-flex items-center gap-1.5 py-2"
             >
               <span
                 className="size-1.5 bg-orange rounded-full pulse-dot"
@@ -359,7 +438,7 @@ export function HeaderClient({
               type="button"
               onClick={() => setMobileOpen(false)}
               aria-label="Cerrar menú"
-              className="text-ash hover:text-orange transition-colors"
+              className="text-ash hover:text-orange transition-colors inline-flex items-center justify-center w-11 h-11 -mr-2"
             >
               <X size={22} aria-hidden />
             </button>

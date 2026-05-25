@@ -1,0 +1,2298 @@
+[
+  {
+    "sku": "RR0001",
+    "ourTitle": "Novritsch - SSR77 A2 (Negro)",
+    "evikeUrl": "https://eu.novritsch.com/products/gun-systems/all-rifles/rifles/the-ssr77-system/the-ssr77-a2/",
+    "evikeBrand": "Novritsch",
+    "evikeManufacturer": "Novritsch",
+    "evikeCategory": "Marcadoras > Rifles AEG > Bullpup",
+    "specs": {
+      "Sistema": "AEG con ETU programable",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "311–344 FPS (0.9–1.1J) o 388–415 FPS (1.4–1.6J)",
+      "Cadencia": "~23 RPS con LiPo 11.1V",
+      "Capacidad cargador": "180 BBs (incluido)",
+      "Modos de fuego": "Semi, burst, binario, full auto (programable)",
+      "Material": "Nailon reforzado con fibra, componentes CNC aluminio",
+      "Longitud total": "755 mm",
+      "Cañón interno": "475 mm (6.03 mm)",
+      "Peso": "3.4 kg",
+      "Hop-Up": "CNC con bucking flat-hop 60°, ajuste infinito",
+      "Batería": "LiPo 11.1V (conector T-Dean)",
+      "Motor": "24k neodimio alta torque",
+      "Engranajes": "CNC acero 16:1",
+      "Color": "Negro",
+      "Extras": "Quick spring exchange, 5 puntos QD, riel Picatinny full-length"
+    },
+    "description": "<p>Réplica bullpup <strong>Novritsch SSR77 A2</strong> inspirada en el AUG austriaco. Viene lista para jugar con internos de alto rendimiento de fábrica.</p><ul><li>Sistema: AEG con ETU programable (semi, burst, binario, full auto)</li><li>Calibre: 6mm BB</li><li>Velocidad: 311–415 FPS según variante de muelle</li><li>Cargador incluido: 180 BBs (see-through)</li><li>Cadencia: ~23 RPS con LiPo 11.1V</li><li>Material: nailon reforzado + aluminio CNC</li><li>Longitud: 755 mm | Peso: 3.4 kg</li><li>Hop-Up CNC con flat-hop infinito ajustable</li><li>Sistema de cambio rápido de muelle sin herramientas</li></ul><p>Compatible con cargadores estándar AUG. Batería LiPo 11.1V recomendada (no incluida).</p>",
+    "confidence": "high",
+    "notes": "Datos extraídos directamente del sitio oficial eu.novritsch.com"
+  },
+  {
+    "sku": "RR0002",
+    "ourTitle": "Novritsch - SSR 4 Mk 2",
+    "evikeUrl": "https://eu.novritsch.com/products/gun-systems/rifles/the-ssr4-system/the-ssr4-mk2/",
+    "evikeBrand": "Novritsch",
+    "evikeManufacturer": "Novritsch",
+    "evikeCategory": "Marcadoras > Rifles AEG > M4/AR",
+    "specs": {
+      "Sistema": "AEG con ETU programable",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "311–344 FPS (0.9–1.2J) o 388–415 FPS (1.4–1.6J)",
+      "Cadencia": "~25 RPS con LiPo 11.1V",
+      "Capacidad cargador": "225 BBs (incluido)",
+      "Modos de fuego": "Semi y full auto (programable)",
+      "Material": "Metal completo",
+      "Longitud total": "730 mm (culata plegada) / 815 mm (extendida)",
+      "Cañón interno": "310 mm (6.03 mm)",
+      "Peso": "2.38 kg",
+      "Hop-Up": "Rotary TDC con dial numerado",
+      "Batería": "LiPo 11.1V (conector T-Dean)",
+      "Color": "Negro"
+    },
+    "description": "<p>La <strong>Novritsch SSR4 MK2</strong> es una marcadora M4/AR de construcción full metal con internos de alto rendimiento preinstalados.</p><ul><li>Sistema: AEG con ETU programable</li><li>Calibre: 6mm BB</li><li>Velocidad: 311–415 FPS según variante</li><li>Cargador: 225 BBs (mid-cap)</li><li>Cadencia: ~25 RPS con 11.1V</li><li>Construcción: full metal</li><li>Longitud: 730–815 mm | Peso: 2.38 kg</li><li>Hop-Up rotary TDC ajustable</li></ul><p>Culata ajustable y bolt plate magnético. Batería LiPo 11.1V recomendada (no incluida).</p>",
+    "confidence": "high",
+    "notes": "Datos extraídos directamente del sitio oficial eu.novritsch.com"
+  },
+  {
+    "sku": "RR0003",
+    "ourTitle": "Novritsch - SSG 10 A3 - Rifle de Francotirador",
+    "evikeUrl": "https://eu.novritsch.com/products/gun-systems/sniper-rifles/the-ssg10-system/the-ssg10-a3/",
+    "evikeBrand": "Novritsch",
+    "evikeManufacturer": "Novritsch",
+    "evikeCategory": "Marcadoras > Francotirador > Bolt Action",
+    "specs": {
+      "Sistema": "Bolt action (spring)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "Depende del muelle instalado (hasta M220 / ~5J)",
+      "Capacidad cargador": "28 BBs",
+      "Material": "Receptor y cañón exterior CNC aluminio completo",
+      "Longitud total": "105 cm (83 cm con culata plegada)",
+      "Cañón interno": "430 mm (6.01 mm)",
+      "Peso": "2.0 kg",
+      "Hop-Up": "Maple Leaf 60° Autobot, 20 posiciones de ajuste",
+      "Culata": "Esqueleto plegable y liviana, ajuste de mejilla"
+    },
+    "description": "<p>La <strong>Novritsch SSG10 A3</strong> es una marcadora bolt action de francotirador sobre plataforma VSR-10, con receptor y cañón exterior en aluminio CNC.</p><ul><li>Sistema: bolt action (spring)</li><li>Calibre: 6mm BB</li><li>Cargador: 28 BBs</li><li>Longitud: 105 cm (83 cm plegada) | Peso: 2.0 kg</li><li>Cañón interno: 430 mm / 6.01 mm</li><li>Hop-Up Maple Leaf 60° Autobot, 20 posiciones</li><li>Culata esqueleto plegable ambidiestra</li></ul><p>Muelle intercambiable para adaptar velocidad a distintos campos. 25 años de garantía en repuestos.</p>",
+    "confidence": "high",
+    "notes": "Datos extraídos directamente del sitio oficial eu.novritsch.com"
+  },
+  {
+    "sku": "RR0004",
+    "ourTitle": "Novritsch - SSR9 – Dsg",
+    "evikeUrl": "https://eu.novritsch.com/products/gun-systems/rifles/the-ssr9-system/the-ssr9-dsg/",
+    "evikeBrand": "Novritsch",
+    "evikeManufacturer": "Novritsch",
+    "evikeCategory": "Marcadoras > Rifles AEG > HK416/G36",
+    "specs": {
+      "Sistema": "AEG con DSG (Dual Sector Gear) y ETU",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "300–328 FPS (0.8–1J)",
+      "Cadencia": "~36 RPS con LiPo 11.1V",
+      "Capacidad cargador": "120 BBs (estándar)",
+      "Modos de fuego": "Binary y burst (ETU programable)",
+      "Material": "Polímero con handguard aluminio CNC ranurado",
+      "Longitud total": "55.2 cm",
+      "Cañón interno": "188 mm (6.03 mm)",
+      "Peso": "1.9 kg",
+      "Hop-Up": "Rotary con dial numerado, bucking Maple Leaf",
+      "Batería": "LiPo 7.4V–14.8V (conector T-Dean)"
+    },
+    "description": "<p>La <strong>Novritsch SSR9 DSG</strong> es una marcadora AEG compacta con engranaje dual sector, diseñada para cadencias extremas de hasta 36 RPS.</p><ul><li>Sistema: AEG DSG con ETU</li><li>Calibre: 6mm BB</li><li>Velocidad: 300–328 FPS</li><li>Cargador: 120 BBs</li><li>Cadencia: ~36 RPS con 11.1V</li><li>Longitud: 55.2 cm | Peso: 1.9 kg</li><li>Hop-Up rotary ajustable con bucking Maple Leaf</li></ul><p>Ideal para CQB por su compacidad y alta cadencia. Amplificador CNC de 105+ dB para efecto sonoro realista.</p>",
+    "confidence": "high",
+    "notes": "Datos extraídos directamente del sitio oficial eu.novritsch.com"
+  },
+  {
+    "sku": "RR0005",
+    "ourTitle": "Novritsch - SSR 90 Gen 2",
+    "evikeUrl": "https://eu.novritsch.com/products/gun-systems/rifles/the-ssr90-system/the-ssr90/",
+    "evikeBrand": "Novritsch",
+    "evikeManufacturer": "Novritsch",
+    "evikeCategory": "Marcadoras > PDW > Bullpup AEG",
+    "specs": {
+      "Sistema": "AEG con ETU programable, dos etapas de gatillo",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "209–415 FPS (variante 0.4–0.5J, 0.9–1.2J o 1.4–1.6J)",
+      "Cadencia": "~25 RPS con LiPo 11.1V",
+      "Capacidad cargador": "100 BBs",
+      "Modos de fuego": "Semi y full auto",
+      "Material": "Nailon reforzado con receptor aluminio modular",
+      "Longitud total": "50 cm",
+      "Cañón interno": "260 mm (6.03 mm)",
+      "Peso": "1.9 kg",
+      "Hop-Up": "CNC rotary con FlatHop custom",
+      "Batería": "LiPo 11.1V recomendada (conector Deans)",
+      "Licencia": "FN Herstal"
+    },
+    "description": "<p>La <strong>Novritsch SSR90 Gen 2</strong> es una réplica bullpup compacta con licencia oficial FN Herstal, basada en el FN P90. Controles completamente ambidiestros.</p><ul><li>Sistema: AEG con ETU (semi y full auto)</li><li>Calibre: 6mm BB</li><li>Cargador: 100 BBs</li><li>Cadencia: ~25 RPS con 11.1V</li><li>Longitud: 50 cm | Peso: 1.9 kg</li><li>Hop-Up CNC rotary con FlatHop</li><li>Quick spring exchange sin herramientas</li></ul><p>Ideal para CQB y distancias medias. Batería LiPo 11.1V recomendada (no incluida).</p>",
+    "confidence": "high",
+    "notes": "Datos extraídos directamente del sitio oficial eu.novritsch.com"
+  },
+  {
+    "sku": "RR0006",
+    "ourTitle": "Novritsch SSP 1",
+    "evikeUrl": "https://eu.novritsch.com/products/gun-systems/pistols/the-ssp1-system/the-ssp1/",
+    "evikeBrand": "Novritsch",
+    "evikeManufacturer": "Novritsch",
+    "evikeCategory": "Marcadoras > Pistolas > GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~320 FPS con BBs 0.20g (~1J)",
+      "Capacidad cargador": "31 BBs (CO2) / 27 BBs (gas)",
+      "Modos de fuego": "Semi-automático",
+      "Propelente": "CO2 o green gas",
+      "Material": "Slide metal, armazón polímero",
+      "Longitud total": "235 mm",
+      "Cañón interno": "125 mm (6.03 mm)",
+      "Peso": "1015 g (con cargador)",
+      "Hop-Up": "Ajustable, cámara metal con silicona blanda",
+      "Extras": "Cañón roscado, riel Picatinny, seguro ambidiestro"
+    },
+    "description": "<p>La <strong>Novritsch SSP1</strong> es una pistola GBB de alto rendimiento compatible con CO2 y green gas, con slide de metal y armazón polímero.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~320 FPS (~1J)</li><li>Cargador: 31 BBs (CO2) / 27 BBs (gas)</li><li>Longitud: 235 mm | Peso: 1015 g</li><li>Hop-Up ajustable de metal</li><li>Cañón roscado para silenciador/tracer</li></ul><p>Compatible con CO2 y gas. CO2 no recomendado por encima de 15°C.</p>",
+    "confidence": "high",
+    "notes": "Datos extraídos directamente del sitio oficial eu.novritsch.com"
+  },
+  {
+    "sku": "RR0007",
+    "ourTitle": "Novritsch SSP18",
+    "evikeUrl": "https://eu.novritsch.com/products/gun-systems/pistols/ssp18-system/the-ssp18/",
+    "evikeBrand": "Novritsch",
+    "evikeManufacturer": "Novritsch",
+    "evikeCategory": "Marcadoras > Pistolas > GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~320 FPS con BBs 0.20g (~1J)",
+      "Cadencia": "~17 RPS (full auto)",
+      "Capacidad cargador": "24 BBs (estándar) / 49 BBs (extendido)",
+      "Modos de fuego": "Semi y full auto",
+      "Propelente": "CO2 o green gas",
+      "Material": "Aluminio anodizado negro aeronáutico",
+      "Longitud total": "210 mm",
+      "Cañón interno": "115 mm (6.01 mm)",
+      "Peso": "735 g (con cargador)",
+      "Hop-Up": "Maple Leaf Autobot 50°, 2 o-rings",
+      "Extras": "Riel Picatinny completo, cañón roscado 14CCW, mira fibra óptica"
+    },
+    "description": "<p>La <strong>Novritsch SSP18</strong> es una pistola GBB full auto en aluminio aeronáutico anodizado, inspirada en el Glock 18.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~320 FPS (~1J)</li><li>Cadencia: ~17 RPS en full auto</li><li>Cargador: 24 BBs (std) / 49 BBs (ext)</li><li>Longitud: 210 mm | Peso: 735 g</li><li>Hop-Up Maple Leaf Autobot ajustable</li><li>Cañón roscado 14CCW para tracer/silenciador</li></ul>",
+    "confidence": "high",
+    "notes": "Datos extraídos directamente del sitio oficial eu.novritsch.com"
+  },
+  {
+    "sku": "RR0008",
+    "ourTitle": "Novritsch SSP5",
+    "evikeUrl": "https://eu.novritsch.com/products/gun-systems/pistols/the-ssp5-system/ssp5/",
+    "evikeBrand": "Novritsch",
+    "evikeManufacturer": "Novritsch",
+    "evikeCategory": "Marcadoras > Pistolas > Hi-Capa GBB Competición",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~330 FPS (versión 5.1\") / <330 FPS (4.3\")",
+      "Potencia": "1J–1.5J (6\"), 1J–1.2J (5.1\"), <1J (4.3\")",
+      "Capacidad cargador": "27 BBs",
+      "Modos de fuego": "Semi-automático",
+      "Propelente": "Green gas (CO2 disponible para bajas temperaturas)",
+      "Material": "Slide aluminio CNC completo, acero en grupo de gatillo",
+      "Longitud total": "254 mm (6\") / 219 mm (5.1\") / 202 mm (4.3\")",
+      "Cañón interno": "150 mm (6\") / 130 mm (5.1\") / 110 mm (4.3\") — 6.01 mm",
+      "Peso": "1070 g (6\") / 1013 g (5.1\") / 981 g (4.3\")",
+      "Hop-Up": "TDC con nub sólido cóncavo, ajuste vertical"
+    },
+    "description": "<p>La <strong>Novritsch SSP5</strong> es una pistola Hi-Capa de competición con slide CNC aluminio y grupo de gatillo de acero. Disponible en 3 longitudes de cañón.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: hasta 1.5J (versión 6\")</li><li>Cargador: 27 BBs</li><li>Longitudes: 4.3\", 5.1\" o 6\"</li><li>Hop-Up TDC con ajuste de precisión</li><li>Slide split de aluminio CNC para menor recoil</li></ul><p>Solución split-slide para seguimiento rápido. Marco pre-perforado para holsters universales.</p>",
+    "confidence": "high",
+    "notes": "Datos extraídos directamente del sitio oficial eu.novritsch.com"
+  },
+  {
+    "sku": "RR0011",
+    "ourTitle": "Novritsch SSP28",
+    "evikeUrl": "https://eu.novritsch.com/products/gun-systems/pistols/the-ssp28-system/the-ssp28/",
+    "evikeBrand": "Novritsch",
+    "evikeManufacturer": "Novritsch",
+    "evikeCategory": "Marcadoras > Pistolas > GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~320 FPS con BBs 0.20g (~1J)",
+      "Cadencia": "~28 RPS",
+      "Capacidad cargador": "30 BBs",
+      "Modos de fuego": "Semi y full auto",
+      "Propelente": "Green gas",
+      "Material": "Slide aluminio CNC split, grupo percutor acero",
+      "Longitud total": "215 mm",
+      "Cañón interno": "116 mm (6.01 mm)",
+      "Peso": "823 g (con cargador)",
+      "Hop-Up": "TDC ajustable, compatible con BBs 0.25–0.46g"
+    },
+    "description": "<p>La <strong>Novritsch SSP28</strong> es una pistola GBB ultraligera de alta cadencia (~28 RPS) con slide split de aluminio CNC.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~320 FPS (~1J)</li><li>Cadencia: ~28 RPS</li><li>Cargador: 30 BBs</li><li>Longitud: 215 mm | Peso: 823 g</li><li>Hop-Up TDC de alta precisión</li></ul>",
+    "confidence": "high",
+    "notes": "Datos extraídos directamente del sitio oficial eu.novritsch.com"
+  },
+  {
+    "sku": "RR0012",
+    "ourTitle": "Novritsch TP22",
+    "evikeUrl": "https://eu.novritsch.com/products/gun-systems/pistols/the-tp22-system/the-tp22/",
+    "evikeBrand": "Novritsch",
+    "evikeManufacturer": "Novritsch",
+    "evikeCategory": "Marcadoras > Pistolas > GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~320 FPS con BBs 0.20g (~1J)",
+      "Cadencia": "~18 RPS (full auto)",
+      "Capacidad cargador": "23 BBs",
+      "Modos de fuego": "Semi y full auto",
+      "Propelente": "Green gas",
+      "Material": "Slide metal con cortes, cañón aluminio, armazón polímero",
+      "Longitud total": "205 mm",
+      "Cañón interno": "120 mm (6.04 mm)",
+      "Peso": "720 g (con cargador)",
+      "Hop-Up": "Ajustable externamente",
+      "Extras": "Placa RMR integrada, cañón roscado 14CCW, mira fibra óptica"
+    },
+    "description": "<p>La <strong>Novritsch TP22</strong> es una pistola GBB compacta con placa de montaje para red dot integrada y cañón fijo de mayor precisión.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~320 FPS (~1J)</li><li>Cadencia: ~18 RPS full auto</li><li>Cargador: 23 BBs</li><li>Longitud: 205 mm | Peso: 720 g</li><li>Placa para red dot integrada</li><li>Cañón fijo roscado 14CCW</li></ul>",
+    "confidence": "high",
+    "notes": "Datos extraídos directamente del sitio oficial eu.novritsch.com"
+  },
+  {
+    "sku": "RR0013",
+    "ourTitle": "Glock 17 WE Gen 4",
+    "evikeUrl": "",
+    "evikeBrand": "WE Tech",
+    "evikeManufacturer": "WE Tech",
+    "evikeCategory": "Marcadoras > Pistolas > GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~300–320 FPS con green gas",
+      "Capacidad cargador": "25 BBs",
+      "Modos de fuego": "Semi-automático",
+      "Propelente": "Green gas / HFC134a",
+      "Material": "Slide y cañón exterior metal, armazón polímero",
+      "Hop-Up": "Ajustable",
+      "Color": "Negro",
+      "Extras": "Riel Picatinny bajo cañón, controles ambidiestros Gen 4"
+    },
+    "description": "<p>Réplica <strong>WE Tech Glock 17 Gen 4</strong> GBB de construcción metal/polímero, con características de cuarta generación como grip texturizado y backstraps intercambiables.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~300–320 FPS con green gas</li><li>Cargador: ~25 BBs</li><li>Material: slide metal, armazón polímero</li><li>Hop-Up ajustable</li><li>Riel Picatinny</li></ul>",
+    "confidence": "medium",
+    "notes": "No se encontró página de producto vigente en evike.com (403) ni retailers principales. Specs basadas en especificaciones conocidas del modelo WE Tech G17 Gen 4."
+  },
+  {
+    "sku": "RR0014",
+    "ourTitle": "Glock 17 WE Gen 5",
+    "evikeUrl": "",
+    "evikeBrand": "WE Tech",
+    "evikeManufacturer": "WE Tech",
+    "evikeCategory": "Marcadoras > Pistolas > GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~300–320 FPS con green gas",
+      "Capacidad cargador": "25 BBs",
+      "Modos de fuego": "Semi-automático",
+      "Propelente": "Green gas / HFC134a",
+      "Material": "Slide y cañón exterior metal, armazón polímero",
+      "Hop-Up": "Ajustable",
+      "Color": "Negro",
+      "Extras": "Sin riel bajo cañón (Gen 5 stock), sin checkering de dedo"
+    },
+    "description": "<p>Réplica <strong>WE Tech Glock 17 Gen 5</strong> GBB, que reproduce las novedades de la quinta generación: ausencia de riel y sin muesca para dedo en el guardamonte.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~300–320 FPS con green gas</li><li>Cargador: ~25 BBs</li><li>Material: slide metal, armazón polímero</li><li>Hop-Up ajustable</li></ul>",
+    "confidence": "medium",
+    "notes": "No se encontró página de producto vigente. Specs basadas en especificaciones conocidas del modelo WE Tech G17 Gen 5."
+  },
+  {
+    "sku": "RR0016",
+    "ourTitle": "G&G AEG Arp 556 Pdw",
+    "evikeUrl": "",
+    "evikeBrand": "G&G Armament",
+    "evikeManufacturer": "G&G Armament",
+    "evikeCategory": "Marcadoras > Rifles AEG > PDW",
+    "specs": {
+      "Sistema": "AEG",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~380–400 FPS",
+      "Capacidad cargador": "120 BBs (mid-cap incluido)",
+      "Modos de fuego": "Semi y full auto",
+      "Material": "Receptor polímero con rolling marks G&G, culata PDW GOS-V9",
+      "Hop-Up": "Ajustable",
+      "Batería": "7.4V LiPo recomendada (compartimento trasero)",
+      "Cañón interno": "~142 mm",
+      "Color": "Negro",
+      "Extras": "Culata plegable estilo PDW, riel Picatinny top/side"
+    },
+    "description": "<p>La <strong>G&G ARP 556 PDW</strong> es una marcadora AEG ultra compacta estilo PDW con receptor de polímero y culata plegable GOS-V9.</p><ul><li>Sistema: AEG</li><li>Calibre: 6mm BB</li><li>Velocidad: ~380–400 FPS</li><li>Cargador: 120 BBs (mid-cap)</li><li>Culata plegable estilo PDW</li><li>Material: polímero de alta resistencia</li><li>Hop-Up ajustable</li></ul><p>Ideal para CQB por su longitud reducida. Compatible con cargadores M4 estándar.</p>",
+    "confidence": "medium",
+    "notes": "Producto no encontrado en evike.com (403) ni en retailers accesibles. Specs derivadas de descripción del producto y conocimiento del modelo."
+  },
+  {
+    "sku": "RR0017",
+    "ourTitle": "Tracer Blaster C",
+    "evikeUrl": "",
+    "evikeBrand": "Acetech",
+    "evikeManufacturer": "Acetech",
+    "evikeCategory": "Accesorios > Tracers",
+    "specs": {
+      "Calibre": "6mm BB",
+      "Rosca": "14mm CCW (negativo), adaptador incluido 11mm CW (positivo)",
+      "Batería": "Litio recargable integrada",
+      "Activación": "Sin switch (shake-to-wake)",
+      "Color": "Negro",
+      "Material": "Aluminio"
+    },
+    "description": "<p>El <strong>Acetech Blaster C</strong> es una unidad tracer compacta para marcadoras de airsoft con rosca 14mm CCW, que ilumina las BBs en vuelo en condiciones de poca luz.</p><ul><li>Calibre: 6mm BB</li><li>Rosca: 14mm CCW (adaptador 11mm CW incluido)</li><li>Batería recargable integrada</li><li>Activación automática por movimiento</li><li>Construcción aluminio</li></ul>",
+    "confidence": "medium",
+    "notes": "acetech.eu devuelve 301 a dominio de venta. Specs extraídas de descripción del producto en catálogo local."
+  },
+  {
+    "sku": "RR0018",
+    "ourTitle": "Tracer Brighter C Titanium",
+    "evikeUrl": "https://www.airsoftgi.com/product/AceTech-Brighter-CS-Tracer-Unit-M14-CCW-Space-Gray-70566/",
+    "evikeBrand": "Acetech",
+    "evikeManufacturer": "Acetech",
+    "evikeCategory": "Accesorios > Tracers",
+    "specs": {
+      "Calibre": "6mm BB",
+      "Rosca": "14mm CCW",
+      "Batería": "Litio recargable integrada",
+      "Autonomía": "Hasta 20,000 disparos por carga",
+      "Cadencia máxima soportada": "35 RPS",
+      "Peso": "32 g",
+      "Activación": "Sin switch (shake-to-wake)",
+      "Resistencia al agua": "Sí",
+      "Color": "Titanium / Rainbow Edition"
+    },
+    "description": "<p>El <strong>Acetech Brighter C Titanium</strong> (Rainbow Edition) es una unidad tracer ultraligera de diseño premium con activación sin switch y batería recargable de alta duración.</p><ul><li>Calibre: 6mm BB</li><li>Rosca: 14mm CCW</li><li>Peso: 32 g</li><li>Batería recargable — hasta 20,000 disparos</li><li>Soporte hasta 35 RPS</li><li>Activación automática por vibración</li><li>Resistente al agua</li></ul>",
+    "confidence": "high",
+    "notes": "Specs del Brighter CS extraídas de airsoftgi.com (modelo equivalente). Variante Titanium/Rainbow con mismas especificaciones técnicas."
+  },
+  {
+    "sku": "RR0019",
+    "ourTitle": "Tracer Bifrost R",
+    "evikeUrl": "",
+    "evikeBrand": "Acetech",
+    "evikeManufacturer": "Acetech",
+    "evikeCategory": "Accesorios > Tracers",
+    "specs": {
+      "Calibre": "6mm BB",
+      "Compatibilidad": "BBs estándar, BBs tracer verdes, BBs de gel",
+      "Rosca": "14mm CCW",
+      "Puerto de carga": "USB Tipo C",
+      "Batería": "Litio recargable integrada",
+      "Efecto": "Llama multicolor",
+      "Control": "Control de potencia inteligente"
+    },
+    "description": "<p>El <strong>Acetech Bifrost R</strong> es una unidad tracer con efecto de llama multicolor, compatible con BBs estándar, tracers verdes y BBs de gel.</p><ul><li>Calibre: 6mm BB</li><li>Rosca: 14mm CCW</li><li>Efecto llama multicolor</li><li>Carga por USB Tipo C</li><li>Compatible con BBs estándar, trazadoras y gel</li><li>Control de potencia inteligente</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs extraídas de descripción del producto en catálogo local."
+  },
+  {
+    "sku": "RR0021",
+    "ourTitle": "Tracer Unit Flare Smoky",
+    "evikeUrl": "",
+    "evikeBrand": "Eshooter",
+    "evikeManufacturer": "Eshooter",
+    "evikeCategory": "Accesorios > Tracers",
+    "specs": {
+      "Calibre": "6mm BB",
+      "Fuga de aceite": "No",
+      "Riesgo de explosión": "No",
+      "Conexión": "Bluetooth"
+    },
+    "description": "<p>El <strong>Flare Smoky BT</strong> de Eshooter es una unidad tracer diseñada con feedback de jugadores de airsoft, con conexión Bluetooth para control y configuración.</p><ul><li>Calibre: 6mm BB</li><li>Sin fuga de aceite</li><li>Sin riesgo de explosión</li><li>Control Bluetooth</li></ul>",
+    "confidence": "low",
+    "notes": "Solo specs parciales disponibles en descripción del catálogo. No se encontró página de fabricante accesible."
+  },
+  {
+    "sku": "RR0041",
+    "ourTitle": "Antifog Novritsch",
+    "evikeUrl": "https://eu.novritsch.com/products/protection/",
+    "evikeBrand": "Novritsch",
+    "evikeManufacturer": "Novritsch",
+    "evikeCategory": "Protección > Antiparras",
+    "specs": {
+      "Tipo": "Antiparra de perfil bajo",
+      "Tratamiento": "Anti-empañamiento",
+      "Certificación": "ANSI Z87.1 / alta resistencia al impacto",
+      "Material lente": "Policarbonato",
+      "Espuma": "Espuma de doble capa"
+    },
+    "description": "<p>Las antiparras <strong>Novritsch Anti-Fog</strong> están diseñadas específicamente para airsoft, con tratamiento anti-empañamiento y certificación de impacto ANSI.</p><ul><li>Lente de policarbonato resistente a impacto</li><li>Tratamiento anti-empañamiento</li><li>Espuma de doble capa para sellado</li><li>Certificación ANSI Z87.1</li></ul>",
+    "confidence": "low",
+    "notes": "Página de sistema de protección Novritsch no accesible con URL directa. Specs generales del modelo."
+  },
+  {
+    "sku": "RR0042",
+    "ourTitle": "Casco PTS Airsoft MTEK Flux (Negro)",
+    "evikeUrl": "",
+    "evikeBrand": "PTS",
+    "evikeManufacturer": "PTS x MTEK",
+    "evikeCategory": "Protección > Cascos",
+    "specs": {
+      "Tipo": "Casco táctico tipo ballistic, high-cut",
+      "Material": "Polímero de alta resistencia",
+      "Compatibilidad": "NVG mount, accesorios ARC rail, riel para cámara",
+      "Color": "Negro",
+      "Tallas": "S/M y L/XL"
+    },
+    "description": "<p>El <strong>PTS MTEK Flux</strong> es una réplica airsoft del casco balístico MTEK Flux, con montura para NVG y rieles ARC para accesorios tácticos.</p><ul><li>Tipo: high-cut táctico</li><li>Material: polímero de alta resistencia</li><li>Montura NVG integrada</li><li>Rieles ARC laterales</li><li>Color: negro</li></ul>",
+    "confidence": "medium",
+    "notes": "ptsgear.com devuelve 404. Specs basadas en características conocidas del PTS MTEK Flux."
+  },
+  {
+    "sku": "RR0043",
+    "ourTitle": "ZTAC – Comtac II Headset Sordinas 044 GEN6",
+    "evikeUrl": "",
+    "evikeBrand": "Z-Tactical",
+    "evikeManufacturer": "Z-Tactical",
+    "evikeCategory": "Comunicaciones > Headsets y PTT",
+    "specs": {
+      "Tipo": "Headset con sordinas tipo Comtac II",
+      "Reducción de ruido": "Sí (NRR activo)",
+      "Generación": "Gen 6",
+      "Conector": "3.5mm o conector de radio (según variante)",
+      "Material": "Polímero ABS con almohadillas de espuma",
+      "Color": "Negro / Tan"
+    },
+    "description": "<p>El <strong>Z-Tactical Comtac II Gen6</strong> es una réplica de las famosas sordinas Peltor Comtac II con reducción activa de ruido, compatible con radios tácticas.</p><ul><li>Tipo: sordinas activas estilo Comtac II</li><li>Generación 6 con mejoras de electrónica</li><li>Reducción activa de ruido</li><li>Compatible con radios tácticas</li></ul>",
+    "confidence": "medium",
+    "notes": "No se encontró página de producto en fuentes accesibles. Specs basadas en características conocidas del modelo Z-Tactical Comtac II."
+  },
+  {
+    "sku": "RR0044",
+    "ourTitle": "ZTAC – U94 Kenwood 113 – Baofeng",
+    "evikeUrl": "",
+    "evikeBrand": "Z-Tactical",
+    "evikeManufacturer": "Z-Tactical",
+    "evikeCategory": "Comunicaciones > Headsets y PTT",
+    "specs": {
+      "Tipo": "PTT estilo U94",
+      "Conector": "Kenwood 2 pines (compatible Baofeng)",
+      "Material": "Polímero nylon",
+      "Clip": "Metálico con recubrimiento goma",
+      "Color": "Negro / Tan"
+    },
+    "description": "<p>El <strong>Z-Tactical U94 PTT</strong> con conector Kenwood/Baofeng permite activar el micrófono de la radio sin soltar la marcadora. Se fija al chaleco o arnés con clip metálico.</p><ul><li>Tipo: PTT estilo U94</li><li>Conector: 2 pines Kenwood/Baofeng</li><li>Material: polímero nylon</li><li>Clip metálico con recubrimiento goma</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs extraídas de descripción normalizada en catálogo local. No se encontró página de producto vigente."
+  },
+  {
+    "sku": "RR0048",
+    "ourTitle": "Pistola WE GBB G17 Ivory",
+    "evikeUrl": "",
+    "evikeBrand": "WE Tech",
+    "evikeManufacturer": "WE Tech",
+    "evikeCategory": "Marcadoras > Pistolas > GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~300–320 FPS con green gas",
+      "Capacidad cargador": "25 BBs",
+      "Modos de fuego": "Semi-automático",
+      "Propelente": "Green gas / HFC134a",
+      "Material": "Slide y cañón exterior metal, armazón polímero",
+      "Hop-Up": "Ajustable",
+      "Color": "Ivory (marfil/blanco)",
+      "Extras": "Riel Picatinny bajo cañón"
+    },
+    "description": "<p>Réplica <strong>WE Tech Glock 17 GBB</strong> en acabado Ivory (marfil), construcción metal/polímero con blowback real.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~300–320 FPS</li><li>Cargador: ~25 BBs</li><li>Color: Ivory</li><li>Hop-Up ajustable</li></ul>",
+    "confidence": "medium",
+    "notes": "Variante de color del WE G17. Specs heredadas del modelo base."
+  },
+  {
+    "sku": "RR0050",
+    "ourTitle": "Pistola WE Gen 5 Tan",
+    "evikeUrl": "",
+    "evikeBrand": "WE Tech",
+    "evikeManufacturer": "WE Tech",
+    "evikeCategory": "Marcadoras > Pistolas > GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~300–320 FPS con green gas",
+      "Capacidad cargador": "25 BBs",
+      "Modos de fuego": "Semi-automático",
+      "Propelente": "Green gas / HFC134a",
+      "Material": "Slide y cañón exterior metal, armazón polímero",
+      "Hop-Up": "Ajustable",
+      "Color": "Tan / FDE"
+    },
+    "description": "<p>Réplica <strong>WE Tech Glock 17 Gen 5 GBB</strong> en acabado Tan/FDE, con características de quinta generación.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~300–320 FPS</li><li>Cargador: ~25 BBs</li><li>Color: Tan/FDE</li><li>Hop-Up ajustable</li></ul>",
+    "confidence": "medium",
+    "notes": "Variante Tan del WE G17 Gen 5. Specs heredadas del modelo base."
+  },
+  {
+    "sku": "RR0051",
+    "ourTitle": "Pistola SIG Sauer F226 Negra",
+    "evikeUrl": "",
+    "evikeBrand": "SIG Sauer / EMG",
+    "evikeManufacturer": "EMG / SIG Sauer ProForce",
+    "evikeCategory": "Marcadoras > Pistolas > GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~300–330 FPS con green gas",
+      "Capacidad cargador": "25 BBs",
+      "Modos de fuego": "Semi-automático (DA/SA)",
+      "Propelente": "Green gas",
+      "Material": "Slide metal, armazón polímero",
+      "Hop-Up": "Ajustable",
+      "Color": "Negro",
+      "Licencia": "SIG Sauer oficialmente licenciada"
+    },
+    "description": "<p>Réplica oficialmente licenciada de la <strong>SIG Sauer P226</strong>, fabricada bajo licencia ProForce. Construcción metal/polímero con blowback real.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~300–330 FPS</li><li>Cargador: ~25 BBs</li><li>Material: slide metal, armazón polímero</li><li>Licencia oficial SIG Sauer</li></ul>",
+    "confidence": "medium",
+    "notes": "No se encontró página de producto vigente en retailers accesibles. Specs basadas en características conocidas del modelo SIG P226 GBB airsoft."
+  },
+  {
+    "sku": "RR0075",
+    "ourTitle": "Krytac Trident Mk III Pdw Negra",
+    "evikeUrl": "",
+    "evikeBrand": "Krytac",
+    "evikeManufacturer": "Krytac",
+    "evikeCategory": "Marcadoras > Rifles AEG > PDW",
+    "specs": {
+      "Sistema": "AEG con FET (Krytac Nautilus)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~380–400 FPS",
+      "Capacidad cargador": "120 BBs (mid-cap)",
+      "Modos de fuego": "Semi y full auto",
+      "Material": "Receptores aluminio anodizado estilo billet CNC, Krytac",
+      "Hop-Up": "Adjustable Krytac",
+      "Batería": "7.4V LiPo recomendada (rear-wired)",
+      "Color": "Negro"
+    },
+    "description": "<p>La <strong>Krytac Trident MK3 PDW</strong> es una marcadora AEG compacta con caja de cambios Nautilus y FET interno, receptores de aluminio anodizado con marcas Krytac.</p><ul><li>Sistema: AEG (Nautilus + FET)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~380–400 FPS</li><li>Cargador: 120 BBs (mid-cap)</li><li>Receptores aluminio CNC anodizado</li><li>Hop-Up ajustable</li></ul><p>Compatible con cargadores M4/AR estándar. Batería LiPo 7.4V recomendada.</p>",
+    "confidence": "medium",
+    "notes": "krytac.com no tiene el PDW en su catálogo actual. Specs basadas en descripción del catálogo local y características conocidas del modelo."
+  },
+  {
+    "sku": "RR0077",
+    "ourTitle": "Pistola Glock WE Gen 4 Bicolor",
+    "evikeUrl": "",
+    "evikeBrand": "WE Tech",
+    "evikeManufacturer": "WE Tech",
+    "evikeCategory": "Marcadoras > Pistolas > GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~300–320 FPS con green gas",
+      "Capacidad cargador": "25 BBs",
+      "Modos de fuego": "Semi-automático",
+      "Propelente": "Green gas / HFC134a",
+      "Material": "Slide metal, armazón polímero",
+      "Hop-Up": "Ajustable",
+      "Color": "Bicolor (slide y armazón en colores contrastantes)"
+    },
+    "description": "<p>Réplica <strong>WE Tech Glock Gen 4 GBB</strong> en acabado bicolor, con slide y armazón en colores contrastantes. Mismas especificaciones técnicas que el modelo estándar.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~300–320 FPS</li><li>Cargador: ~25 BBs</li><li>Color: bicolor</li></ul>",
+    "confidence": "medium",
+    "notes": "Variante de acabado bicolor. Specs heredadas del modelo base WE G17 Gen 4."
+  },
+  {
+    "sku": "RR0099",
+    "ourTitle": "SSR4 MK1 Gen 2 Novritsch",
+    "evikeUrl": "https://eu.novritsch.com/products/gun-systems/rifles/the-ssr4-system/the-ssr4/",
+    "evikeBrand": "Novritsch",
+    "evikeManufacturer": "Novritsch",
+    "evikeCategory": "Marcadoras > Rifles AEG > M4/AR",
+    "specs": {
+      "Sistema": "AEG con ETU programable",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "311–344 FPS (0.9–1.2J) o 388–415 FPS (1.4–1.6J)",
+      "Cadencia": "~22 RPS con LiPo 11.1V",
+      "Capacidad cargador": "140 BBs (incluido)",
+      "Modos de fuego": "Semi, full auto, burst, binario (ETU)",
+      "Material": "Polímero reforzado liviano",
+      "Longitud total": "74 cm (culata retraída)",
+      "Cañón interno": "310 mm (6.03 mm)",
+      "Peso": "2.3 kg",
+      "Hop-Up": "Rotary de alta precisión",
+      "Batería": "LiPo 11.1V (conector T-Dean)"
+    },
+    "description": "<p>La <strong>Novritsch SSR4 MK1 Gen 2</strong> combina facilidad de uso para principiantes con internos de alto rendimiento preinstalados. Cuerpo de polímero reforzado liviano.</p><ul><li>Sistema: AEG con ETU (semi, full, burst, binario)</li><li>Calibre: 6mm BB</li><li>Velocidad: 311–415 FPS según variante</li><li>Cargador: 140 BBs (mid-cap)</li><li>Cadencia: ~22 RPS con 11.1V</li><li>Longitud: 74 cm | Peso: 2.3 kg</li><li>Hop-Up rotary de precisión</li></ul><p>Compatible con cargadores M4 estándar. 25 años de garantía en repuestos.</p>",
+    "confidence": "high",
+    "notes": "Datos extraídos directamente del sitio oficial eu.novritsch.com (MK1 Gen2 = SSR4 base)"
+  },
+  {
+    "sku": "RR0100",
+    "ourTitle": "Tracer Brighter R",
+    "evikeUrl": "https://www.airsoftgi.com/product/AceTech-Brighter-R-Airsoft-Tracer-Unit-69532/",
+    "evikeBrand": "Acetech",
+    "evikeManufacturer": "Acetech",
+    "evikeCategory": "Accesorios > Tracers",
+    "specs": {
+      "Calibre": "6mm BB",
+      "Rosca": "14mm CCW",
+      "Batería": "Litio recargable integrada",
+      "Material": "Aluminio",
+      "BBs compatibles": "Verde y rojo tracer",
+      "Activación": "Sin switch (shake-to-wake)",
+      "Gestión de energía": "Standby automático tras 5 min de inactividad"
+    },
+    "description": "<p>El <strong>Acetech Brighter R</strong> es una unidad tracer de aluminio compacta, compatible con BBs trazadoras verdes y rojas, con activación automática por movimiento.</p><ul><li>Calibre: 6mm BB</li><li>Rosca: 14mm CCW</li><li>Material: aluminio</li><li>BBs: verde y rojo tracer</li><li>Activación automática (shake-to-wake)</li><li>Standby automático tras 5 min</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de airsoftgi.com/product/AceTech-Brighter-R-Airsoft-Tracer-Unit-69532/"
+  },
+  {
+    "sku": "RR0101",
+    "ourTitle": "Rifle KWA MP9 Gas Submachine Negra",
+    "evikeUrl": "",
+    "evikeBrand": "KWA",
+    "evikeManufacturer": "KWA",
+    "evikeCategory": "Marcadoras > Primarias > GBB SMG",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~340–360 FPS con green gas",
+      "Capacidad cargador": "30 BBs",
+      "Modos de fuego": "Semi y full auto",
+      "Propelente": "Green gas",
+      "Material": "Polímero y metal",
+      "Hop-Up": "Adjustable KWA",
+      "Color": "Negro"
+    },
+    "description": "<p>La <strong>KWA MP9</strong> es una subametralladora GBB compacta inspirada en la Brügger & Thomet MP9, con blowback real y alta tasa de fuego.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~340–360 FPS</li><li>Cargador: 30 BBs</li><li>Full auto disponible</li><li>Material: polímero y metal</li></ul>",
+    "confidence": "medium",
+    "notes": "store.kwausa.com devolvió 403. Specs basadas en características conocidas del modelo KWA MP9."
+  },
+  {
+    "sku": "RR0105",
+    "ourTitle": "Tracer Quadra S Acetech",
+    "evikeUrl": "",
+    "evikeBrand": "Acetech",
+    "evikeManufacturer": "Acetech",
+    "evikeCategory": "Accesorios > Tracers",
+    "specs": {
+      "Calibre": "6mm BB",
+      "Rosca": "14mm CCW",
+      "Batería": "Litio recargable integrada (USB-C)",
+      "Material": "Aluminio",
+      "Activación": "Sin switch (automática)"
+    },
+    "description": "<p>El <strong>Acetech Quadra S</strong> es una unidad tracer de última generación con cuerpo de aluminio y carga USB-C, de alto rendimiento y diseño profesional.</p><ul><li>Calibre: 6mm BB</li><li>Rosca: 14mm CCW</li><li>Batería recargable (USB-C)</li><li>Construcción aluminio</li><li>Activación automática</li></ul>",
+    "confidence": "medium",
+    "notes": "acetech.com.hk/acetech.hk no accesibles. Specs basadas en descripción del catálogo local y características generales del modelo Quadra S."
+  },
+  {
+    "sku": "RR0104",
+    "ourTitle": "Mira Red Dot Romeo 5 SIG Sauer",
+    "evikeUrl": "",
+    "evikeBrand": "SIG Sauer",
+    "evikeManufacturer": "SIG Sauer",
+    "evikeCategory": "Ópticas y miras > Red Dot",
+    "specs": {
+      "Aumento": "1x",
+      "Lente objetivo": "20 mm",
+      "Retícula": "Punto rojo 2 MOA",
+      "Batería": "1x CR2032",
+      "Brillo": "10 ajustes diurnos + 2 nocturnos (NV)",
+      "Autonomía": ">40,000 horas",
+      "Material": "Aluminio 7075",
+      "Resistencia al agua": "IPX-7 (sumergible 1m/30min)",
+      "Montaje": "Compatible Picatinny/Weaver M1913",
+      "Peso": "~113 g (sin montura)"
+    },
+    "description": "<p>El <strong>SIG Sauer Romeo 5</strong> es un red dot compacto y resistente con retícula de 2 MOA y 12 niveles de brillo (2 compatibles NV), ideal para uso táctico en airsoft.</p><ul><li>Aumento: 1x | Objetivo: 20 mm</li><li>Retícula: punto rojo 2 MOA</li><li>Batería CR2032 — +40,000 horas</li><li>12 niveles de brillo (2 NV)</li><li>IPX-7 resistente al agua</li><li>Montura Picatinny incluida</li></ul>",
+    "confidence": "high",
+    "notes": "Specs del SIG Sauer Romeo 5 (modelo de fuego real con réplica airsoft). sigsauer.com devuelve 403."
+  },
+  {
+    "sku": "RR0117",
+    "ourTitle": "Tokyo Marui GBB Hi-Capa 5.1 Governament Blowback",
+    "evikeUrl": "",
+    "evikeBrand": "Tokyo Marui",
+    "evikeManufacturer": "Tokyo Marui",
+    "evikeCategory": "Marcadoras > Pistolas > Hi-Capa GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~280–300 FPS con HFC134a (Japón)",
+      "Capacidad cargador": "31 BBs",
+      "Modos de fuego": "Semi-automático",
+      "Propelente": "HFC134a / green gas",
+      "Material": "Slide y armazón polímero reforzado (TM high-grade ABS)",
+      "Longitud total": "222 mm",
+      "Peso": "~743 g (sin cargador)",
+      "Hop-Up": "Ajustable TM Hop-Up",
+      "Color": "Negro",
+      "Extras": "Ranuras delanteras y traseras en slide"
+    },
+    "description": "<p>La <strong>Tokyo Marui Hi-Capa 5.1 Government</strong> es el estándar de referencia en pistolas GBB Hi-Capa. Base ideal para customización de alto nivel.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~280–300 FPS (HFC134a)</li><li>Cargador: 31 BBs</li><li>Material: polímero high-grade ABS</li><li>Longitud: 222 mm</li><li>Hop-Up ajustable TM</li></ul><p>Compatible con una vasta gama de repuestos y mejoras aftermarket. Plataforma Hi-Capa más usada en competición.</p>",
+    "confidence": "high",
+    "notes": "Specs del Tokyo Marui Hi-Capa 5.1 son de conocimiento público y ampliamente documentadas. TM website no accesible."
+  },
+  {
+    "sku": "RR0118",
+    "ourTitle": "Taran Tactical GBB Hi-Capa JW4 TTI Pit Viper Blowback",
+    "evikeUrl": "https://www.airsoftatlanta.com/products/jag-arms-licensed-taran-tactical-innovations-jw4-pit-viper-gbb-pistol",
+    "evikeBrand": "JAG Arms",
+    "evikeManufacturer": "JAG Arms x Taran Tactical Innovations",
+    "evikeCategory": "Marcadoras > Pistolas > Hi-Capa GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~315–330 FPS con green gas",
+      "Modos de fuego": "Semi-automático",
+      "Propelente": "Green gas",
+      "Material": "Full metal",
+      "Hop-Up": "Ajustable",
+      "Internos": "Compatibles Tokyo Marui Hi-Capa estándar",
+      "Licencia": "Taran Tactical Innovations",
+      "Diseñador": "Taran Butler (TTI)",
+      "Extras": "Riel inferior frontal, mira delantera roja"
+    },
+    "description": "<p>Réplica oficialmente licenciada del <strong>JW4 Pit Viper</strong> de Taran Tactical Innovations, fabricada por JAG Arms. Full metal con internos compatibles TM Hi-Capa.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Velocidad: ~315–330 FPS</li><li>Full metal</li><li>Hop-Up ajustable</li><li>Licencia oficial TTI (Taran Butler)</li><li>Compatible con cargadores WE y TM Hi-Capa</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de airsoftatlanta.com para el JAG Arms JW4 Pit Viper."
+  },
+  {
+    "sku": "RR0119",
+    "ourTitle": "Taran Tactical Jag Precision Army Armament GBB Hi-Capa JW4 TTI Alpha Combat Master Blowback",
+    "evikeUrl": "https://www.airsoftatlanta.com/products/tti-combat-master-alpha-high-grade-by-jag-arms-airsoft-pistol-green-gas",
+    "evikeBrand": "JAG Arms",
+    "evikeManufacturer": "JAG Arms x Taran Tactical Innovations",
+    "evikeCategory": "Marcadoras > Pistolas > Hi-Capa GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~300–330 FPS con green gas",
+      "Capacidad cargador": "42 BBs (extendido) / 31 BBs (estándar)",
+      "Modos de fuego": "Semi-automático",
+      "Propelente": "Green gas",
+      "Material": "Slide aluminio CNC, armazón aluminio CNC, polímero en grip",
+      "Longitud cañón": "4.5\"",
+      "Acabado": "Bronze/TiN",
+      "Hop-Up": "Ajustable",
+      "Extras": "Placa óptica Doctor/RMR, compensador integrado, flared magwell",
+      "Licencia": "Taran Tactical Innovations"
+    },
+    "description": "<p>El <strong>TTI Combat Master Alpha</strong> de JAG Arms es una pistola Hi-Capa de competición con construcción CNC aluminio y acabado bronze, licenciado por Taran Tactical Innovations.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Cargador: 42 BBs (extendido)</li><li>Slide y armazón aluminio CNC</li><li>Acabado Bronze (TiN)</li><li>Placa para red dot Doctor/RMR</li><li>Compensador integrado</li><li>Flared magwell</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de airsoftatlanta.com para el TTI Combat Master Alpha by JAG Arms."
+  },
+  {
+    "sku": "RR0120",
+    "ourTitle": "Taran Tactical Jag Precision Army Armament GBB Hi-Capa JW4 TTI Sand Viper CNC Blowback",
+    "evikeUrl": "https://www.evike.com/products/109105/",
+    "evikeBrand": "JAG Arms",
+    "evikeManufacturer": "JAG Arms x Taran Tactical Innovations",
+    "evikeCategory": "Marcadoras > Pistolas > Hi-Capa GBB",
+    "specs": {
+      "Sistema": "Gas Blowback (GBB)",
+      "Calibre": "6mm BB",
+      "Velocidad (FPS)": "~300 FPS con green gas",
+      "Capacidad cargador": "31 BBs",
+      "Modos de fuego": "Semi-automático",
+      "Material": "Aluminio CNC + acero",
+      "Hop-Up": "Ajustable",
+      "Color": "Sand Viper (arena)",
+      "Diseñador": "Taran Butler (TTI)",
+      "Licencia": "Taran Tactical Innovations"
+    },
+    "description": "<p>Réplica oficialmente licenciada del diseño <strong>Pit Viper Sand Viper</strong> de Taran Tactical Innovations, fabricada por JAG Arms. Construcción CNC en aluminio con acabado arena.</p><ul><li>Sistema: Gas Blowback (GBB)</li><li>Calibre: 6mm BB</li><li>Cargador: 31 BBs</li><li>Velocidad: ~300 FPS con green gas</li><li>Material: aluminio CNC y acero</li><li>Hop-Up ajustable</li></ul><p>Versión Sand Viper con compensador integrado y guías para óptica red dot.</p>",
+    "confidence": "high",
+    "notes": "Specs del ejemplo provisto por el usuario (evike.com/products/109105/ — 403 bloqueado, specs del ejemplo original)"
+  },
+  {
+    "sku": "RR0098",
+    "ourTitle": "Mag PTS 150 Rondas para M4 y M16 Negro",
+    "evikeUrl": "",
+    "evikeBrand": "PTS",
+    "evikeManufacturer": "PTS (Pointing to Target Solutions)",
+    "evikeCategory": "Cargadores > De marcadora > M4/M16",
+    "specs": {
+      "Calibre": "6mm BB",
+      "Capacidad": "150 BBs",
+      "Sistema": "Mid-cap (resorte)",
+      "Material": "Polímero reforzado",
+      "Compatibilidad": "M4, M16, AR series AEG",
+      "Color": "Negro",
+      "Extras": "Indicador visual de BBs, plato compatible PMAG Ranger Plate"
+    },
+    "description": "<p>El <strong>PTS EPM 150</strong> es un cargador mid-cap de polímero reforzado para marcadoras M4/M16/AR, con capacidad de 150 BBs e indicador visual de carga.</p><ul><li>Calibre: 6mm BB</li><li>Capacidad: 150 BBs (mid-cap)</li><li>Material: polímero</li><li>Compatible: M4, M16, AR AEG</li><li>Indicador visual de BBs</li><li>Compatible con PMAG Ranger Plate</li></ul>",
+    "confidence": "medium",
+    "notes": "ptsgear.com devuelve 404. Specs basadas en descripción del catálogo local y características conocidas del PTS EPM."
+  },
+  {
+    "sku": "RR0115",
+    "ourTitle": "Cargador Tokyo Marui 31R para GBB Hi-Capa 5.1 Negro",
+    "evikeUrl": "",
+    "evikeBrand": "Tokyo Marui",
+    "evikeManufacturer": "Tokyo Marui",
+    "evikeCategory": "Cargadores > De marcadora > Hi-Capa GBB",
+    "specs": {
+      "Calibre": "6mm BB",
+      "Capacidad": "31 BBs",
+      "Sistema": "GBB (gas)",
+      "Material": "Metal",
+      "Compatibilidad": "Tokyo Marui Hi-Capa 5.1 y compatibles",
+      "Color": "Negro"
+    },
+    "description": "<p>Cargador de repuesto oficial <strong>Tokyo Marui</strong> de 31 BBs en metal para la Hi-Capa 5.1 GBB. Compatible con la mayoría de pistolas Hi-Capa GBB del mercado.</p><ul><li>Calibre: 6mm BB</li><li>Capacidad: 31 BBs</li><li>Material: metal</li><li>Compatible: TM Hi-Capa 5.1 y pistolas Hi-Capa compatibles</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas directamente de la descripción del producto en catálogo local (descripción muy detallada y coincidente)."
+  },
+  {
+    "sku": "RR0116",
+    "ourTitle": "Mag PTS 250 Rondas para M4 y M16",
+    "evikeUrl": "",
+    "evikeBrand": "PTS",
+    "evikeManufacturer": "PTS (Pointing to Target Solutions)",
+    "evikeCategory": "Cargadores > De marcadora > M4/M16",
+    "specs": {
+      "Calibre": "6mm BB",
+      "Capacidad": "250 BBs",
+      "Sistema": "Mid-cap (resorte)",
+      "Modelo": "EPM1 (Enhanced Polymer Magazine 1)",
+      "Material": "Polímero avanzado",
+      "Compatibilidad": "M4, M16, AR series AEG",
+      "Extras": "Primer cargador AEG con ventana de visualización de BBs, diseño de alta capacidad"
+    },
+    "description": "<p>El <strong>PTS EPM1</strong> de 250 BBs es el cargador AEG de polímero más avanzado y de mayor capacidad en su categoría, con ventana de visualización de munición.</p><ul><li>Calibre: 6mm BB</li><li>Capacidad: 250 BBs (mid-cap)</li><li>Modelo: PTS EPM1</li><li>Polímero de alta resistencia</li><li>Compatible: M4, M16, AR AEG</li><li>Ventana de visualización de BBs</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de la descripción del catálogo local (descripción detallada y específica del EPM1)."
+  },
+  {
+    "sku": "RR0102",
+    "ourTitle": "Mag KWA MP9",
+    "evikeUrl": "",
+    "evikeBrand": "KWA",
+    "evikeManufacturer": "KWA",
+    "evikeCategory": "Cargadores > De marcadora > GBB SMG",
+    "specs": {
+      "Calibre": "6mm BB",
+      "Capacidad": "30 BBs",
+      "Sistema": "GBB (gas)",
+      "Material": "Metal/polímero",
+      "Compatibilidad": "KWA MP9 GBB"
+    },
+    "description": "<p>Cargador de repuesto para <strong>KWA MP9 GBB</strong>, de 30 BBs, compatible exclusivamente con la subametralladora KWA MP9.</p><ul><li>Calibre: 6mm BB</li><li>Capacidad: 30 BBs</li><li>Compatible: KWA MP9 GBB</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs basadas en características conocidas del cargador KWA MP9."
+  },
+  {
+    "sku": "RR0047",
+    "ourTitle": "Cargador Glock 17",
+    "evikeUrl": "",
+    "evikeBrand": "WE Tech / Compatible",
+    "evikeManufacturer": "WE Tech",
+    "evikeCategory": "Cargadores > De marcadora > GBB Pistola",
+    "specs": {
+      "Calibre": "6mm BB",
+      "Capacidad": "25 BBs",
+      "Sistema": "GBB (gas)",
+      "Material": "Metal",
+      "Compatibilidad": "WE Tech Glock 17 GBB y compatibles"
+    },
+    "description": "<p>Cargador estándar de repuesto para pistola <strong>Glock 17 GBB</strong> (WE Tech y compatibles), capacidad de 25 BBs en metal.</p><ul><li>Calibre: 6mm BB</li><li>Capacidad: ~25 BBs</li><li>Material: metal</li><li>Compatible: WE Tech G17 GBB</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs generales para cargador GBB Glock 17."
+  },
+  {
+    "sku": "RR0052",
+    "ourTitle": "Cargador Glock 17 Extendido",
+    "evikeUrl": "",
+    "evikeBrand": "WE Tech / Compatible",
+    "evikeManufacturer": "WE Tech",
+    "evikeCategory": "Cargadores > De marcadora > GBB Pistola",
+    "specs": {
+      "Calibre": "6mm BB",
+      "Capacidad": "~40+ BBs (extendido)",
+      "Sistema": "GBB (gas)",
+      "Material": "Metal",
+      "Compatibilidad": "WE Tech Glock 17 GBB y compatibles"
+    },
+    "description": "<p>Cargador extendido para <strong>Glock 17 GBB</strong>, mayor capacidad que el estándar. Compatible con WE Tech G17 y marcadoras Glock GBB compatibles.</p><ul><li>Calibre: 6mm BB</li><li>Capacidad: extendida (~40+ BBs)</li><li>Material: metal</li><li>Compatible: WE Tech G17 GBB</li></ul>",
+    "confidence": "low",
+    "notes": "Specs generales estimadas para cargador extendido GBB Glock 17."
+  },
+  {
+    "sku": "RR0039",
+    "ourTitle": "Mira Red Dot - V3",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico / Armadillo",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Ópticas y miras > Red Dot",
+    "specs": {
+      "Aumento": "1x",
+      "Compatibilidad montaje": "Riel Picatinny",
+      "Retícula": "Punto rojo ajustable (XY)",
+      "Protección": "Tapa Lexan contra BBs entrantes",
+      "Ajuste": "Windage y elevation"
+    },
+    "description": "<p>Mira red dot <strong>V3</strong> de perfil compacto, compatible con rieles Picatinny, con tapa de Lexan para proteger la lente de BBs entrantes.</p><ul><li>Aumento: 1x</li><li>Montura: Picatinny</li><li>Retícula: punto rojo ajustable</li><li>Tapa Lexan protectora</li><li>Ajuste windage y elevation</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs extraídas de descripción del catálogo local."
+  },
+  {
+    "sku": "RR0054",
+    "ourTitle": "Mira de Punto Rojo Armadillo 1X20 mm Romeo5 Negro",
+    "evikeUrl": "",
+    "evikeBrand": "Armadillo",
+    "evikeManufacturer": "Armadillo (replica SIG Romeo5)",
+    "evikeCategory": "Ópticas y miras > Red Dot",
+    "specs": {
+      "Aumento": "1x",
+      "Lente objetivo": "20 mm",
+      "Retícula": "Punto rojo 2 MOA",
+      "Batería": "1x CR2032",
+      "Brillo": "8 días + 2 nocturnos (NV)",
+      "Autonomía": ">40,000 horas",
+      "Montaje": "Compatible Picatinny/Weaver",
+      "Color": "Negro"
+    },
+    "description": "<p>La <strong>Mira Armadillo Romeo5 1x20mm</strong> es un red dot compacto estilo SIG Romeo5 con 10 niveles de brillo (2 NV) y autonomía superior a 40,000 horas.</p><ul><li>Aumento: 1x | Objetivo: 20 mm</li><li>Retícula: punto rojo 2 MOA</li><li>Batería CR2032 — +40,000 horas</li><li>10 niveles de brillo (2 nocturnos)</li><li>Montura Picatinny compatible</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas directamente de la descripción del catálogo local (detallada y verificable)."
+  },
+  {
+    "sku": "RR0055",
+    "ourTitle": "Magnificador Armadillo 2X G45 Negro",
+    "evikeUrl": "",
+    "evikeBrand": "Armadillo",
+    "evikeManufacturer": "Armadillo (replica EOTech G45)",
+    "evikeCategory": "Ópticas y miras > Magnificadores",
+    "specs": {
+      "Aumento": "2x",
+      "Compatibilidad": "Todos los modelos HWS/red dot",
+      "Dimensiones": "99 x 58.4 x 83.8 mm",
+      "Peso": "362.9 g",
+      "Resistencia al agua": "33 pies (10 m)",
+      "Montaje": "Compatible Picatinny, flip-to-side"
+    },
+    "description": "<p>El <strong>Magnificador Armadillo G45 2x</strong> amplía a 2x cualquier red dot o HWS existente, con montura flip-to-side y resistencia al agua a 10 metros.</p><ul><li>Aumento: 2x</li><li>Compatible con cualquier red dot HWS</li><li>Dimensiones: 99 × 58.4 × 83.8 mm | Peso: 362.9 g</li><li>Resistente al agua: 10 m</li><li>Montura flip-to-side Picatinny</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas directamente de la descripción del catálogo local."
+  },
+  {
+    "sku": "RR0097",
+    "ourTitle": "Casco Emerson Sf Ultra High Cut",
+    "evikeUrl": "",
+    "evikeBrand": "Emerson",
+    "evikeManufacturer": "Emerson Gear",
+    "evikeCategory": "Protección > Cascos",
+    "specs": {
+      "Tipo": "High-cut táctico (SF style)",
+      "Material": "ABS polímero de alta resistencia",
+      "Compatibilidad": "NVG mount, rieles ARC laterales",
+      "Tallas": "M/L ajustable",
+      "Color": "Negro / Multicam / Tan (según variante)"
+    },
+    "description": "<p>El <strong>Emerson SF Ultra High Cut</strong> es un casco táctico de perfil alto (high-cut) inspirado en el Ops-Core, con montura NVG y rieles ARC laterales para accesorios.</p><ul><li>Tipo: high-cut SF</li><li>Material: ABS de alta resistencia</li><li>Montura NVG integrada</li><li>Rieles ARC laterales</li><li>Tallas: M/L ajustable</li></ul>",
+    "confidence": "medium",
+    "notes": "emersongear.net no accesible. Specs basadas en características conocidas del Emerson SF High Cut."
+  },
+  {
+    "sku": "RR0109",
+    "ourTitle": "Odin PTS",
+    "evikeUrl": "",
+    "evikeBrand": "PTS",
+    "evikeManufacturer": "PTS",
+    "evikeCategory": "Repuestos y mejoras",
+    "specs": {
+      "Tipo": "Speedloader / magazine loader (Odin Innovations)",
+      "Capacidad": "Varía según modelo",
+      "Material": "Polímero",
+      "Compatibilidad": "Cargadores M4/AR mid-cap y high-cap"
+    },
+    "description": "<p>El <strong>PTS Odin</strong> (Odin Innovations) es un cargador de velocidad para rellenar rápidamente cargadores mid-cap y high-cap de M4/AR en campo.</p><ul><li>Tipo: speedloader</li><li>Compatible: cargadores M4/AR</li><li>Material: polímero</li></ul>",
+    "confidence": "low",
+    "notes": "Descripción muy escueta en catálogo local. Specs estimadas."
+  },
+  {
+    "sku": "RR0121",
+    "ourTitle": "Resorte M90 Spring",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Repuestos y mejoras > Muelles",
+    "specs": {
+      "Tipo": "Muelle de AEG (gearbox)",
+      "Potencia": "M90 (~270–290 FPS con BB 0.20g)",
+      "Compatibilidad": "Gearbox V2, V3, V6 estándar",
+      "Material": "Acero"
+    },
+    "description": "<p>Muelle de repuesto <strong>M90</strong> para gearbox de AEG, que entrega aproximadamente 270–290 FPS con BBs de 0.20g. Ideal para campos CQB con límite de velocidad.</p><ul><li>Tipo: muelle AEG</li><li>Potencia: M90 (~270–290 FPS / 0.20g)</li><li>Compatible: V2, V3, V6</li><li>Material: acero</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs estándar para muelle M90 airsoft."
+  },
+  {
+    "sku": "RR0022",
+    "ourTitle": "BBs BLS 0.25 1 kg",
+    "evikeUrl": "",
+    "evikeBrand": "BLS",
+    "evikeManufacturer": "BLS",
+    "evikeCategory": "Munición y gas > BBs",
+    "specs": {
+      "Calibre": "6mm",
+      "Peso": "0.25 g",
+      "Cantidad": "~4000 BBs / kg",
+      "Material": "Polímero liso",
+      "Presentación": "Bolsa 1 kg"
+    },
+    "description": "<p>BBs <strong>BLS de 0.25g</strong> en bolsa de 1 kg, para marcadoras de airsoft 6mm. Calibración uniforme y acabado liso para buena alimentación.</p><ul><li>Calibre: 6mm</li><li>Peso: 0.25g</li><li>Cantidad: ~4000 BBs</li><li>Polímero liso sin costura</li></ul>",
+    "confidence": "high",
+    "notes": "Specs estándar para BBs BLS 0.25g 1kg. Ampliamente documentadas."
+  },
+  {
+    "sku": "RR0023",
+    "ourTitle": "BBs BLS 0.28",
+    "evikeUrl": "",
+    "evikeBrand": "BLS",
+    "evikeManufacturer": "BLS",
+    "evikeCategory": "Munición y gas > BBs",
+    "specs": {
+      "Calibre": "6mm",
+      "Peso": "0.28 g",
+      "Material": "Polímero liso",
+      "Uso recomendado": "Marcadoras con hop-up para mayor alcance"
+    },
+    "description": "<p>BBs <strong>BLS de 0.28g</strong> para marcadoras de airsoft 6mm. Mayor peso que 0.20/0.25g, recomendadas con hop-up ajustado para mayor precisión y alcance.</p><ul><li>Calibre: 6mm</li><li>Peso: 0.28g</li><li>Polímero liso</li><li>Mejor rendimiento con hop-up calibrado</li></ul>",
+    "confidence": "high",
+    "notes": "Specs estándar BLS 0.28g."
+  },
+  {
+    "sku": "RR0025",
+    "ourTitle": "Guantes Tácticos Negros y Tan",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Protección > Guantes",
+    "specs": {
+      "Tipo": "Guantes tácticos de dedo completo",
+      "Material": "Cuero sintético / polímero reforzado en nudillos",
+      "Colores": "Negro y Tan",
+      "Tallas": "S, M, L, XL"
+    },
+    "description": "<p>Guantes tácticos de dedo completo para airsoft, con protección en nudillos y palma de cuero sintético. Disponibles en negro y tan.</p><ul><li>Tipo: dedo completo</li><li>Protección: nudillos reforzados</li><li>Material: cuero sintético</li><li>Colores: negro y tan</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico sin marca. Specs mínimas disponibles."
+  },
+  {
+    "sku": "RR0026",
+    "ourTitle": "Cargadora de Velocidad CYMA 100R",
+    "evikeUrl": "",
+    "evikeBrand": "CYMA",
+    "evikeManufacturer": "CYMA",
+    "evikeCategory": "Cargadores > Speedloaders",
+    "specs": {
+      "Tipo": "Speedloader / cargadora rápida",
+      "Capacidad": "100 BBs",
+      "Calibre": "6mm BB",
+      "Material": "Polímero",
+      "Mecanismo": "Palanca de carga rápida"
+    },
+    "description": "<p>Cargadora rápida <strong>CYMA 100R</strong> de 100 BBs para cargar cargadores mid-cap de airsoft en campo de forma rápida y ergonómica.</p><ul><li>Capacidad: 100 BBs</li><li>Calibre: 6mm</li><li>Mecanismo: palanca</li><li>Material: polímero</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs estándar para speedloader CYMA 100R."
+  },
+  {
+    "sku": "RR0027",
+    "ourTitle": "Cargadora de Velocidad WoSport 1000R",
+    "evikeUrl": "",
+    "evikeBrand": "WoSport",
+    "evikeManufacturer": "WoSport",
+    "evikeCategory": "Cargadores > Speedloaders",
+    "specs": {
+      "Tipo": "Speedloader / cargadora rápida de alta capacidad",
+      "Capacidad": "1000 BBs",
+      "Calibre": "6mm BB",
+      "Material": "Polímero",
+      "Mecanismo": "Manivela"
+    },
+    "description": "<p>Cargadora rápida <strong>WoSport 1000R</strong> de alta capacidad para 1000 BBs, con mecanismo de manivela para recargar cargadores high-cap o mid-cap rápidamente.</p><ul><li>Capacidad: 1000 BBs</li><li>Calibre: 6mm</li><li>Mecanismo: manivela</li><li>Material: polímero</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs estándar speedloader WoSport 1000R."
+  },
+  {
+    "sku": "RR0028",
+    "ourTitle": "G&G BBs Verde Tracer 0.25G",
+    "evikeUrl": "",
+    "evikeBrand": "G&G Armament",
+    "evikeManufacturer": "G&G Armament",
+    "evikeCategory": "Munición y gas > BBs",
+    "specs": {
+      "Calibre": "6mm",
+      "Peso": "0.25 g",
+      "Tipo": "Trazadora (tracer) — fluorescente verde",
+      "Material": "Polímero con recubrimiento fluorescente",
+      "Compatibilidad": "Unidades tracer estándar airsoft"
+    },
+    "description": "<p>BBs <strong>G&G trazadoras verdes de 0.25g</strong> para usar con unidades tracer de airsoft. Se iluminan al pasar por la unidad tracer, visibles en condiciones de poca luz.</p><ul><li>Calibre: 6mm</li><li>Peso: 0.25g</li><li>Color: verde fluorescente</li><li>Compatibles con unidades tracer estándar</li></ul>",
+    "confidence": "high",
+    "notes": "Specs estándar G&G tracer BBs 0.25g."
+  },
+  {
+    "sku": "RR0029",
+    "ourTitle": "G&G BBs Verde Tracer 0,28 g / 2700 R Botella",
+    "evikeUrl": "",
+    "evikeBrand": "G&G Armament",
+    "evikeManufacturer": "G&G Armament",
+    "evikeCategory": "Munición y gas > BBs",
+    "specs": {
+      "Calibre": "6mm",
+      "Peso": "0.28 g",
+      "Tipo": "Trazadora (tracer) — fluorescente verde",
+      "Cantidad": "2700 BBs (botella)",
+      "Material": "Polímero con recubrimiento fluorescente"
+    },
+    "description": "<p>BBs <strong>G&G trazadoras verdes de 0.28g</strong> en botella de 2700 unidades. Mayor peso para mejor estabilidad en vuelo con hop-up calibrado.</p><ul><li>Calibre: 6mm</li><li>Peso: 0.28g</li><li>Cantidad: 2700 BBs</li><li>Color: verde fluorescente</li><li>Compatibles con unidades tracer estándar</li></ul>",
+    "confidence": "high",
+    "notes": "Specs estándar G&G tracer BBs 0.28g botella 2700."
+  },
+  {
+    "sku": "RR0030",
+    "ourTitle": "Puff Dino Verde Gas 600ML",
+    "evikeUrl": "",
+    "evikeBrand": "Puff Dino",
+    "evikeManufacturer": "Puff Dino",
+    "evikeCategory": "Munición y gas > Gas propelente",
+    "specs": {
+      "Tipo": "Green gas (propano + silicona)",
+      "Volumen": "600 mL",
+      "Presión": "~0.4–0.5 MPa (temperatura ambiente)",
+      "Contenido": "Propano + aceite de silicona lubricante"
+    },
+    "description": "<p>Gas propelente <strong>Puff Dino Green Gas</strong> de 600 mL para pistolas y rifles GBB de airsoft. Incluye aceite de silicona para lubricar sellos y válvulas.</p><ul><li>Tipo: green gas (propano + silicona)</li><li>Volumen: 600 mL</li><li>Con aceite de silicona integrado</li><li>Compatible con pistolas y rifles GBB airsoft</li></ul>",
+    "confidence": "high",
+    "notes": "Specs estándar Puff Dino Green Gas 600mL."
+  },
+  {
+    "sku": "RR0031",
+    "ourTitle": "Emerson Gear – G3 Combat Pants-Upgraded Version ／Multicam",
+    "evikeUrl": "",
+    "evikeBrand": "Emerson Gear",
+    "evikeManufacturer": "Emerson Gear",
+    "evikeCategory": "Uniformes",
+    "specs": {
+      "Tipo": "Pantalón táctico G3 versión mejorada",
+      "Color": "Multicam",
+      "Material": "Nailon / polycotton ripstop",
+      "Sistema de rodilleras": "Compatible con rodilleras extraíbles (bolsillos integrados)",
+      "Bolsillos": "Múltiples (laterales, traseros, cargo)",
+      "Tallas": "XS a XXL"
+    },
+    "description": "<p>Los <strong>Emerson Gear G3 Combat Pants Upgraded</strong> en Multicam son pantalones tácticos de alta resistencia con bolsillos para rodilleras extraíbles y múltiples compartimentos.</p><ul><li>Material: ripstop resistente</li><li>Color: Multicam</li><li>Bolsillos para rodilleras</li><li>Múltiples bolsillos de carga</li></ul>",
+    "confidence": "medium",
+    "notes": "emersongear.net no accesible. Specs basadas en características conocidas del G3 Combat Pants."
+  },
+  {
+    "sku": "RR0032",
+    "ourTitle": "Emerson Gear – Upgraded Version G3 Combat Shirt／muticam",
+    "evikeUrl": "",
+    "evikeBrand": "Emerson Gear",
+    "evikeManufacturer": "Emerson Gear",
+    "evikeCategory": "Uniformes",
+    "specs": {
+      "Tipo": "Camisa táctica G3 versión mejorada",
+      "Color": "Multicam",
+      "Material": "Nailon / polycotton ripstop",
+      "Codos": "Bolsillos para coderas extraíbles",
+      "Tallas": "XS a XXL"
+    },
+    "description": "<p>La <strong>Emerson Gear G3 Combat Shirt Upgraded</strong> en Multicam es una camisa táctica de manga larga con bolsillos para coderas extraíbles y tejido ripstop de alta resistencia.</p><ul><li>Material: ripstop</li><li>Color: Multicam</li><li>Bolsillos para coderas</li><li>Compatible con conjunto G3 pants</li></ul>",
+    "confidence": "medium",
+    "notes": "emersongear.net no accesible. Specs basadas en características conocidas del G3 Combat Shirt."
+  },
+  {
+    "sku": "RR0033",
+    "ourTitle": "Bolso Rifle 85 Tan",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Estuches y bolsos",
+    "specs": {
+      "Tipo": "Bolso/funda para marcadora primaria",
+      "Longitud": "85 cm",
+      "Color": "Tan",
+      "Material": "Nailon 600D o similar",
+      "Cierre": "Cremallera"
+    },
+    "description": "<p>Bolso de transporte de 85 cm para marcadoras primarias, en color tan. Protege la marcadora durante el transporte al campo.</p><ul><li>Longitud: 85 cm</li><li>Color: tan</li><li>Material: nailon 600D</li><li>Cierre cremallera</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Specs mínimas estimadas."
+  },
+  {
+    "sku": "RR0034",
+    "ourTitle": "EZShoot Linterna de Pistola de 800 Lúmenes",
+    "evikeUrl": "",
+    "evikeBrand": "EZShoot",
+    "evikeManufacturer": "EZShoot",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "800 lm",
+      "Alcance del haz": "160 m (~524 ft)",
+      "Montaje": "Riel Picatinny / bajo cañón pistola",
+      "Recargable": "Sí",
+      "Modos": "Encendido constante"
+    },
+    "description": "<p>Linterna táctica <strong>EZShoot de 800 lúmenes</strong> para pistola, con montaje en riel Picatinny y batería recargable. Alcance de haz de ~160 m.</p><ul><li>Potencia: 800 lm</li><li>Alcance: ~160 m</li><li>Montaje: Picatinny bajo cañón</li><li>Batería recargable</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs extraídas de descripción del catálogo local."
+  },
+  {
+    "sku": "RR0035",
+    "ourTitle": "EZShoot Linterna Láser Recargable de 800 Lúmenes",
+    "evikeUrl": "",
+    "evikeBrand": "EZShoot",
+    "evikeManufacturer": "EZShoot",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "800 lm",
+      "Alcance de luz": "~160 m (~524 ft)",
+      "Láser": "Rojo, <5 mW, Clase IIIA",
+      "Alcance del láser": "~200 m de día / hasta ~2000 m de noche",
+      "Montaje": "Riel Picatinny",
+      "Recargable": "Sí"
+    },
+    "description": "<p>Combo linterna + láser <strong>EZShoot de 800 lúmenes</strong>, con láser rojo clase IIIA (<5 mW) y batería recargable. Doble función para uso táctico.</p><ul><li>Potencia: 800 lm</li><li>Láser rojo: <5 mW (Clase IIIA)</li><li>Montaje: Picatinny</li><li>Batería recargable</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs extraídas de descripción del catálogo local."
+  },
+  {
+    "sku": "RR0037",
+    "ourTitle": "Lente High Lander Pyramex Ambar",
+    "evikeUrl": "",
+    "evikeBrand": "Pyramex",
+    "evikeManufacturer": "Pyramex",
+    "evikeCategory": "Protección > Antiparras",
+    "specs": {
+      "Modelo": "Highlander",
+      "Lente": "Policarbonato ámbar",
+      "Anti-fog": "Sí (ventilación indirecta)",
+      "Marco": "Resistente con escudo lateral extendido",
+      "Correa": "Elástica ajustable",
+      "Espuma": "Sí (sellado perimetral)",
+      "Certificación": "ANSI Z87.1"
+    },
+    "description": "<p>Las antiparras <strong>Pyramex Highlander</strong> en lente ámbar cuentan con ventilación indirecta anti-empañamiento, marco resistente con escudo lateral extendido y espuma de sellado.</p><ul><li>Lente: policarbonato ámbar</li><li>Anti-fog: ventilación indirecta</li><li>Marco con escudo lateral</li><li>Correa elástica ajustable</li><li>Certificación ANSI Z87.1</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de descripción detallada del catálogo local."
+  },
+  {
+    "sku": "RR0038",
+    "ourTitle": "Lentes High Lander Pyramex Gris",
+    "evikeUrl": "",
+    "evikeBrand": "Pyramex",
+    "evikeManufacturer": "Pyramex",
+    "evikeCategory": "Protección > Antiparras",
+    "specs": {
+      "Modelo": "Highlander",
+      "Lente": "Policarbonato gris (solar)",
+      "Anti-fog": "Sí (ventilación indirecta)",
+      "Marco": "Resistente con escudo lateral extendido",
+      "Correa": "Elástica ajustable",
+      "Espuma": "Sí (sellado perimetral)",
+      "Certificación": "ANSI Z87.1"
+    },
+    "description": "<p>Las antiparras <strong>Pyramex Highlander</strong> en lente gris (solar) reducen el deslumbramiento exterior. Ventilación indirecta anti-empañamiento y espuma de sellado.</p><ul><li>Lente: policarbonato gris</li><li>Anti-fog: ventilación indirecta</li><li>Marco con escudo lateral</li><li>Correa elástica ajustable</li><li>Certificación ANSI Z87.1</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de descripción detallada del catálogo local."
+  },
+  {
+    "sku": "RR0040",
+    "ourTitle": "Cámara de Alcance Runcam 2 – 4K",
+    "evikeUrl": "",
+    "evikeBrand": "RunCam",
+    "evikeManufacturer": "RunCam",
+    "evikeCategory": "Cámaras",
+    "specs": {
+      "Resolución": "4K (3840×2160)",
+      "FOV": "155° (ultra wide)",
+      "Montaje": "Compatible riel Picatinny estándar",
+      "Almacenamiento": "MicroSD (no incluida)",
+      "Batería": "Interna recargable",
+      "Estabilización": "No (sin gimbal)"
+    },
+    "description": "<p>La <strong>RunCam 2 4K</strong> es una cámara de acción compacta que graba cada disparo en calidad 4K, diseñada para montaje en riel Picatinny de marcadoras primarias.</p><ul><li>Resolución: 4K (3840×2160)</li><li>FOV: 155°</li><li>Montaje: riel Picatinny</li><li>MicroSD (no incluida)</li><li>Batería recargable interna</li></ul>",
+    "confidence": "medium",
+    "notes": "shop.runcam.com no tiene la página vigente. Specs basadas en características conocidas del RunCam 2 4K."
+  },
+  {
+    "sku": "RR0045",
+    "ourTitle": "Estuche Armadillo Impermeable para Fusil de Asalto",
+    "evikeUrl": "",
+    "evikeBrand": "Armadillo",
+    "evikeManufacturer": "Armadillo",
+    "evikeCategory": "Estuches y bolsos",
+    "specs": {
+      "Tipo": "Estuche rígido impermeable para marcadora primaria",
+      "Impermeabilidad": "IP67 o equivalente",
+      "Interior": "Espuma pre-cortada (pick-and-pluck)",
+      "Cierre": "Cierre de presión hermético",
+      "Color": "Negro"
+    },
+    "description": "<p>Estuche rígido <strong>Armadillo</strong> impermeable para marcadoras primarias / fusiles de asalto. Espuma interior pick-and-pluck y cierre hermético para máxima protección.</p><ul><li>Impermeable (IP67)</li><li>Espuma pick-and-pluck personalizable</li><li>Cierre hermético de presión</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs basadas en características típicas de la línea Armadillo."
+  },
+  {
+    "sku": "RR0046",
+    "ourTitle": "Estuche Armadillo Impermeable Rígido Protector para Pistola",
+    "evikeUrl": "",
+    "evikeBrand": "Armadillo",
+    "evikeManufacturer": "Armadillo",
+    "evikeCategory": "Estuches y bolsos",
+    "specs": {
+      "Tipo": "Estuche rígido impermeable para pistola",
+      "Impermeabilidad": "IP67 o equivalente",
+      "Interior": "Espuma pre-cortada (pick-and-pluck)",
+      "Cierre": "Cierre de presión hermético",
+      "Color": "Negro"
+    },
+    "description": "<p>Estuche rígido <strong>Armadillo</strong> impermeable para pistolas de airsoft. Espuma interior configurable y cierre hermético para protección en transporte.</p><ul><li>Impermeable (IP67)</li><li>Espuma pick-and-pluck</li><li>Cierre hermético</li><li>Tamaño para pistola</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs basadas en características típicas de la línea Armadillo."
+  },
+  {
+    "sku": "RR0049",
+    "ourTitle": "BBs, Botella de 0.45 g",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Munición y gas > BBs",
+    "specs": {
+      "Calibre": "6mm",
+      "Peso": "0.45 g",
+      "Tipo": "BBs pesadas para francotirador / alta precisión",
+      "Uso recomendado": "Rifles de francotirador con hop-up de alta potencia"
+    },
+    "description": "<p>BBs de <strong>0.45g</strong> para airsoft, especialmente indicadas para rifles de francotirador de alta potencia donde el hop-up permite aprovechar BBs pesadas para mayor precisión y resistencia al viento.</p><ul><li>Calibre: 6mm</li><li>Peso: 0.45g</li><li>Uso: francotirador / alta velocidad + hop-up</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs estándar para BBs 0.45g airsoft."
+  },
+  {
+    "sku": "RR0053",
+    "ourTitle": "Batería 11.1 V 1200 a",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Energía > Baterías",
+    "specs": {
+      "Tipo": "LiPo (Litio Polímero)",
+      "Voltaje": "11.1 V (3S)",
+      "Capacidad": "1200 mAh",
+      "Conector": "Deans / Mini Tamiya (varía por modelo)",
+      "Formato": "Mini stick o nunchuck (varía)"
+    },
+    "description": "<p>Batería <strong>LiPo 11.1V 1200mAh</strong> para marcadoras AEG de airsoft. El voltaje 11.1V (3S) maximiza cadencia y respuesta del gatillo.</p><ul><li>Tipo: LiPo 3S</li><li>Voltaje: 11.1V</li><li>Capacidad: 1200 mAh</li><li>Uso: AEG airsoft</li></ul><p>Requiere cargador LiPo balanceado. No sobrecargar.</p>",
+    "confidence": "medium",
+    "notes": "Specs estándar LiPo 11.1V 1200mAh."
+  },
+  {
+    "sku": "RR0056",
+    "ourTitle": "Parches",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Accesorios > Parches",
+    "specs": {
+      "Tipo": "Parches tácticos / morales",
+      "Fijación": "Velcro (hook-and-loop)",
+      "Material": "PVC o bordado"
+    },
+    "description": "<p>Parches tácticos con fijación velcro para chalecos, cascos y equipamiento MOLLE. Disponibles en PVC o bordados.</p><ul><li>Fijación: velcro</li><li>Material: PVC o bordado</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Descripción mínima."
+  },
+  {
+    "sku": "RR0057",
+    "ourTitle": "Correa 2 Puntos Alta Tenacidad",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Equipamiento táctico > Correas",
+    "specs": {
+      "Tipo": "Correa de 2 puntos",
+      "Material": "Nailon de alta tenacidad",
+      "Ajuste": "Rápido (quick-adjust slider)",
+      "Longitud": "Ajustable",
+      "Compatibilidad": "QD sling swivels estándar"
+    },
+    "description": "<p>Correa de <strong>2 puntos</strong> de nailon de alta tenacidad para marcadoras primarias de airsoft. Ajuste rápido para cambiar longitud en campo.</p><ul><li>Tipo: 2 puntos</li><li>Material: nailon alta tenacidad</li><li>Ajuste rápido</li><li>Compatible con swivels QD</li></ul>",
+    "confidence": "medium",
+    "notes": "Producto genérico. Specs estándar para correa 2 puntos."
+  },
+  {
+    "sku": "RR0058",
+    "ourTitle": "Chest Rig Profesional",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Equipamiento táctico > Chest rigs",
+    "specs": {
+      "Tipo": "Chest rig táctico",
+      "Sistema": "MOLLE",
+      "Material": "Nailon 500D o 1000D",
+      "Portacargadores": "Múltiples (M4/AK compatible)",
+      "Colores": "Negro / Multicam / Tan"
+    },
+    "description": "<p>Chest rig táctico con sistema MOLLE para personalización de pouches. Portacargadores para M4/AK y compatibilidad con accesorios MOLLE.</p><ul><li>Sistema MOLLE</li><li>Material: nailon 500D</li><li>Portacargadores M4/AK</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Specs mínimas estimadas."
+  },
+  {
+    "sku": "RR0059",
+    "ourTitle": "Máscara Bucal",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Protección > Máscaras",
+    "specs": {
+      "Tipo": "Protector bucal / lower face mask",
+      "Material": "Malla metálica o ABS",
+      "Compatibilidad": "Uso con antiparras estándar"
+    },
+    "description": "<p>Protector bucal de malla para airsoft, complemento para antiparras. Protege la zona inferior del rostro de impactos de BBs.</p><ul><li>Tipo: protector bucal</li><li>Material: malla metálica</li><li>Uso: junto con antiparras</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Descripción mínima."
+  },
+  {
+    "sku": "RR0060",
+    "ourTitle": "Máscara Clasica",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Protección > Máscaras",
+    "specs": {
+      "Tipo": "Máscara facial completa clásica",
+      "Material": "Malla metálica / ABS",
+      "Cobertura": "Cara completa"
+    },
+    "description": "<p>Máscara clásica de protección facial completa para airsoft en malla metálica. Protege ojos, cara y zona bucal de impactos de BBs.</p><ul><li>Tipo: cara completa</li><li>Material: malla metálica + ABS</li><li>Protección integral</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Descripción mínima."
+  },
+  {
+    "sku": "RR0061",
+    "ourTitle": "Máscara Cubrejeta",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Protección > Máscaras",
+    "specs": {
+      "Tipo": "Cubre-orejetas / protector lateral casco",
+      "Material": "ABS o nailon",
+      "Compatibilidad": "Cascos estilo high-cut con rail ARC"
+    },
+    "description": "<p>Protectores laterales (cubrejetas) para cascos de airsoft tipo high-cut, compatibles con rieles ARC. Protección adicional para las orejas.</p><ul><li>Tipo: cubrejetas laterales</li><li>Compatible: cascos con rail ARC</li></ul>",
+    "confidence": "low",
+    "notes": "Nombre sugiere cubrejetas. Descripción estimada."
+  },
+  {
+    "sku": "RR0062",
+    "ourTitle": "Máscara Profesional",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Protección > Máscaras",
+    "specs": {
+      "Tipo": "Máscara facial profesional / media cara o cara completa",
+      "Material": "ABS reforzado / malla metálica",
+      "Cobertura": "Media cara o cara completa"
+    },
+    "description": "<p>Máscara profesional de protección para airsoft, en ABS reforzado o malla metálica. Mayor resistencia y ergonomía que los modelos básicos.</p><ul><li>Material: ABS/malla metálica</li><li>Diseño profesional</li><li>Protección contra impactos de BBs</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Specs mínimas estimadas."
+  },
+  {
+    "sku": "RR0063",
+    "ourTitle": "Pouch Bolsa de Descarte",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Equipamiento táctico > Pouches",
+    "specs": {
+      "Tipo": "Dump pouch / bolsa de descarte",
+      "Sistema": "MOLLE",
+      "Material": "Nailon",
+      "Capacidad": "Plegable, se expande al usar"
+    },
+    "description": "<p>Dump pouch (bolsa de descarte) MOLLE para guardar cargadores vacíos o materiales durante el juego de airsoft. Se pliega cuando no se usa.</p><ul><li>Sistema MOLLE</li><li>Plegable</li><li>Material: nailon</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Specs mínimas."
+  },
+  {
+    "sku": "RR0064",
+    "ourTitle": "Pouch Radio",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Comunicaciones > Radios",
+    "specs": {
+      "Tipo": "Funda / pouch para radio portátil",
+      "Sistema": "MOLLE",
+      "Compatible": "Baofeng UV-5R y radios de tamaño similar",
+      "Material": "Nailon 500D o similar"
+    },
+    "description": "<p>Pouch MOLLE para radio portátil Baofeng UV-5R y modelos similares. Fijación MOLLE para chaleco táctico.</p><ul><li>Sistema MOLLE</li><li>Compatible: Baofeng UV-5R</li><li>Material: nailon</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Specs mínimas."
+  },
+  {
+    "sku": "RR0065",
+    "ourTitle": "Protector de Mira",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Accesorios > Rieles y monturas",
+    "specs": {
+      "Tipo": "Protector de lente para miras ópticas",
+      "Material": "Policarbonato / Lexan",
+      "Compatibilidad": "Miras de 30–40 mm de diámetro de objetivo"
+    },
+    "description": "<p>Protector de lente para miras ópticas de airsoft, fabricado en policarbonato resistente a impactos de BBs. Evita dañar la óptica durante el juego.</p><ul><li>Material: policarbonato</li><li>Protege la lente objetivo</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Specs mínimas."
+  },
+  {
+    "sku": "RR0066",
+    "ourTitle": "Camara Go Pro Hero 13 Black",
+    "evikeUrl": "",
+    "evikeBrand": "GoPro",
+    "evikeManufacturer": "GoPro",
+    "evikeCategory": "Cámaras",
+    "specs": {
+      "Resolución máxima": "5.3K / 60fps",
+      "Estabilización": "HyperSmooth 6.0",
+      "Batería": "Enduro (desmontable)",
+      "Impermeabilidad": "10 m (sin carcasa)",
+      "Pantalla trasera": "2.27\" táctil",
+      "Pantalla delantera": "1.4\" táctil"
+    },
+    "description": "<p>La <strong>GoPro Hero 13 Black</strong> es la cámara de acción más avanzada de GoPro, con resolución hasta 5.3K, estabilización HyperSmooth 6.0 e impermeabilidad a 10 m.</p><ul><li>Video: hasta 5.3K/60fps</li><li>Estabilización: HyperSmooth 6.0</li><li>Impermeabilidad: 10 m</li><li>Pantalla táctil trasera 2.27\"</li><li>Batería Enduro removible</li></ul>",
+    "confidence": "high",
+    "notes": "Specs del GoPro Hero 13 Black son de conocimiento público."
+  },
+  {
+    "sku": "RR0067",
+    "ourTitle": "Go Pro Hero",
+    "evikeUrl": "",
+    "evikeBrand": "GoPro",
+    "evikeManufacturer": "GoPro",
+    "evikeCategory": "Cámaras",
+    "specs": {
+      "Resolución máxima": "1080p / 60fps (modelo base)",
+      "Estabilización": "Digital básica",
+      "Impermeabilidad": "10 m (sin carcasa)"
+    },
+    "description": "<p>La <strong>GoPro Hero</strong> (modelo base) es la cámara de acción de entrada de GoPro, compacta, ligera e impermeable hasta 10 m. Ideal para registro de partidas de airsoft.</p><ul><li>Video: 1080p/60fps</li><li>Impermeabilidad: 10 m</li><li>Compacta y liviana</li></ul>",
+    "confidence": "medium",
+    "notes": "Modelo base GoPro Hero — specs varían por año de edición."
+  },
+  {
+    "sku": "RR0068",
+    "ourTitle": "BBs Tracers BLS 1 kg 0.28",
+    "evikeUrl": "",
+    "evikeBrand": "BLS",
+    "evikeManufacturer": "BLS",
+    "evikeCategory": "Munición y gas > BBs",
+    "specs": {
+      "Calibre": "6mm",
+      "Peso": "0.28 g",
+      "Tipo": "Trazadora (tracer) — fluorescente",
+      "Cantidad": "~3570 BBs / kg",
+      "Presentación": "Bolsa 1 kg"
+    },
+    "description": "<p>BBs <strong>BLS trazadoras de 0.28g</strong> en bolsa de 1 kg. Se iluminan al pasar por unidades tracer, visibles en condiciones de poca luz.</p><ul><li>Calibre: 6mm</li><li>Peso: 0.28g</li><li>Tracer fluorescente</li><li>Cantidad: ~3570 BBs</li></ul>",
+    "confidence": "high",
+    "notes": "Specs estándar BLS tracer 0.28g 1kg."
+  },
+  {
+    "sku": "RR0069",
+    "ourTitle": "BBs BLS .20 1 kg",
+    "evikeUrl": "",
+    "evikeBrand": "BLS",
+    "evikeManufacturer": "BLS",
+    "evikeCategory": "Munición y gas > BBs",
+    "specs": {
+      "Calibre": "6mm",
+      "Peso": "0.20 g",
+      "Cantidad": "~5000 BBs / kg",
+      "Material": "Polímero liso",
+      "Presentación": "Bolsa 1 kg"
+    },
+    "description": "<p>BBs <strong>BLS de 0.20g</strong> en bolsa de 1 kg. El peso estándar de referencia para airsoft, compatible con todo tipo de marcadoras AEG y GBB.</p><ul><li>Calibre: 6mm</li><li>Peso: 0.20g (estándar)</li><li>Cantidad: ~5000 BBs</li><li>Polímero liso</li></ul>",
+    "confidence": "high",
+    "notes": "Specs estándar BLS 0.20g 1kg."
+  },
+  {
+    "sku": "RR0070",
+    "ourTitle": "Antiparra Venture Gear Loadout",
+    "evikeUrl": "",
+    "evikeBrand": "Venture Gear",
+    "evikeManufacturer": "Venture Gear",
+    "evikeCategory": "Protección > Antiparras",
+    "specs": {
+      "Modelo": "Loadout",
+      "Lente": "Policarbonato",
+      "Anti-fog": "Revestimiento H2MAX anti-empañamiento",
+      "Ventilación": "Marco ventilado (filtra polvo)",
+      "Acolchado": "Espuma perimetral",
+      "Certificación": "ANSI Z87.1"
+    },
+    "description": "<p>Las antiparras <strong>Venture Gear Loadout</strong> combinan ventilación del marco con revestimiento anti-empañamiento H2MAX y acolchado de espuma para sellado cómodo.</p><ul><li>Lente policarbonato</li><li>Anti-fog H2MAX</li><li>Marco ventilado anti-polvo</li><li>Espuma perimetral</li><li>ANSI Z87.1</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de descripción detallada del catálogo local."
+  },
+  {
+    "sku": "RR0071",
+    "ourTitle": "Lentes Dropzone Ballistic Kit",
+    "evikeUrl": "",
+    "evikeBrand": "Pyramex / Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Protección > Antiparras",
+    "specs": {
+      "Tipo": "Kit de lentes balísticos intercambiables",
+      "Lentes incluidas": "4 lentes de distintas tonalidades",
+      "Protección": "Balística máxima",
+      "Montura": "Liviana",
+      "Nasal": "Puente de goma para uso prolongado",
+      "Certificación": "Balístico (MIL-PRF-31013 o equivalente)"
+    },
+    "description": "<p>Kit <strong>Dropzone Ballistic</strong> de 4 lentes intercambiables con protección balística máxima. Tonalidades variadas para adaptarse a distintas condiciones de iluminación.</p><ul><li>4 lentes intercambiables</li><li>Protección balística máxima</li><li>Montura liviana</li><li>Puente nasal de goma</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de descripción detallada del catálogo local."
+  },
+  {
+    "sku": "RR0072",
+    "ourTitle": "Lente Pyramex Modelo I-Force Ambar",
+    "evikeUrl": "",
+    "evikeBrand": "Pyramex",
+    "evikeManufacturer": "Pyramex",
+    "evikeCategory": "Protección > Antiparras",
+    "specs": {
+      "Modelo": "I-Force",
+      "Sistema": "Lente dual (exterior PC + interior acetato anti-fog)",
+      "Lente exterior": "Policarbonato ámbar",
+      "Lente interior": "Acetato anti-empañamiento",
+      "Uso": "Indoor / poca luz (ámbar)",
+      "Certificación": "ANSI Z87.1"
+    },
+    "description": "<p>Las antiparras <strong>Pyramex I-Force</strong> cuentan con sistema de lente dual exclusivo: exterior de policarbonato ámbar y capa interior de acetato para prevenir el empañamiento. Ideales para uso indoor.</p><ul><li>Sistema dual: PC ámbar + acetato anti-fog</li><li>Ideal para indoor / poca luz</li><li>ANSI Z87.1</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de descripción detallada del catálogo local."
+  },
+  {
+    "sku": "RR0073",
+    "ourTitle": "Cargador de Baterías Gen Ace",
+    "evikeUrl": "",
+    "evikeBrand": "Gen Ace",
+    "evikeManufacturer": "Gen Ace",
+    "evikeCategory": "Cargadores > De marcadora",
+    "specs": {
+      "Tipo": "Cargador balanceado para LiPo",
+      "Compatible": "LiPo 2S–4S (7.4V–14.8V)",
+      "Corriente máxima": "Varía por modelo (típico 2A–6A)",
+      "Funciones": "Carga balanceada, almacenamiento"
+    },
+    "description": "<p>Cargador de baterías <strong>Gen Ace</strong> para packs LiPo de airsoft. Con función de carga balanceada para prolongar la vida útil de las baterías.</p><ul><li>Compatible: LiPo 2S–4S</li><li>Carga balanceada</li><li>Función almacenamiento</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs generales para cargador LiPo Gen Ace."
+  },
+  {
+    "sku": "RR0074",
+    "ourTitle": "Chaleco",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Protección > Chalecos",
+    "specs": {
+      "Tipo": "Chaleco táctico MOLLE",
+      "Sistema": "MOLLE",
+      "Material": "Nailon 600D",
+      "Portacargadores": "Incluidos"
+    },
+    "description": "<p>Chaleco táctico MOLLE para airsoft con portacargadores integrados y sistema MOLLE para personalización de equipamiento.</p><ul><li>Sistema MOLLE</li><li>Material: nailon 600D</li><li>Portacargadores incluidos</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Descripción mínima."
+  },
+  {
+    "sku": "RR0076",
+    "ourTitle": "Bengalas Negras y Azules",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Accesorios > Bengalas",
+    "specs": {
+      "Tipo": "Bengalas de color para airsoft",
+      "Colores": "Negro (humo) y Azul (humo)",
+      "Uso": "Señalización, efecto dramático en partidas"
+    },
+    "description": "<p>Bengalas de humo de color para airsoft. Color negro y azul para señalización o efectos dramáticos en partidas.</p><ul><li>Colores: negro y azul</li><li>Humo de color</li><li>Uso: señalización táctica</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Descripción mínima."
+  },
+  {
+    "sku": "RR0078",
+    "ourTitle": "Linterna para Marcadora Primaria 3000 lúmenes",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "3000 lm",
+      "Montaje": "Riel Picatinny / M-LOK",
+      "Batería": "Recargable (USB-C o magnética)",
+      "Modos": "Alto / bajo"
+    },
+    "description": "<p>Linterna táctica de <strong>3000 lúmenes</strong> para marcadoras primarias, con montaje en riel Picatinny o M-LOK y batería recargable.</p><ul><li>Potencia: 3000 lm</li><li>Montaje: Picatinny/M-LOK</li><li>Batería recargable</li><li>Modos alto/bajo</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Specs extraídas del título."
+  },
+  {
+    "sku": "RR0079",
+    "ourTitle": "Linterna Tactica 800 lúmenes Gazeshot",
+    "evikeUrl": "",
+    "evikeBrand": "Gazeshot",
+    "evikeManufacturer": "Gazeshot",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "800 lm",
+      "Montaje": "Riel Picatinny",
+      "Batería": "Recargable"
+    },
+    "description": "<p>Linterna táctica <strong>Gazeshot de 800 lúmenes</strong> para marcadoras de airsoft con montaje en riel Picatinny.</p><ul><li>Potencia: 800 lm</li><li>Montaje: Picatinny</li><li>Batería recargable</li></ul>",
+    "confidence": "low",
+    "notes": "Marca poco conocida. Specs mínimas del título."
+  },
+  {
+    "sku": "RR0080",
+    "ourTitle": "Balaclava Varios Colores",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Protección > Máscaras",
+    "specs": {
+      "Tipo": "Balaclava / pasamontañas",
+      "Material": "Licra / nailon elástico",
+      "Cobertura": "Cabeza completa con apertura para ojos",
+      "Colores": "Varios"
+    },
+    "description": "<p>Balaclava de lycra para airsoft, protege cabeza y cuello con apertura para los ojos. Disponible en varios colores.</p><ul><li>Material: licra elástica</li><li>Cobertura: cabeza y cuello</li><li>Varios colores disponibles</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Descripción mínima."
+  },
+  {
+    "sku": "RR0081",
+    "ourTitle": "Linterna de Pistola Recargable 700 lúmenes Cronhawk",
+    "evikeUrl": "",
+    "evikeBrand": "Cronhawk",
+    "evikeManufacturer": "Cronhawk",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "700 lm",
+      "Montaje": "Riel Picatinny bajo cañón pistola",
+      "Batería": "Recargable integrada"
+    },
+    "description": "<p>Linterna de pistola <strong>Cronhawk de 700 lúmenes</strong> con batería recargable integrada y montaje en riel Picatinny.</p><ul><li>Potencia: 700 lm</li><li>Montaje: Picatinny pistola</li><li>Batería recargable</li></ul>",
+    "confidence": "low",
+    "notes": "Marca poco conocida. Specs del título."
+  },
+  {
+    "sku": "RR0082",
+    "ourTitle": "Luz de Baja DLXArsot",
+    "evikeUrl": "",
+    "evikeBrand": "DLXArsot",
+    "evikeManufacturer": "DLXArsot",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Tipo": "Luz de baja visibilidad / IR / LED rojo",
+      "Montaje": "Riel Picatinny o casco"
+    },
+    "description": "<p>Luz de baja visibilidad <strong>DLXArsot</strong> para casco o riel táctico, diseñada para señalización con mínima emisión visible.</p><ul><li>Tipo: luz de baja visibilidad</li><li>Montaje: Picatinny o casco</li></ul>",
+    "confidence": "low",
+    "notes": "Marca/modelo no identificado claramente. Specs mínimas estimadas."
+  },
+  {
+    "sku": "RR0083",
+    "ourTitle": "Linterna para Casco Ultra Compacta Ezaiming",
+    "evikeUrl": "",
+    "evikeBrand": "Ezaiming",
+    "evikeManufacturer": "Ezaiming",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Tipo": "Linterna de casco ultra compacta",
+      "Montaje": "Casco (clip/NVG mount)"
+    },
+    "description": "<p>Linterna ultra compacta <strong>Ezaiming</strong> para casco de airsoft con sistema de montaje en casco.</p><ul><li>Tipo: linterna de casco</li><li>Ultra compacta</li><li>Montaje en casco</li></ul>",
+    "confidence": "low",
+    "notes": "Marca/modelo poco conocido. Specs mínimas."
+  },
+  {
+    "sku": "RR0084",
+    "ourTitle": "Linterna Mini Vtiger 1000 lúmenes para Glock y Riel Picatinny",
+    "evikeUrl": "",
+    "evikeBrand": "Vtiger",
+    "evikeManufacturer": "Vtiger",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "1000 lm",
+      "Montaje": "Riel Picatinny bajo cañón (compatible Glock)",
+      "Formato": "Mini compacta"
+    },
+    "description": "<p>Linterna mini <strong>Vtiger de 1000 lúmenes</strong> para pistola Glock y riel Picatinny. Formato compacto para no interferir con el manejo de la pistola.</p><ul><li>Potencia: 1000 lm</li><li>Montaje: Picatinny (compatible Glock)</li><li>Mini compacta</li></ul>",
+    "confidence": "low",
+    "notes": "Marca poco conocida. Specs del título."
+  },
+  {
+    "sku": "RR0085",
+    "ourTitle": "Luz Tactica de Rifle 1800 lúmenes con Interruptor EZShoot",
+    "evikeUrl": "",
+    "evikeBrand": "EZShoot",
+    "evikeManufacturer": "EZShoot",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "1800 lm",
+      "Alcance": "~300 m (~984 ft)",
+      "Autonomía": "2.5 horas (modo alto)",
+      "Montaje": "Riel Picatinny para rifle",
+      "Interruptor": "Remoto / cable de presión incluido",
+      "Batería": "Recargable"
+    },
+    "description": "<p>Linterna táctica <strong>EZShoot de 1800 lúmenes</strong> para rifle con interruptor de presión remoto. Alcance de ~300 m y 2.5 hs de autonomía en modo alto.</p><ul><li>Potencia: 1800 lm (~1.5x más que modelos comunes)</li><li>Alcance: ~300 m</li><li>Autonomía: 2.5 hs</li><li>Interruptor remoto incluido</li><li>Montaje: Picatinny</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de descripción detallada del catálogo local."
+  },
+  {
+    "sku": "RR0086",
+    "ourTitle": "Linterna Tactica de 1700 lúmenes Recargable Magnetico, para Rifle EZShoot",
+    "evikeUrl": "",
+    "evikeBrand": "EZShoot",
+    "evikeManufacturer": "EZShoot",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "1700 lm",
+      "Alcance": "~280 m (~918 ft)",
+      "Recarga": "Magnética",
+      "Montaje": "Riel Picatinny para rifle"
+    },
+    "description": "<p>Linterna táctica <strong>EZShoot de 1700 lúmenes</strong> con carga magnética para rifle. 1.5 veces más brillante que linternas comunes, con alcance de ~280 m.</p><ul><li>Potencia: 1700 lm</li><li>Alcance: ~280 m</li><li>Carga magnética</li><li>Montaje: Picatinny</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de descripción detallada del catálogo local."
+  },
+  {
+    "sku": "RR0087",
+    "ourTitle": "Linterna para Rifle de 1450 lúmenes con Interruptor Votatu ML40",
+    "evikeUrl": "https://www.votatu.com/products/votatu-ml40-1450-lumens-tactical-lights",
+    "evikeBrand": "Votatu",
+    "evikeManufacturer": "Votatu",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "1450 lm (alto) / 550 lm (bajo)",
+      "Alcance": "130 m (alto) / 60 m (bajo)",
+      "Autonomía": "45 min (alto) / 60 min (bajo)",
+      "Batería": "Litio polímero integrada, recarga USB magnética (2h)",
+      "Dimensiones": "134 × 22 × 23 mm",
+      "Peso": "123 g",
+      "Montaje": "M-LOK (sin adaptador)",
+      "Modos": "Alto, bajo, estroboscópico (doble pulsación)",
+      "Material": "Aluminio aeronáutico CNC, anodizado Mil-Spec",
+      "Activación": "Momentánea y constante (ambidiestro)"
+    },
+    "description": "<p>La <strong>Votatu ML40</strong> es una linterna táctica compacta de 1450 lúmenes con montaje M-LOK nativo (sin adaptador), construcción aluminio CNC y carga USB magnética.</p><ul><li>Potencia: 1450 lm (alto) / 550 lm (bajo)</li><li>Alcance: 130 m</li><li>Autonomía: 45 min (alto)</li><li>Dimensiones: 134 × 22 × 23 mm | Peso: 123 g</li><li>Montaje M-LOK nativo</li><li>Carga magnética USB (2h)</li><li>Estroboscópico disponible</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas directamente de votatu.com/products/votatu-ml40-1450-lumens-tactical-lights"
+  },
+  {
+    "sku": "RR0088",
+    "ourTitle": "Linterna Compacta de Pistola 1000 lúmenes Ezaiming",
+    "evikeUrl": "",
+    "evikeBrand": "Ezaiming",
+    "evikeManufacturer": "Ezaiming",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "1000 lm",
+      "Alcance": "~120 m (~393 ft)",
+      "Autonomía": "90 minutos",
+      "Montaje": "Riel Picatinny bajo cañón pistola",
+      "Interruptor": "Alto/bajo ergonómico"
+    },
+    "description": "<p>Linterna de pistola <strong>Ezaiming de 1000 lúmenes</strong> con alcance de ~120 m y 90 min de autonomía. Interruptor ergonómico con modos alto y bajo.</p><ul><li>Potencia: 1000 lm</li><li>Alcance: ~120 m</li><li>Autonomía: 90 min</li><li>Montaje: Picatinny</li><li>Modos alto/bajo</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de descripción detallada del catálogo local."
+  },
+  {
+    "sku": "RR0089",
+    "ourTitle": "Luz de Pistola 800 lúmenes, Linterna Compacta Ajustable GMConn",
+    "evikeUrl": "",
+    "evikeBrand": "GMConn",
+    "evikeManufacturer": "GMConn",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Modelo": "GM-1085",
+      "Lúmenes": "800 lm",
+      "Altura": "~31.75 mm (1.25 pulgadas)",
+      "Montaje": "Riel ajustable (adapta distintos tipos de pistola)",
+      "Perfil": "Bajo perfil y compacto"
+    },
+    "description": "<p>La linterna de pistola <strong>GMConn GM-1085 de 800 lúmenes</strong> cuenta con riel ajustable que se adapta a distintos tipos de pistola y perfil ultra bajo de solo 31.75 mm.</p><ul><li>Potencia: 800 lm</li><li>Altura: 31.75 mm (perfil bajo)</li><li>Riel ajustable para distintas pistolas</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de descripción detallada del catálogo local."
+  },
+  {
+    "sku": "RR0090",
+    "ourTitle": "Linterna Tactica de 1600 lúmenes Compatible con Riel Mlok/Picatinny para Rifle Defentac",
+    "evikeUrl": "",
+    "evikeBrand": "Defentac",
+    "evikeManufacturer": "Defentac",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "1600 lm",
+      "Montaje": "M-LOK y Picatinny 2-en-1 (sin adaptador)",
+      "Indicador de batería": "Sí (al accionar el encendido)",
+      "Batería": "Recargable"
+    },
+    "description": "<p>Linterna táctica <strong>Defentac de 1600 lúmenes</strong> con montaje 2-en-1 compatible con M-LOK y Picatinny sin adaptador. Indicador de nivel de batería integrado.</p><ul><li>Potencia: 1600 lm</li><li>Montaje: M-LOK y Picatinny (2-en-1)</li><li>Indicador de batería</li><li>Batería recargable</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de descripción detallada del catálogo local."
+  },
+  {
+    "sku": "RR0091",
+    "ourTitle": "Linterna Tactica 1450 lúmenes Picatinny Rail, Estroboscopica, Toughsol",
+    "evikeUrl": "",
+    "evikeBrand": "Toughsol",
+    "evikeManufacturer": "Toughsol",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Modelo": "TF-1132",
+      "Lúmenes": "1450 lm",
+      "Montaje": "Picatinny y M-LOK 2-en-1 (sin adaptador)",
+      "Modos": "4 modos: constante, momentáneo, estroboscópico, estroboscópico momentáneo"
+    },
+    "description": "<p>La linterna <strong>Toughsol TF-1132 de 1450 lúmenes</strong> ofrece 4 modos de operación (incluido estroboscópico) y montaje 2-en-1 Picatinny/M-LOK sin adaptador.</p><ul><li>Potencia: 1450 lm</li><li>4 modos: constante, momentáneo, estroboscópico, estroboscópico momentáneo</li><li>Montaje: Picatinny + M-LOK (2-en-1)</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de descripción detallada del catálogo local."
+  },
+  {
+    "sku": "RR0092",
+    "ourTitle": "Guantes",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Protección > Guantes",
+    "specs": {
+      "Tipo": "Guantes tácticos",
+      "Material": "Cuero sintético / polímero"
+    },
+    "description": "<p>Guantes tácticos para airsoft con protección en nudillos y palma reforzada.</p><ul><li>Tipo: táctico</li><li>Material: cuero sintético</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Descripción mínima."
+  },
+  {
+    "sku": "RR0093",
+    "ourTitle": "Triple Pouch IDOgear",
+    "evikeUrl": "",
+    "evikeBrand": "IDOgear",
+    "evikeManufacturer": "IDOgear",
+    "evikeCategory": "Equipamiento táctico > Pouches",
+    "specs": {
+      "Tipo": "Triple portacargadores",
+      "Sistema": "MOLLE",
+      "Compatibilidad": "Cargadores M4/AR / 5.56mm",
+      "Material": "Nailon 500D o CORDURA",
+      "Colores": "Negro / Multicam / Ranger Green"
+    },
+    "description": "<p>Triple portacargadores <strong>IDOgear</strong> con sistema MOLLE para 3 cargadores M4/AR. Nailon de alta resistencia con cierre elástico o Velcro.</p><ul><li>Tipo: triple pouch</li><li>Sistema MOLLE</li><li>Compatible: M4/AR cargadores</li><li>Nailon CORDURA</li></ul>",
+    "confidence": "medium",
+    "notes": "idogear.com bloquea. Specs basadas en características conocidas de la línea IDOgear."
+  },
+  {
+    "sku": "RR0094",
+    "ourTitle": "5.56 Pistol Triple Mag Pouch Negro IDOgear",
+    "evikeUrl": "",
+    "evikeBrand": "IDOgear",
+    "evikeManufacturer": "IDOgear",
+    "evikeCategory": "Equipamiento táctico > Pouches",
+    "specs": {
+      "Tipo": "Triple pouch combinado (5.56 + pistola)",
+      "Sistema": "MOLLE",
+      "Compatibilidad": "Cargadores 5.56 (M4) + cargadores de pistola",
+      "Material": "Nailon 500D",
+      "Color": "Negro"
+    },
+    "description": "<p>Pouch triple <strong>IDOgear</strong> que combina espacios para cargadores de rifle 5.56 y pistola, con sistema MOLLE.</p><ul><li>Triple: rifle 5.56 + pistola</li><li>Sistema MOLLE</li><li>Material: nailon 500D</li><li>Color: negro</li></ul>",
+    "confidence": "medium",
+    "notes": "idogear.com bloquea. Specs basadas en características conocidas de la línea IDOgear."
+  },
+  {
+    "sku": "RR0095",
+    "ourTitle": "IDOgear Pouch Doble",
+    "evikeUrl": "",
+    "evikeBrand": "IDOgear",
+    "evikeManufacturer": "IDOgear",
+    "evikeCategory": "Equipamiento táctico > Pouches",
+    "specs": {
+      "Tipo": "Doble portacargadores",
+      "Sistema": "MOLLE",
+      "Compatibilidad": "Cargadores M4/AR",
+      "Material": "Nailon 500D"
+    },
+    "description": "<p>Doble portacargadores <strong>IDOgear</strong> con sistema MOLLE para 2 cargadores M4/AR.</p><ul><li>Tipo: doble pouch</li><li>Sistema MOLLE</li><li>Compatible: M4/AR</li></ul>",
+    "confidence": "medium",
+    "notes": "idogear.com bloquea. Specs basadas en características conocidas de la línea IDOgear."
+  },
+  {
+    "sku": "RR0096",
+    "ourTitle": "IDOgear Pouch Single",
+    "evikeUrl": "",
+    "evikeBrand": "IDOgear",
+    "evikeManufacturer": "IDOgear",
+    "evikeCategory": "Equipamiento táctico > Pouches",
+    "specs": {
+      "Tipo": "Single portacargador",
+      "Sistema": "MOLLE",
+      "Compatibilidad": "Cargadores M4/AR o pistola",
+      "Material": "Nailon 500D"
+    },
+    "description": "<p>Single portacargador <strong>IDOgear</strong> con sistema MOLLE para 1 cargador M4/AR o pistola.</p><ul><li>Tipo: single pouch</li><li>Sistema MOLLE</li><li>Compatible: M4/AR o pistola</li></ul>",
+    "confidence": "medium",
+    "notes": "idogear.com bloquea. Specs basadas en características conocidas de la línea IDOgear."
+  },
+  {
+    "sku": "RR0103",
+    "ourTitle": "Mesh",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Protección > Máscaras",
+    "specs": {
+      "Tipo": "Máscara de malla metálica (mesh)",
+      "Material": "Acero inoxidable / aluminio",
+      "Cobertura": "Media cara o cara completa"
+    },
+    "description": "<p>Máscara de malla metálica para airsoft, protege la cara de impactos de BBs con construcción de acero inoxidable o aluminio.</p><ul><li>Material: malla metálica</li><li>Protección contra BBs</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Descripción mínima."
+  },
+  {
+    "sku": "RR0106",
+    "ourTitle": "Linterna Defentac 2400 lúmenes",
+    "evikeUrl": "",
+    "evikeBrand": "Defentac",
+    "evikeManufacturer": "Defentac",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "2400 lm",
+      "Montaje": "M-LOK y Picatinny",
+      "Batería": "Recargable (carga magnética)",
+      "Resistencia al agua": "Impermeable",
+      "Indicador de batería": "Sí"
+    },
+    "description": "<p>Linterna táctica <strong>Defentac de 2400 lúmenes</strong> con montaje M-LOK/Picatinny, carga magnética e indicador de nivel de potencia. Impermeable.</p><ul><li>Potencia: 2400 lm</li><li>Montaje: M-LOK + Picatinny</li><li>Carga magnética</li><li>Impermeable</li><li>Indicador de batería</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de descripción del catálogo local."
+  },
+  {
+    "sku": "RR0107",
+    "ourTitle": "Linterna Defentac 1750 lúmenes",
+    "evikeUrl": "",
+    "evikeBrand": "Defentac",
+    "evikeManufacturer": "Defentac",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "1750 lm",
+      "Montaje": "M-LOK y Picatinny",
+      "Batería": "Recargable (carga magnética)",
+      "Modos": "Estroboscópico momentáneo disponible",
+      "Interruptor": "De presión integrado"
+    },
+    "description": "<p>Linterna táctica <strong>Defentac de 1750 lúmenes</strong> con zoom, interruptor de presión integrado, estroboscópico momentáneo y carga magnética. Compatible M-LOK/Picatinny.</p><ul><li>Potencia: 1750 lm</li><li>Zoom óptico</li><li>Interruptor de presión integrado</li><li>Estroboscópico momentáneo</li><li>M-LOK/Picatinny</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas de descripción del catálogo local."
+  },
+  {
+    "sku": "RR0108",
+    "ourTitle": "Cargador de Batería Titan",
+    "evikeUrl": "",
+    "evikeBrand": "Titan",
+    "evikeManufacturer": "Titan",
+    "evikeCategory": "Cargadores > De marcadora",
+    "specs": {
+      "Tipo": "Cargador balanceado para LiPo / LiFe",
+      "Compatible": "LiPo 1S–4S / LiFe",
+      "Entrada": "USB o adaptador DC"
+    },
+    "description": "<p>Cargador de baterías <strong>Titan</strong> para packs LiPo de marcadoras AEG con carga balanceada y seguridad de sobrecarga.</p><ul><li>Compatible: LiPo 1S–4S</li><li>Carga balanceada</li><li>Entrada USB o DC</li></ul>",
+    "confidence": "low",
+    "notes": "Specs mínimas disponibles. Modelo Titan no identificado con precisión."
+  },
+  {
+    "sku": "RR0110",
+    "ourTitle": "Radio Baofeng UV-5R",
+    "evikeUrl": "https://www.baofengradio.com/products/uv-5r",
+    "evikeBrand": "Baofeng",
+    "evikeManufacturer": "Baofeng",
+    "evikeCategory": "Comunicaciones > Radios",
+    "specs": {
+      "Bandas": "VHF: 136–174 MHz / UHF: 400–520 MHz",
+      "Potencia": "5W (alta) / 1W (baja)",
+      "Canales": "128",
+      "Batería": "1800 mAh Li-ion",
+      "Pantalla": "LCD 1.5\"",
+      "Peso": "500 g (con batería y antena)",
+      "Funciones extra": "FM radio, linterna LED, VOX, bloqueo de teclado, alerta de emergencia",
+      "Conector": "K-plug (compatible auriculares y cable de programación)"
+    },
+    "description": "<p>La <strong>Baofeng UV-5R</strong> es la radio táctica portátil más popular para airsoft, dual banda VHF/UHF con 128 canales y 5W de potencia.</p><ul><li>Dual banda: VHF 136–174 MHz / UHF 400–520 MHz</li><li>Potencia: 5W / 1W</li><li>128 canales</li><li>Batería 1800 mAh</li><li>Radio FM integrada</li><li>Linterna LED</li></ul><p>Compatible con PTT tipo K-plug (Kenwood). Requiere licencia de radiooperador para uso legal.</p>",
+    "confidence": "high",
+    "notes": "Specs extraídas directamente de baofengradio.com"
+  },
+  {
+    "sku": "RR0111",
+    "ourTitle": "Juego de Rieles Picatinny",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Accesorios > Rieles y monturas",
+    "specs": {
+      "Tipo": "Rieles Picatinny adicionales",
+      "Estándar": "MIL-STD-1913 Picatinny",
+      "Material": "Aluminio anodizado",
+      "Compatibilidad": "Guardamanos de 20 mm o M-LOK/KeyMod (según modelo)"
+    },
+    "description": "<p>Juego de rieles <strong>Picatinny adicionales</strong> para expandir puntos de montaje en guardamanos de marcadoras airsoft.</p><ul><li>Estándar Picatinny MIL-STD-1913</li><li>Material: aluminio anodizado</li><li>Para guardamanos M-LOK / KeyMod</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Specs mínimas."
+  },
+  {
+    "sku": "RR0112",
+    "ourTitle": "Gancho para Monturas",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Accesorios > Rieles y monturas",
+    "specs": {
+      "Tipo": "Adaptador / gancho para monturas de óptica",
+      "Compatibilidad": "Riel Picatinny MIL-STD-1913",
+      "Material": "Aluminio o acero"
+    },
+    "description": "<p>Adaptador o gancho para monturas de óptica, compatible con rieles Picatinny estándar.</p><ul><li>Riel Picatinny</li><li>Material: aluminio o acero</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Descripción mínima."
+  },
+  {
+    "sku": "RR0113",
+    "ourTitle": "Linterna Votatu para Rifle PL50S 1450 lúmenes",
+    "evikeUrl": "https://www.votatu.com/products/votatu-pl50s-rechargeable-picatinny-flashlight-with-pressure-switch",
+    "evikeBrand": "Votatu",
+    "evikeManufacturer": "Votatu",
+    "evikeCategory": "Iluminación",
+    "specs": {
+      "Lúmenes": "1450 lm (alto) / 550 lm (bajo)",
+      "Alcance": "130 m (alto) / 60 m (bajo)",
+      "Autonomía": "45 min (alto) / 60 min (bajo)",
+      "Batería": "Polímero integrada",
+      "Montaje": "Picatinny 1913",
+      "Interruptor de presión": "Integrado",
+      "Material": "Aluminio Mil-Spec hard-anodizado",
+      "Modos": "Alto y bajo"
+    },
+    "description": "<p>La <strong>Votatu PL50S</strong> es una linterna de 1450 lúmenes con interruptor de presión integrado para montaje Picatinny 1913. Construcción aluminio Mil-Spec con acabado hard-anodizado.</p><ul><li>Potencia: 1450 lm (alto) / 550 lm (bajo)</li><li>Alcance: 130 m</li><li>Autonomía: 45 min (alto)</li><li>Interruptor de presión integrado</li><li>Montaje: Picatinny 1913</li><li>Aluminio Mil-Spec</li></ul>",
+    "confidence": "high",
+    "notes": "Specs extraídas directamente de votatu.com/products/votatu-pl50s-rechargeable-picatinny-flashlight-with-pressure-switch"
+  },
+  {
+    "sku": "RR0114",
+    "ourTitle": "Chalecos Varios Colores sin Pouchs",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Protección > Chalecos",
+    "specs": {
+      "Tipo": "Chaleco MOLLE sin pouches",
+      "Sistema": "MOLLE",
+      "Material": "Nailon 600D",
+      "Colores": "Varios",
+      "Incluye": "Solo el chaleco, sin portacargadores"
+    },
+    "description": "<p>Chaleco táctico MOLLE sin pouches incluidos, disponible en varios colores. Base modular para personalizar el equipamiento según necesidad.</p><ul><li>Sistema MOLLE</li><li>Sin pouches (chaleco base)</li><li>Varios colores</li><li>Material: nailon 600D</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Specs mínimas."
+  },
+  {
+    "sku": "RR0122",
+    "ourTitle": "Correa 1 Punto",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Equipamiento táctico > Correas",
+    "specs": {
+      "Tipo": "Correa de 1 punto",
+      "Material": "Nailon de alta tenacidad",
+      "Ajuste": "Rápido",
+      "Compatibilidad": "Swivel QD o loop"
+    },
+    "description": "<p>Correa de <strong>1 punto</strong> para marcadoras de airsoft, con ajuste rápido y compatibilidad con swivels QD.</p><ul><li>Tipo: 1 punto</li><li>Ajuste rápido</li><li>Compatible con QD</li></ul>",
+    "confidence": "low",
+    "notes": "Producto genérico. Specs estándar correa 1 punto."
+  },
+  {
+    "sku": "RR0123",
+    "ourTitle": "Cuchillo de Goma Dumi",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Accesorios > Entrenamiento",
+    "specs": {
+      "Tipo": "Cuchillo de entrenamiento dummy (dumi)",
+      "Material": "Goma / polímero blando",
+      "Uso": "Entrenamiento sin riesgo de corte"
+    },
+    "description": "<p>Cuchillo de entrenamiento (dummy/dumi) fabricado en goma para práctica de combate cercano en airsoft y entrenamiento táctico sin riesgo de lesiones.</p><ul><li>Material: goma blanda</li><li>Uso: entrenamiento CQC</li><li>Sin filo</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs estándar para cuchillo dummy de entrenamiento."
+  },
+  {
+    "sku": "RR0124",
+    "ourTitle": "Antiparras con Ventilador Incorporado",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Protección > Antiparras",
+    "specs": {
+      "Tipo": "Antiparras con ventilador eléctrico anti-empañamiento",
+      "Lente": "Policarbonato",
+      "Ventilador": "Motor eléctrico integrado (batería incluida)",
+      "Certificación": "ANSI Z87.1 o equivalente"
+    },
+    "description": "<p>Antiparras para airsoft con ventilador eléctrico incorporado para eliminar el empañamiento incluso en condiciones de alta actividad física.</p><ul><li>Ventilador eléctrico anti-empañamiento</li><li>Lente: policarbonato</li><li>Certificación ANSI</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs estándar para antiparras con ventilador airsoft."
+  },
+  {
+    "sku": "RR0125",
+    "ourTitle": "Bolsa de Descarte IDOgear",
+    "evikeUrl": "",
+    "evikeBrand": "IDOgear",
+    "evikeManufacturer": "IDOgear",
+    "evikeCategory": "Equipamiento táctico > Pouches",
+    "specs": {
+      "Tipo": "Dump pouch / bolsa de descarte",
+      "Sistema": "MOLLE",
+      "Material": "Nailon 500D",
+      "Capacidad": "Expandible (plegable en desuso)"
+    },
+    "description": "<p>Dump pouch (bolsa de descarte) <strong>IDOgear</strong> con sistema MOLLE para guardar cargadores vacíos durante el juego. Se pliega cuando no se usa.</p><ul><li>Sistema MOLLE</li><li>Plegable / expandible</li><li>Material: nailon 500D IDOgear</li></ul>",
+    "confidence": "medium",
+    "notes": "idogear.com bloquea. Specs basadas en características conocidas de la línea IDOgear."
+  },
+  {
+    "sku": "RR0126",
+    "ourTitle": "Antiparras Tácticas de Alto Rendimiento con Sistema de Ventilación Anti-Empañamiento (Kit de 2 Lentes)",
+    "evikeUrl": "",
+    "evikeBrand": "Genérico",
+    "evikeManufacturer": "Genérico",
+    "evikeCategory": "Protección > Antiparras",
+    "specs": {
+      "Tipo": "Antiparras tácticas de alto rendimiento",
+      "Lentes incluidas": "Kit de 2 lentes intercambiables",
+      "Sistema anti-fog": "Ventilación anti-empañamiento",
+      "Lente": "Policarbonato",
+      "Certificación": "ANSI Z87.1 o equivalente"
+    },
+    "description": "<p>Antiparras tácticas de alto rendimiento con sistema de ventilación anti-empañamiento y kit de 2 lentes intercambiables para distintas condiciones de luz.</p><ul><li>Kit 2 lentes intercambiables</li><li>Sistema de ventilación anti-empañamiento</li><li>Lente: policarbonato resistente</li><li>Certificación ANSI</li></ul>",
+    "confidence": "medium",
+    "notes": "Specs extraídas de nombre del producto y descripción del catálogo."
+  }
+]

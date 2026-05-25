@@ -20,12 +20,12 @@ export function Pagination({
         {currentPage > 1 ? (
           <Link
             href={buildHref(currentPage - 1)}
-            className="inline-flex items-center gap-2 text-bone hover:text-orange transition-colors"
+            className="inline-flex items-center gap-2 text-bone hover:text-orange transition-colors min-h-[2.75rem] px-2"
           >
             <ChevronLeft size={14} aria-hidden /> Anterior
           </Link>
         ) : (
-          <span className="text-rail inline-flex items-center gap-2">
+          <span className="text-rail inline-flex items-center gap-2 min-h-[2.75rem] px-2">
             <ChevronLeft size={14} aria-hidden /> Anterior
           </span>
         )}
@@ -35,12 +35,12 @@ export function Pagination({
         {hasNext ? (
           <Link
             href={buildHref(currentPage + 1)}
-            className="inline-flex items-center gap-2 text-bone hover:text-orange transition-colors"
+            className="inline-flex items-center gap-2 text-bone hover:text-orange transition-colors min-h-[2.75rem] px-2"
           >
             Siguiente <ChevronRight size={14} aria-hidden />
           </Link>
         ) : (
-          <span className="text-rail inline-flex items-center gap-2">
+          <span className="text-rail inline-flex items-center gap-2 min-h-[2.75rem] px-2">
             Siguiente <ChevronRight size={14} aria-hidden />
           </span>
         )}

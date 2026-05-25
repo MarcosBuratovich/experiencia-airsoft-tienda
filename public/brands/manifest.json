@@ -1,0 +1,244 @@
+{
+  "Novritsch": {
+    "logo": "/brands/novritsch.png",
+    "format": "png",
+    "source": "https://us.novritsch.com/wp-content/uploads/2022/01/novUS.png",
+    "needsInvert": true,
+    "comment": "White logo on dark background — fits dark site"
+  },
+  "Tokyo Marui": {
+    "logo": "/brands/tokyo-marui.svg",
+    "format": "svg",
+    "source": "https://cdn.worldvectorlogo.com/logos/tokyo-marui.svg",
+    "needsInvert": true,
+    "comment": "Dark logo on transparent background — invert for dark site bg"
+  },
+  "KWA": {
+    "logo": "/brands/kwa.svg",
+    "format": "svg",
+    "source": "https://cdn.worldvectorlogo.com/logos/kwa-2.svg",
+    "needsInvert": false
+  },
+  "WE Tech": {
+    "logo": "/brands/we-tech.png",
+    "format": "png",
+    "source": "https://weairsoft.com/media/logo/stores/1/WE_tti.png (cropped to badge + bg removed)",
+    "needsInvert": false,
+    "comment": "WE Airsoft Taiwan official badge — circular green/black/gray on transparent"
+  },
+  "PTS Syndicate": {
+    "logo": "/brands/pts-syndicate.svg",
+    "format": "svg",
+    "source": "https://cdn.freebiesupply.com/logos/large/2x/pts-logo-svg-vector.svg",
+    "needsInvert": true,
+    "comment": "Dark text logo on transparent background"
+  },
+  "IDOgear": {
+    "logo": null,
+    "source": null,
+    "comment": "Official site (idogear.com on Shopline CMS) blocks logo CDN; no usable logo URL found"
+  },
+  "Acetech": {
+    "logo": "/brands/acetech.png",
+    "format": "png",
+    "source": "https://shoplineimg.com/5ff58f9e936c12003724be6b/63c60dc778d03500232441d4/x140.png",
+    "needsInvert": false,
+    "comment": "White logo on transparent — fits dark site"
+  },
+  "ZTAC": {
+    "logo": "/brands/ztac.png",
+    "format": "png",
+    "source": "https://www.ztactical.com/static/web/img/header/header_img1.png",
+    "needsInvert": false,
+    "comment": "Large PNG (2227x1916 RGBA) — white/colored logo on transparent; fits dark site"
+  },
+  "Emerson Gear": {
+    "logo": "/brands/emerson-gear.png",
+    "format": "png",
+    "source": "https://inrorwxhrqojji5q-static.micyjz.com/cloud/lpBpnKiljnSRmkqljnimjq/logo-baisekuan.png",
+    "needsInvert": false,
+    "comment": "White logo on transparent — fits dark site"
+  },
+  "JAG Arms": {
+    "logo": "/brands/jag-arms.png",
+    "format": "png",
+    "source": "https://jagprecision.com/cdn/shop/files/JAG_LOGO_SOLO_flat_copy_570x202.png?v=1613517494",
+    "needsInvert": true,
+    "comment": "Dark logo on transparent background"
+  },
+  "Taran Tactical Innovations": {
+    "logo": "/brands/taran-tactical.png",
+    "format": "png",
+    "source": "https://cdn11.bigcommerce.com/s-nw0rxi/images/stencil/282x53/logo_1668464367__82939.original.png",
+    "needsInvert": true,
+    "comment": "White/light logo on dark background — fits dark site"
+  },
+  "G&G": {
+    "logo": "/brands/gg.png",
+    "format": "png",
+    "source": "https://ggairsoft.com/wp-content/uploads/2024/09/Yz5mIu4OSIm8a6Rcjcqrkw.png",
+    "needsInvert": true
+  },
+  "Krytac": {
+    "logo": "/brands/krytac.svg",
+    "format": "svg",
+    "source": "https://cdn.worldvectorlogo.com/logos/krytac.svg",
+    "needsInvert": false,
+    "comment": "Colored/dark logo — check on dark bg, may need invert"
+  },
+  "CYMA": {
+    "logo": "/brands/cyma.svg",
+    "format": "svg",
+    "source": "https://cdn.worldvectorlogo.com/logos/cyma.svg",
+    "needsInvert": true,
+    "comment": "Black text SVG on transparent — invert for dark site"
+  },
+  "Baofeng": {
+    "logo": "/brands/baofeng.png",
+    "format": "png",
+    "source": "https://images.seeklogo.com/logo-png/43/1/baofeng-logo-png_seeklogo-439018.png",
+    "needsInvert": false,
+    "comment": "Dark logo on transparent — invert for dark site bg"
+  },
+  "GoPro": {
+    "logo": "/brands/gopro.png",
+    "format": "png",
+    "source": "https://companieslogo.com/img/orig/GPRO-4c0ba998.png?t=1720244492",
+    "needsInvert": true,
+    "comment": "GoPro blue/white logo on transparent"
+  },
+  "Runcam": {
+    "logo": "/brands/runcam.png",
+    "format": "png",
+    "source": "https://www.runcam.com/images/logo1.png",
+    "needsInvert": false
+  },
+  "Pyramex": {
+    "logo": "/brands/pyramex.png",
+    "format": "png",
+    "source": "https://www.pyramex.com/cdn/shop/files/logo-main_black_150x.png?v=1662654616",
+    "needsInvert": true,
+    "comment": "Black logo on transparent — invert for dark site bg"
+  },
+  "SIG Sauer": {
+    "logo": "/brands/sig-sauer.svg",
+    "format": "svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/1/19/Sig_sauer_logo.svg",
+    "needsInvert": true,
+    "comment": "Dark text SVG — invert for dark site bg"
+  },
+  "Gens Ace": {
+    "logo": "/brands/gens-ace.png",
+    "format": "png",
+    "source": "https://cdn11.bigcommerce.com/s-99ohneivnb/images/stencil/185x47/tagens_1767496421__13722.original.png",
+    "needsInvert": true,
+    "comment": "White/light logo on transparent — fits dark site"
+  },
+  "Venture Gear": {
+    "logo": "/brands/venture-gear.png",
+    "format": "png",
+    "source": "https://www.pyramex.com/cdn/shop/files/venture_gear_product_page_logo.png?v=1677856160",
+    "needsInvert": true,
+    "comment": "Dark text logo on transparent — invert for dark site. Sub-brand of Pyramex."
+  },
+  "Puff Dino": {
+    "logo": "/brands/puff-dino.webp",
+    "format": "webp",
+    "source": "https://cdn.ready-market.com.tw/ef18cebf/Templates/pic/logo.png",
+    "needsInvert": false,
+    "comment": "Official Puff Dino Taiwan site logo"
+  },
+  "BLS BBs": {
+    "logo": "/brands/bls-bbs.png",
+    "format": "png",
+    "source": "https://www.bls.com.tw/archive/image/weblogo/170718_logo.png",
+    "needsInvert": false,
+    "comment": "Dark logo on transparent — invert for dark site. From official Lien Sheng Plastic (BLS) Taiwan site."
+  },
+  "Armadillo": {
+    "logo": null,
+    "source": null,
+    "comment": "Armadillo Tactical Gear (armadillotacticalgear.com) makes tactical ladders for military, not an airsoft gear brand — no findable airsoft brand identity"
+  },
+  "Defentac": {
+    "logo": "/brands/defentac.webp",
+    "format": "webp",
+    "source": "https://thedefentac.com/wp-content/uploads/sites/76/2025/05/Defentac-logo.webp",
+    "needsInvert": false
+  },
+  "EZShoot": {
+    "logo": null,
+    "source": null,
+    "comment": "No accessible logo found on ezshooting.com (Shopify site with JS-rendered images); Amazon storefront has no downloadable logo"
+  },
+  "Votatu": {
+    "logo": "/brands/votatu.svg",
+    "format": "svg",
+    "source": "https://cdn.shopify.com/s/files/1/0645/1068/9492/files/vatouor_logo2.svg?v=1681808174",
+    "needsInvert": false,
+    "comment": "SVG from official Shopify store — appears to be colored"
+  },
+  "WoSport": {
+    "logo": "/brands/wosport.png",
+    "format": "png",
+    "source": "http://www.wosport.com/images/logo.png",
+    "needsInvert": false,
+    "comment": "Dark logo on transparent — invert for dark site bg"
+  },
+  "MTEK Flux": {
+    "logo": "/brands/mtek-flux.png",
+    "format": "png",
+    "source": "https://images.squarespace-cdn.com/content/v1/54ce6ad2e4b0845f01d39ca3/1501606098751-70EAT3YXQ032VZRYNFED/Circle_stag_update_white.png",
+    "needsInvert": false,
+    "comment": "White circular stag logo from MTEK USA (mtekusa.com) — fits dark site. Sub-brand under PTS Syndicate licensing."
+  },
+  "Eshooter": {
+    "logo": "/brands/eshooter.svg",
+    "format": "svg",
+    "source": "https://cdn.shopify.com/s/files/1/0557/3256/8162/files/logo-red-white.svg",
+    "needsInvert": false,
+    "comment": "Red and white SVG logo from official Shopify store — fits dark site"
+  },
+  "Ezaiming": {
+    "logo": null,
+    "source": null,
+    "comment": "Amazon-only brand, no official website or downloadable logo found"
+  },
+  "GMConn": {
+    "logo": null,
+    "source": null,
+    "comment": "Obscure Chinese OEM brand, no web presence or logo found"
+  },
+  "DLXArsot": {
+    "logo": null,
+    "source": null,
+    "comment": "Obscure brand, no web presence or logo found"
+  },
+  "Gazeshot": {
+    "logo": null,
+    "source": null,
+    "comment": "Obscure brand, no web presence or logo found"
+  },
+  "Toughsol": {
+    "logo": null,
+    "source": null,
+    "comment": "Obscure brand, no web presence or logo found"
+  },
+  "Vtiger": {
+    "logo": null,
+    "source": null,
+    "comment": "Vtiger is a CRM software company, not an airsoft brand — possible name confusion"
+  },
+  "Cronhawk": {
+    "logo": null,
+    "source": null,
+    "comment": "Chinese OEM, no findable brand identity"
+  },
+  "Titan": {
+    "logo": "/brands/titan.png",
+    "format": "png",
+    "source": "https://titanbatteries.com/cdn/shop/files/Titan_Logo_Side_v10_black_1.png?height=44&v=1753800236",
+    "needsInvert": true,
+    "comment": "Black logo on transparent — invert for dark site bg. Titan Power USA (titanbatteries.com)."
+  }
+}
