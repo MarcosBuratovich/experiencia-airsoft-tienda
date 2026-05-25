@@ -13,6 +13,7 @@ export function PedidoForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [generalError, setGeneralError] = useState<string | null>(null);
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+  const [whatsappUrl, setWhatsappUrl] = useState<string | null>(null);
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -43,6 +44,7 @@ export function PedidoForm() {
       });
       const data = (await res.json()) as {
         ok?: boolean;
+        url?: string;
         error?: string;
         issues?: { field: string; message: string }[];
       };
@@ -57,6 +59,12 @@ export function PedidoForm() {
         setGeneralError(data.error ?? "No pudimos registrar tu pedido.");
         setStatus("error");
         return;
+      }
+      if (data.url) {
+        setWhatsappUrl(data.url);
+        // Intento de auto-open. Si el browser bloquea el popup, el botón
+        // de fallback en el success state queda visible para el usuario.
+        window.open(data.url, "_blank", "noopener");
       }
       setStatus("success");
     } catch (err) {
@@ -74,21 +82,32 @@ export function PedidoForm() {
         <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-orange/20 border border-orange/50 mb-5">
           <CheckCircle2 size={28} className="text-orange" aria-hidden />
         </div>
-        <p className="sect-label">Pedido recibido</p>
-        <h3 className="sect-title fluid-3xl mt-3">¡Gracias!</h3>
+        <p className="sect-label">Pedido cargado</p>
+        <h3 className="sect-title fluid-3xl mt-3">¡Te abrimos WhatsApp!</h3>
         <p className="text-ash fluid-base mt-3 max-w-prose mx-auto">
-          Recibimos tu pedido. Te respondemos por email o WhatsApp con la
-          cotización detallada. Si te conviene, te mandamos un link de pago
-          para señar y arrancar el proceso.
+          Te llevamos a WhatsApp con el pedido ya armado. Mandanos el
+          mensaje y te respondemos con la cotización detallada en horas
+          hábiles.
         </p>
+        {whatsappUrl ? (
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener"
+            className="mt-6 btn-wa clip-tag uppercase tracking-wider fluid-base px-5 py-3 inline-flex items-center justify-center gap-2"
+          >
+            <Send size={16} aria-hidden /> Abrir WhatsApp
+          </a>
+        ) : null}
         <button
           type="button"
           onClick={() => {
             setStatus("idle");
             setGeneralError(null);
             setFieldErrors({});
+            setWhatsappUrl(null);
           }}
-          className="mt-6 fluid-xs uppercase tracking-widest text-bone hover:text-orange transition-colors"
+          className="block mx-auto mt-5 fluid-xs uppercase tracking-widest text-bone hover:text-orange transition-colors"
         >
           Cargar otro pedido →
         </button>
@@ -139,8 +158,7 @@ export function PedidoForm() {
           <Field
             name="email"
             type="email"
-            label="Email"
-            required
+            label="Email (opcional)"
             autoComplete="email"
             error={fieldErrors.email}
           />
