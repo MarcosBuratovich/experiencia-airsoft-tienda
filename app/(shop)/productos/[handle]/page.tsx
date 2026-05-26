@@ -10,6 +10,8 @@ import { ProductGallery } from "@/components/product/product-gallery";
 import { VariantSelector } from "@/components/product/variant-selector";
 import { BrandLogo } from "@/components/brand/brand-logo";
 import { ProductJsonLd } from "@/components/seo/product-jsonld";
+import { BreadcrumbJsonLd } from "@/components/seo/site-jsonld";
+import { SHOP_URL } from "@/app/_components/site-constants";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Badge } from "@/components/ui/badge";
 
@@ -126,6 +128,21 @@ export default async function ProductPage({
       </div>
 
       <ProductJsonLd product={product} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Tienda", url: `${SHOP_URL}/` },
+          { name: "Productos", url: `${SHOP_URL}/productos` },
+          ...(firstCategory
+            ? [
+                {
+                  name: firstCategory.name,
+                  url: `${SHOP_URL}/categorias/${firstCategory.handle}`,
+                },
+              ]
+            : []),
+          { name: product.name },
+        ]}
+      />
     </article>
   );
 }

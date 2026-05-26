@@ -8,6 +8,8 @@ import { FilterBar } from "@/components/filters/filter-bar";
 import { ActiveFilters } from "@/components/filters/active-filters";
 import { Pagination } from "@/components/ui/pagination";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { BreadcrumbJsonLd } from "@/components/seo/site-jsonld";
+import { SHOP_URL } from "@/app/_components/site-constants";
 import { parseProductsSearch } from "@/lib/url";
 
 const PER_PAGE = 24;
@@ -145,6 +147,14 @@ export default async function CategoryPage({
           const qs = params.toString();
           return `/categorias/${handle}${qs ? `?${qs}` : ""}`;
         }}
+      />
+
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Tienda", url: `${SHOP_URL}/` },
+          { name: "Categorías", url: `${SHOP_URL}/categorias` },
+          { name: category.name },
+        ]}
       />
     </section>
   );

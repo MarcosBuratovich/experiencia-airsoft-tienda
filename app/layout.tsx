@@ -6,6 +6,7 @@ import { ShopHeader } from "./_components/shop-header";
 import { ShopFooter } from "./_components/shop-footer";
 import { SHOP_URL } from "./_components/site-constants";
 import { CartDrawer } from "@/components/cart/cart-drawer";
+import { SiteJsonLd } from "@/components/seo/site-jsonld";
 
 const anton = Anton({
   variable: "--font-anton",
@@ -95,6 +96,12 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  // Verificación de Google Search Console — setear GOOGLE_SITE_VERIFICATION
+  // en Vercel con el código que da GSC al elegir "Etiqueta HTML".
+  // Cuando no está, el meta tag no se renderiza.
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export const viewport: Viewport = {
@@ -114,6 +121,7 @@ export default function RootLayout({
       className={`${anton.variable} ${oswald.variable} ${inter.variable} ${jetbrains.variable}`}
     >
       <body className="relative min-h-screen flex flex-col">
+        <SiteJsonLd />
         <ShopHeader />
         <main className="flex-1">{children}</main>
         <ShopFooter />
