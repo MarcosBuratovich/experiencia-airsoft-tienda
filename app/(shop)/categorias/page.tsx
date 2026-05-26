@@ -25,10 +25,9 @@ interface CategoryHero {
 }
 
 async function buildCategoryHero(category: Category): Promise<CategoryHero> {
-  // Trae el primer producto de la categoría para usar como visual hero.
-  // 8 es suficiente para tener variedad si elegimos otro despues; aca usamos
-  // solo el primero pero el array nos da también el count (al menos hasta 8).
-  const items = await getProductsByCategory(category.id, { per_page: 8 }).catch(() => []);
+  // Trae todos los productos de la categoría: necesitamos el primero como
+  // visual hero y el count real (no capped). per_page: 200 es el max de TN.
+  const items = await getProductsByCategory(category.id, { per_page: 200 }).catch(() => []);
   const first = items[0];
   const img = first ? productPrimaryImage(first) : null;
   return {

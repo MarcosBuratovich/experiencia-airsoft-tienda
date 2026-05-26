@@ -65,12 +65,13 @@ export default async function HomePage() {
   const categoryCount = roots.length;
   const brandCount = brandSet.size;
 
-  // Para cada macro-categoría, traemos la primera categoría con productos y
-  // su imagen featured. Limita a las primeras 4 macros para no saturar el home.
+  // Para cada categoría raíz, traemos todos sus productos: necesitamos la
+  // imagen del primero (visual hero) y el conteo real (no capped).
+  // per_page: 200 es el max de TN; el catálogo entra cómodamente.
   const heroByName = new Map<string, { src: string | null; count: number; cat: Category }>();
   await Promise.all(
     roots.map(async (cat) => {
-      const items = await getProductsByCategory(cat.id, { per_page: 4 }).catch(() => []);
+      const items = await getProductsByCategory(cat.id, { per_page: 200 }).catch(() => []);
       const img = items[0] ? productPrimaryImage(items[0]) : null;
       heroByName.set(cat.name, { src: img?.src ?? null, count: items.length, cat });
     }),
