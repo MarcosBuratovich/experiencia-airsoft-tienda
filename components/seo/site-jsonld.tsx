@@ -1,6 +1,7 @@
 import {
   ADDRESS_CITY,
   ADDRESS_STREET,
+  INSTAGRAM_MAIN_URL,
   INSTAGRAM_URL,
   SHOP_URL,
   WHATSAPP_NUMBER,
@@ -33,7 +34,7 @@ export function SiteJsonLd() {
       url: SHOP_URL,
       logo: `${SHOP_URL}/icon.png`,
       image: `${SHOP_URL}/icon.png`,
-      sameAs: [INSTAGRAM_URL, YOUTUBE_URL].filter(Boolean),
+      sameAs: [INSTAGRAM_URL, INSTAGRAM_MAIN_URL, YOUTUBE_URL].filter(Boolean),
       contactPoint: [
         {
           "@type": "ContactPoint",
@@ -76,7 +77,7 @@ export function SiteJsonLd() {
         addressCountry: "AR",
       },
       parentOrganization: { "@id": ORG_ID },
-      sameAs: [INSTAGRAM_URL, YOUTUBE_URL].filter(Boolean),
+      sameAs: [INSTAGRAM_URL, INSTAGRAM_MAIN_URL, YOUTUBE_URL].filter(Boolean),
     },
   ];
   const data = { "@context": "https://schema.org", "@graph": graph };

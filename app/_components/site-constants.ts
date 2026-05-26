@@ -3,7 +3,11 @@ export const SHOP_URL = "https://tienda.experienciaairsoft.com";
 
 export const WHATSAPP_NUMBER = "+54 9 11 3868-9783";
 export const WHATSAPP_URL = "https://wa.me/5491138689783";
-export const INSTAGRAM_URL = "https://www.instagram.com/experienciaairsoft/";
+// Instagram primario para la tienda (header/footer apuntan acá).
+export const INSTAGRAM_URL = "https://www.instagram.com/tienda.experienciaairsoft/";
+// Instagram de la holding — solo se usa en JSON-LD sameAs para que Google
+// relacione las dos cuentas como entidades hermanas.
+export const INSTAGRAM_MAIN_URL = "https://www.instagram.com/experienciaairsoft/";
 export const YOUTUBE_URL = "https://www.youtube.com/@experienciaairsoft8250";
 
 export const ADDRESS_STREET = "Gral. Conesa 1858";
