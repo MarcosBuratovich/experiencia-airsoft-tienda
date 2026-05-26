@@ -170,61 +170,94 @@ export function HeaderClient({
         />
 
         <div
-          className={`max-w-[1400px] mx-auto fluid-gutter-x grid grid-cols-[auto_1fr_auto] items-center gap-4 md:gap-8 transition-[padding] duration-300 ${
-            scrolled ? "py-2.5" : "py-4 md:py-5"
+          className={`max-w-[1400px] mx-auto fluid-gutter-x grid grid-cols-[auto_1fr_auto] items-center gap-2 md:gap-8 transition-[padding] duration-300 ${
+            scrolled ? "py-2.5" : "py-3 md:py-5"
           }`}
         >
-          {/* Logo bloque */}
-          <Link
-            href="/"
-            aria-label="Tienda Experiencia Airsoft — inicio"
-            className="group relative flex items-center gap-3 shrink-0"
-          >
-            <span className="relative inline-flex">
+          {/* Col izquierda */}
+          <div className="flex items-center gap-3">
+            {/* Mobile: menú (≡) a la izquierda */}
+            <button
+              type="button"
+              onClick={() => setMobileOpen(true)}
+              aria-label="Abrir menú"
+              className="md:hidden relative inline-flex items-center justify-center w-10 h-10 border border-bone/20 text-bone hover:border-orange hover:text-orange transition-colors"
+            >
+              <Menu size={20} aria-hidden />
+            </button>
+
+            {/* Desktop: logo + tag a la izquierda */}
+            <Link
+              href="/"
+              aria-label="Tienda Experiencia Airsoft — inicio"
+              className="hidden md:flex group relative items-center gap-3 shrink-0"
+            >
+              <span className="relative inline-flex">
+                <Image
+                  src="/img/logo.png"
+                  alt="Experiencia Airsoft"
+                  width={840}
+                  height={240}
+                  priority
+                  className={`w-auto transition-[height,filter] duration-300 group-hover:drop-shadow-[0_0_18px_rgba(255,107,26,0.55)] ${
+                    scrolled ? "h-8" : "h-12"
+                  }`}
+                />
+              </span>
+              <span className="inline-flex">
+                <span className="mil-tag bone">Tienda Oficial</span>
+              </span>
+            </Link>
+          </div>
+
+          {/* Col centro: logo en mobile (centrado), search en desktop */}
+          <div className="flex items-center justify-center md:justify-stretch min-w-0">
+            <Link
+              href="/"
+              aria-label="Tienda Experiencia Airsoft — inicio"
+              className="md:hidden inline-flex items-center group"
+            >
               <Image
                 src="/img/logo.png"
                 alt="Experiencia Airsoft"
                 width={840}
                 height={240}
                 priority
-                className={`w-auto transition-[height,filter] duration-300 group-hover:drop-shadow-[0_0_18px_rgba(255,107,26,0.55)] ${
-                  scrolled ? "h-7 md:h-8" : "h-9 md:h-12"
+                className={`w-auto transition-[height] duration-300 ${
+                  scrolled ? "h-7" : "h-9"
                 }`}
               />
-            </span>
-            <span className="hidden md:inline-flex">
-              <span className="mil-tag bone">Tienda Oficial</span>
-            </span>
-          </Link>
+            </Link>
 
-          {/* Search bar (desktop) */}
-          <form
-            action="/productos"
-            role="search"
-            className={`hidden md:flex items-center gap-2 border-b transition-colors ${
-              scrolled
-                ? "border-orange/40 focus-within:border-orange"
-                : "border-bone/15 focus-within:border-orange"
-            }`}
-          >
-            <Search size={16} className="text-smoke shrink-0" aria-hidden />
-            <input
-              type="search"
-              name="q"
-              autoComplete="off"
-              placeholder="Buscar marcadoras, BBs, anteojos…"
-              aria-label="Buscar productos"
-              className="flex-1 bg-transparent text-bone fluid-sm py-3 outline-none placeholder:text-smoke uppercase tracking-wider min-w-0"
-            />
-            <button
-              type="submit"
-              className="fluid-xs uppercase tracking-widest text-ash hover:text-orange transition-colors px-2"
+            {/* Search bar desktop */}
+            <form
+              action="/productos"
+              role="search"
+              className={`hidden md:flex w-full items-center gap-2 border-b transition-colors ${
+                scrolled
+                  ? "border-orange/40 focus-within:border-orange"
+                  : "border-bone/15 focus-within:border-orange"
+              }`}
             >
-              Buscar
-            </button>
-          </form>
+              <Search size={16} className="text-smoke shrink-0" aria-hidden />
+              <input
+                type="search"
+                name="q"
+                autoComplete="off"
+                placeholder="Buscar marcadoras, BBs, anteojos…"
+                aria-label="Buscar productos"
+                className="flex-1 bg-transparent text-bone fluid-sm py-3 outline-none placeholder:text-smoke uppercase tracking-wider min-w-0"
+              />
+              <button
+                type="submit"
+                className="fluid-xs uppercase tracking-widest text-ash hover:text-orange transition-colors px-2"
+              >
+                Buscar
+              </button>
+            </form>
+          </div>
 
-          {/* Cluster derecho */}
+          {/* Col derecha: cart (siempre) + sitio principal (desktop xl) */}
           <div className="flex items-center gap-2 md:gap-3 shrink-0">
             <a
               href={SITE_URL}
@@ -234,14 +267,6 @@ export function HeaderClient({
               <ArrowLeft size={12} aria-hidden /> Sitio principal
             </a>
             <CartHeaderButton />
-            <button
-              type="button"
-              onClick={() => setMobileOpen(true)}
-              aria-label="Abrir menú"
-              className="md:hidden relative inline-flex items-center justify-center w-10 h-10 border border-bone/20 text-bone hover:border-orange hover:text-orange transition-colors"
-            >
-              <Menu size={20} aria-hidden />
-            </button>
           </div>
         </div>
 
@@ -358,45 +383,6 @@ export function HeaderClient({
           </div>
         </nav>
 
-        {/* Category strip mobile */}
-        <nav
-          aria-label="Categorías"
-          className="md:hidden border-t border-bone/10"
-        >
-          <div className="max-w-[1400px] mx-auto fluid-gutter-x flex items-center gap-4 overflow-x-auto py-2 fluid-xs uppercase tracking-[.22em] text-ash whitespace-nowrap no-scrollbar">
-            <Link
-              href="/productos"
-              className="text-bone hover:text-orange transition-colors shrink-0 py-2"
-            >
-              Todos
-            </Link>
-            {categories.slice(0, 5).map((c) => (
-              <Link
-                key={c.id}
-                href={`/categorias/${c.handle}`}
-                className="hover:text-orange transition-colors shrink-0 py-2"
-              >
-                {c.name}
-              </Link>
-            ))}
-            <Link
-              href="/categorias"
-              className="text-smoke hover:text-orange transition-colors shrink-0 py-2"
-            >
-              Más →
-            </Link>
-            <Link
-              href="/pedidos-exterior"
-              className="text-orange hover:text-orange/80 transition-colors shrink-0 inline-flex items-center gap-1.5 py-2"
-            >
-              <span
-                className="size-1.5 bg-orange rounded-full pulse-dot"
-                aria-hidden
-              />
-              Pedidos exterior
-            </Link>
-          </div>
-        </nav>
       </header>
 
       {/* ─────── Mobile menu drawer ─────── */}
