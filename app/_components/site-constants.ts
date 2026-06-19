@@ -1,4 +1,7 @@
-export const SITE_URL = "https://experienciaairsoft.com";
+// Host canonico del sitio principal (marketing). DEBE ir con www: es el host
+// que airsoft-app declara en metadataBase, sitemap y robots. Mantener www en
+// los 3 hosts evita el "canonical split" apex-vs-www que dispersa señales.
+export const SITE_URL = "https://www.experienciaairsoft.com";
 export const SHOP_URL = "https://tienda.experienciaairsoft.com";
 
 export const WHATSAPP_NUMBER = "+54 9 11 3868-9783";

@@ -72,18 +72,14 @@ export async function getProductByHandle(
   "use cache";
   cacheLife("hours");
   cacheTag(productHandleTag(handle));
+  cacheTag(productsAllTag());
 
-  try {
-    const items = await tnFetch({
-      path: "products",
-      query: { handle, per_page: 1 },
-      schema: ProductsArraySchema,
-    });
-    return items[0] ?? null;
-  } catch (err) {
-    if (err instanceof TiendanubeNotFoundError) return null;
-    throw err;
-  }
+  // Deriva del catálogo bulk cacheado en vez de 1 fetch por handle. En build,
+  // generateStaticParams pre-renderiza ~120 productos: con 1 llamada por handle
+  // se agotaba el rate limit de TN (2 req/s) y el build fallaba. El endpoint de
+  // listado devuelve el producto completo (mismo shape que ?handle=).
+  const all = await getAllPublishedProducts();
+  return all.find((p) => p.handle === handle) ?? null;
 }
 
 export async function getProductById(id: number): Promise<Product | null> {
@@ -122,14 +118,18 @@ export async function getFeaturedProducts(limit = 8): Promise<Product[]> {
     .slice(0, limit);
 }
 
-// Para sitemap / generateStaticParams. Itera paginado EN SERIE — no paralelizar.
-// El rate limit en plan gratis se drena rapido si pegamos en paralelo.
-export async function getAllProductHandles(): Promise<string[]> {
+// Catálogo bulk: TODOS los productos publicados con el objeto completo, en UNA
+// sola pasada paginada y cacheada. Es la fuente única de getProductByHandle,
+// getAllProductHandles, el sitemap y los "relacionados", para no pegarle a la
+// API de TN una vez por producto (el rate limit 2 req/s se drena en build).
+// Itera EN SERIE — no paralelizar.
+export async function getAllPublishedProducts(): Promise<Product[]> {
   "use cache";
-  cacheLife("days");
+  cacheLife("hours");
+  cacheTag(productsAllTag());
   cacheTag(allProductHandlesTag());
 
-  const handles: string[] = [];
+  const all: Product[] = [];
   const PER_PAGE = 200; // maximo permitido por TN
   for (let page = 1; page <= 100; page++) {
     const batch = await tnFetch({
@@ -138,12 +138,29 @@ export async function getAllProductHandles(): Promise<string[]> {
       schema: ProductsArraySchema,
     });
     if (batch.length === 0) break;
-    for (const p of batch) {
-      if (p.handle) handles.push(p.handle);
-    }
+    all.push(...batch);
     if (batch.length < PER_PAGE) break;
   }
-  return handles;
+  return all.filter((p) => p.published && p.variants.length > 0);
+}
+
+// Para sitemap / generateStaticParams. Devuelve handle + updatedAt: el sitemap
+// usa updatedAt como <lastmod> REAL (no new Date()); generateStaticParams solo
+// usa el handle. Deriva del catálogo bulk (cero llamadas extra a TN).
+export interface ProductHandleMeta {
+  handle: string;
+  updatedAt: string;
+}
+
+export async function getAllProductHandles(): Promise<ProductHandleMeta[]> {
+  "use cache";
+  cacheLife("hours");
+  cacheTag(allProductHandlesTag());
+
+  const all = await getAllPublishedProducts();
+  return all
+    .filter((p) => p.handle)
+    .map((p) => ({ handle: p.handle, updatedAt: p.updated_at }));
 }
 
 export async function getProductsByCategory(

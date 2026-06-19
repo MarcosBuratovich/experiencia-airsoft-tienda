@@ -1,40 +1,48 @@
 import {
-  ADDRESS_CITY,
-  ADDRESS_STREET,
   INSTAGRAM_MAIN_URL,
   INSTAGRAM_URL,
   SHOP_URL,
+  SITE_URL,
   WHATSAPP_NUMBER,
   YOUTUBE_URL,
 } from "@/app/_components/site-constants";
 
 // ──────────────────────────────────────────────────────────────────────
-// Structured data global del site (Organization + WebSite + LocalBusiness).
+// Structured data global de la TIENDA (WebSite + OnlineStore) más una
+// referencia a la Organization CANÓNICA de la marca.
 //
-// - Organization: identidad de la empresa, logo y redes sociales.
-// - WebSite con SearchAction: habilita el "sitelinks searchbox" en Google
-//   (caja de búsqueda que aparece bajo el sitio en resultados).
-// - LocalBusiness/Store: presencia física en CABA — ayuda en búsquedas
-//   locales con intención.
+// Clave para sitelinks/Knowledge Panel: la entidad "Experiencia Airsoft"
+// vive en 3 hosts (www, app, tienda). Para que Google los trate como UNA
+// sola entidad, TODOS deben apuntar al MISMO @id de Organization, anclado
+// al host canónico (www). Acá la Organization se emite como nodo de
+// referencia (mismo @id que airsoft-app) y la tienda se modela como
+// OnlineStore con parentOrganization hacia ese @id.
 //
-// Todos comparten "@id" estables para que Google los enlace como un grafo.
+// - WebSite + SearchAction: caja de búsqueda funcional (/productos?q= ejecuta
+//   búsqueda real contra la API de TN), distinta del searchbox de sitelinks
+//   (deprecado por Google en nov-2024).
+// - La dirección física (NAP) NO se re-declara acá: vive una sola vez en el
+//   #business de www. Duplicarla en otro host fragmenta la entidad local.
 // ──────────────────────────────────────────────────────────────────────
 
-const ORG_ID = `${SHOP_URL}/#organization`;
-const SITE_ID = `${SHOP_URL}/#website`;
+// @id CANÓNICO de la marca, anclado a www. Idéntico al de airsoft-app.
+const ORG_ID = `${SITE_URL}/#organization`;
+const SHOP_SITE_ID = `${SHOP_URL}/#website`;
 const STORE_ID = `${SHOP_URL}/#store`;
+const SAME_AS = [INSTAGRAM_URL, INSTAGRAM_MAIN_URL, YOUTUBE_URL].filter(Boolean);
 
 export function SiteJsonLd() {
   const graph = [
+    // Nodo de referencia a la Organization canónica (mismo @id en los 3 hosts).
     {
       "@type": "Organization",
       "@id": ORG_ID,
       name: "Experiencia Airsoft",
-      alternateName: "Tienda Experiencia Airsoft",
-      url: SHOP_URL,
-      logo: `${SHOP_URL}/icon.png`,
-      image: `${SHOP_URL}/icon.png`,
-      sameAs: [INSTAGRAM_URL, INSTAGRAM_MAIN_URL, YOUTUBE_URL].filter(Boolean),
+      url: SITE_URL,
+      // MISMA URL de logo que airsoft-app (host www) para que Google merge el
+      // nodo Organization de los 3 hosts sin tratarlos como entidades distintas.
+      logo: `${SITE_URL}/img/00_logo_principal.png`,
+      sameAs: SAME_AS,
       contactPoint: [
         {
           "@type": "ContactPoint",
@@ -47,7 +55,7 @@ export function SiteJsonLd() {
     },
     {
       "@type": "WebSite",
-      "@id": SITE_ID,
+      "@id": SHOP_SITE_ID,
       url: SHOP_URL,
       name: "Tienda Experiencia Airsoft",
       publisher: { "@id": ORG_ID },
@@ -62,29 +70,26 @@ export function SiteJsonLd() {
       },
     },
     {
-      "@type": "Store",
+      "@type": "OnlineStore",
       "@id": STORE_ID,
       name: "Tienda Experiencia Airsoft",
       url: SHOP_URL,
       image: `${SHOP_URL}/icon.png`,
       telephone: WHATSAPP_NUMBER,
       priceRange: "$$",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: ADDRESS_STREET,
-        addressLocality: ADDRESS_CITY,
-        addressRegion: "Buenos Aires",
-        addressCountry: "AR",
-      },
       parentOrganization: { "@id": ORG_ID },
-      sameAs: [INSTAGRAM_URL, INSTAGRAM_MAIN_URL, YOUTUBE_URL].filter(Boolean),
+      sameAs: SAME_AS,
     },
   ];
   const data = { "@context": "https://schema.org", "@graph": graph };
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      // .replace(/</g, "\\u003c") sanitiza contra XSS (recomendado por la doc
+      // de Next 16 para JSON-LD serializado con JSON.stringify).
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
     />
   );
 }
@@ -109,7 +114,9 @@ export function BreadcrumbJsonLd({ items }: { items: Crumb[] }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
     />
   );
 }

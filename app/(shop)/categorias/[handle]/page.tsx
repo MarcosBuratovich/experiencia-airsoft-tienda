@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { getCategoryByHandle, getCategories } from "@/lib/tiendanube/categories";
 import { getProductsByCategory } from "@/lib/tiendanube/products";
-import { applyLocalProductFilters } from "@/lib/tiendanube/normalize";
+import { applyLocalProductFilters, stripHtml } from "@/lib/tiendanube/normalize";
 import { ProductGrid } from "@/components/product/product-grid";
 import { FilterBar } from "@/components/filters/filter-bar";
 import { ActiveFilters } from "@/components/filters/active-filters";
@@ -24,18 +25,35 @@ type SearchParams = {
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<Params>;
+  searchParams: Promise<SearchParams>;
 }): Promise<Metadata> {
-  const { handle } = await params;
+  const [{ handle }, sp] = await Promise.all([params, searchParams]);
   const category = await getCategoryByHandle(handle).catch(() => null);
   if (!category) return { title: "Categoría no encontrada", robots: { index: false } };
+
+  // stripHtml: category.description trae HTML crudo de TN (<p>, <strong>); sin
+  // limpiarlo Google muestra/reescribe una meta description con tags.
+  const cleanDesc = category.description
+    ? stripHtml(category.description).slice(0, 160)
+    : "";
+  const description =
+    cleanDesc ||
+    `Productos de la categoría ${category.name} en Tienda Experiencia Airsoft.`;
+
+  // Vistas con filtro/orden/paginación: noindex,follow para no indexar duplicados
+  // de la categoría canónica (que sí queda index vía el canonical limpio).
+  const filtered = Boolean(
+    sp.orden || sp.precio_min || sp.precio_max || (sp.page && sp.page !== "1"),
+  );
+
   return {
     title: category.name,
-    description:
-      category.description ||
-      `Productos de la categoría ${category.name} en Tienda Experiencia Airsoft.`,
+    description,
     alternates: { canonical: `/categorias/${handle}` },
+    ...(filtered ? { robots: { index: false, follow: true } } : {}),
   };
 }
 
@@ -109,13 +127,13 @@ export default async function CategoryPage({
       {subcategories.length > 0 ? (
         <div className="mt-5 flex flex-wrap gap-2">
           {subcategories.map((sc) => (
-            <a
+            <Link
               key={sc.id}
               href={`/categorias/${sc.handle}`}
               className="inline-flex items-center px-3 min-h-[2.5rem] fluid-xs uppercase tracking-widest border border-bone/15 text-bone hover:border-orange hover:text-orange transition-colors clip-tag"
             >
               {sc.name}
-            </a>
+            </Link>
           ))}
         </div>
       ) : null}

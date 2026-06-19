@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getProductByHandle } from "@/lib/tiendanube/products";
+import {
+  getAllProductHandles,
+  getAllPublishedProducts,
+  getProductByHandle,
+} from "@/lib/tiendanube/products";
 import {
   productPrimaryImage,
   stripHtml,
 } from "@/lib/tiendanube/normalize";
 import { ProductGallery } from "@/components/product/product-gallery";
+import { ProductGrid } from "@/components/product/product-grid";
 import { VariantSelector } from "@/components/product/variant-selector";
 import { BrandLogo } from "@/components/brand/brand-logo";
 import { ProductJsonLd } from "@/components/seo/product-jsonld";
@@ -16,6 +21,16 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Badge } from "@/components/ui/badge";
 
 type Params = { handle: string };
+
+// Pre-renderiza en build el HTML de TODOS los productos publicados (en vez de
+// generarlos on-demand en el primer request, que castiga el crawl budget por
+// el TTFB alto contra la API de TN). dynamicParams queda true por default, así
+// que productos nuevos (post-build) se generan on-demand y el webhook de
+// revalidación los pre-genera al instante.
+export async function generateStaticParams() {
+  const products = await getAllProductHandles().catch(() => []);
+  return products.map((p) => ({ handle: p.handle }));
+}
 
 export async function generateMetadata({
   params,
@@ -58,6 +73,20 @@ export default async function ProductPage({
   const primaryImage = productPrimaryImage(product);
   const firstCategory = product.categories[0];
   const attributesEs = (product.attributes ?? []).filter((s) => s);
+
+  // Productos relacionados (misma categoría): enlaces internos producto→producto
+  // y producto→categoría rastreables, para bajar la profundidad de crawl del
+  // catálogo (hoy el grueso solo se alcanza por paginación o sitemap). Filtra
+  // del catálogo bulk cacheado (sin llamadas extra a TN durante el prerender).
+  const related = firstCategory
+    ? (await getAllPublishedProducts().catch(() => []))
+        .filter(
+          (p) =>
+            p.handle !== product.handle &&
+            p.categories.some((c) => c.id === firstCategory.id),
+        )
+        .slice(0, 8)
+    : [];
 
   return (
     <article className="max-w-[1400px] mx-auto fluid-gutter-x fluid-section-y">
@@ -126,6 +155,25 @@ export default async function ProductPage({
           ) : null}
         </div>
       </div>
+
+      {related.length > 0 ? (
+        <section className="mt-16 border-t border-bone/10 pt-10">
+          <div className="flex items-baseline justify-between gap-4">
+            <h2 className="sect-title fluid-2xl">Productos relacionados</h2>
+            {firstCategory ? (
+              <Link
+                href={`/categorias/${firstCategory.handle}`}
+                className="mil-tag bone shrink-0 hover:text-orange transition-colors"
+              >
+                Ver todo {firstCategory.name}
+              </Link>
+            ) : null}
+          </div>
+          <div className="mt-6">
+            <ProductGrid products={related} />
+          </div>
+        </section>
+      ) : null}
 
       <ProductJsonLd product={product} />
       <BreadcrumbJsonLd

@@ -20,12 +20,30 @@ type SearchParams = {
   q?: string;
 };
 
-export const metadata: Metadata = {
-  title: "Productos",
-  description:
-    "Catálogo completo de marcadoras, BBs, protección y accesorios para airsoft. Envíos a todo el país.",
-  alternates: { canonical: "/productos" },
-};
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<SearchParams>;
+}): Promise<Metadata> {
+  const sp = await searchParams;
+  // Vistas con filtro/búsqueda/orden/paginación: noindex,follow. El canonical
+  // siempre apunta a "/productos" limpio, que queda indexable.
+  const filtered = Boolean(
+    sp.q ||
+      sp.categoria ||
+      sp.orden ||
+      sp.precio_min ||
+      sp.precio_max ||
+      (sp.page && sp.page !== "1"),
+  );
+  return {
+    title: "Productos",
+    description:
+      "Catálogo completo de marcadoras, BBs, protección y accesorios para airsoft. Envíos a todo el país.",
+    alternates: { canonical: "/productos" },
+    ...(filtered ? { robots: { index: false, follow: true } } : {}),
+  };
+}
 
 export default async function ProductsListPage({
   searchParams,
