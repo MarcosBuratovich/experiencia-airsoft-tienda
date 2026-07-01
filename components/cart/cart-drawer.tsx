@@ -16,10 +16,12 @@ export function CartDrawer() {
   const remove = useCart((s) => s.remove);
   const subtotalCents = useCart((s) => s.subtotalCents);
   const count = useCart((s) => s.count);
+  const clear = useCart((s) => s.clear);
 
   const [mounted, setMounted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [sentUrl, setSentUrl] = useState<string | null>(null);
 
   // Hidratacion: el store con persist puede diferir entre SSR (0 items)
   // y CSR (N items). No renderizamos contenido hasta que el cliente monto.
@@ -75,8 +77,10 @@ export function CartDrawer() {
         setSubmitting(false);
         return;
       }
-      // Abre WhatsApp en nueva pestaña / app nativa.
+      // Abre WhatsApp y pasa al estado de handoff, con link de fallback por si
+      // el navegador bloqueó el popup.
       window.open(data.url, "_blank", "noopener");
+      setSentUrl(data.url);
       setSubmitting(false);
     } catch (err) {
       console.error("[cart] checkout failed", err);
@@ -251,24 +255,50 @@ export function CartDrawer() {
                   {errorMsg}
                 </p>
               ) : null}
-              <button
-                type="button"
-                onClick={startCheckout}
-                disabled={submitting}
-                className="w-full btn-wa clip-tag uppercase tracking-wider fluid-base px-5 py-4 inline-flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-wait"
-              >
-                {submitting ? "Abriendo WhatsApp..." : "Finalizar por WhatsApp"}
-                {submitting ? null : (
-                  <ChevronRight size={16} aria-hidden />
-                )}
-              </button>
-              <Link
-                href="/carrito"
-                onClick={close}
-                className="block text-center fluid-xs uppercase tracking-widest text-ash hover:text-orange transition-colors"
-              >
-                Ver carrito completo
-              </Link>
+              {sentUrl ? (
+                <div className="border border-green-500/40 bg-green-500/5 clip-notch p-3 space-y-2">
+                  <p className="fluid-sm text-bone">
+                    Te abrimos WhatsApp con tu pedido.
+                  </p>
+                  <a
+                    href={sentUrl}
+                    target="_blank"
+                    rel="noopener"
+                    className="w-full btn-wa clip-tag uppercase tracking-wider fluid-xs px-4 py-2.5 inline-flex items-center justify-center gap-2"
+                  >
+                    ¿No se abrió? Abrir WhatsApp
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      clear();
+                      setSentUrl(null);
+                    }}
+                    className="w-full text-center fluid-xs uppercase tracking-widest text-ash hover:text-orange transition-colors"
+                  >
+                    Vaciar carrito
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <button
+                    type="button"
+                    onClick={startCheckout}
+                    disabled={submitting}
+                    className="w-full btn-wa clip-tag uppercase tracking-wider fluid-base px-5 py-4 inline-flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-wait"
+                  >
+                    {submitting ? "Abriendo WhatsApp..." : "Finalizar por WhatsApp"}
+                    {submitting ? null : <ChevronRight size={16} aria-hidden />}
+                  </button>
+                  <Link
+                    href="/carrito"
+                    onClick={close}
+                    className="block text-center fluid-xs uppercase tracking-widest text-ash hover:text-orange transition-colors"
+                  >
+                    Ver carrito completo
+                  </Link>
+                </>
+              )}
             </footer>
           </>
         )}
