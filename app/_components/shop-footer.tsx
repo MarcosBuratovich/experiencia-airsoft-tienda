@@ -3,6 +3,7 @@ import Image from "next/image";
 import {
   ADDRESS_CITY,
   ADDRESS_STREET,
+  APP_URL,
   INSTAGRAM_URL,
   MAIN_NAV,
   SHOP_NAV,
@@ -65,6 +66,15 @@ export function ShopFooter() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href={APP_URL}
+                  className="hover:text-bone transition"
+                  rel="noopener"
+                >
+                  App / Reservas
+                </a>
+              </li>
             </ul>
           </div>
 

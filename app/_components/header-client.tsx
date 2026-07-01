@@ -15,7 +15,7 @@ import {
   CreditCard,
   Headphones,
 } from "lucide-react";
-import { SHOP_NAV, SITE_URL, WHATSAPP_URL } from "./site-constants";
+import { APP_URL, SHOP_NAV, SITE_URL, WHATSAPP_URL } from "./site-constants";
 import { CartHeaderButton } from "./cart-header-button";
 
 interface CategoryLite {
@@ -257,14 +257,21 @@ export function HeaderClient({
             </form>
           </div>
 
-          {/* Col derecha: cart (siempre) + sitio principal (desktop xl) */}
+          {/* Col derecha: cart (siempre) + navegación a web/app (desktop xl) */}
           <div className="flex items-center gap-2 md:gap-3 shrink-0">
             <a
               href={SITE_URL}
               rel="noopener"
               className="hidden lg:inline-flex items-center gap-1.5 fluid-xs uppercase tracking-widest text-smoke hover:text-bone transition-colors"
             >
-              <ArrowLeft size={12} aria-hidden /> Sitio principal
+              <ArrowLeft size={12} aria-hidden /> Web
+            </a>
+            <a
+              href={APP_URL}
+              rel="noopener"
+              className="hidden lg:inline-flex items-center gap-1 fluid-xs uppercase tracking-widest text-smoke hover:text-bone transition-colors"
+            >
+              App<span aria-hidden>↗</span>
             </a>
             <CartHeaderButton />
           </div>
@@ -491,13 +498,22 @@ export function HeaderClient({
                 <span className="size-1.5 bg-ink rounded-full" aria-hidden />
                 Escribir por WhatsApp
               </a>
-              <a
-                href={SITE_URL}
-                rel="noopener"
-                className="mt-4 block text-center fluid-xs uppercase tracking-widest text-smoke hover:text-orange transition-colors"
-              >
-                ← Volver al sitio principal
-              </a>
+              <div className="mt-4 grid grid-cols-2 gap-2">
+                <a
+                  href={SITE_URL}
+                  rel="noopener"
+                  className="block text-center fluid-xs uppercase tracking-widest text-smoke hover:text-orange transition-colors border border-rail/60 clip-tag py-2.5"
+                >
+                  Web
+                </a>
+                <a
+                  href={APP_URL}
+                  rel="noopener"
+                  className="block text-center fluid-xs uppercase tracking-widest text-smoke hover:text-orange transition-colors border border-rail/60 clip-tag py-2.5"
+                >
+                  App ↗
+                </a>
+              </div>
             </div>
           </nav>
         </aside>

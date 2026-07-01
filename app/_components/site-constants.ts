@@ -3,6 +3,8 @@
 // los 3 hosts evita el "canonical split" apex-vs-www que dispersa señales.
 export const SITE_URL = "https://www.experienciaairsoft.com";
 export const SHOP_URL = "https://tienda.experienciaairsoft.com";
+// App / plataforma (reservas y cuenta). Mismo valor que airsoft-app.
+export const APP_URL = "https://app.experienciaairsoft.com";
 
 export const WHATSAPP_NUMBER = "+54 9 11 3868-9783";
 export const WHATSAPP_URL = "https://wa.me/5491138689783";
