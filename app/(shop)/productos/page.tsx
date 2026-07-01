@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
-import { getProducts } from "@/lib/tiendanube/products";
+import {
+  getAllPublishedProducts,
+  getProducts,
+  type ProductSortBy,
+} from "@/lib/tiendanube/products";
 import { getCategoryByHandle } from "@/lib/tiendanube/categories";
-import { applyLocalProductFilters } from "@/lib/tiendanube/normalize";
+import {
+  applyLocalProductFilters,
+  productFromPriceCents,
+} from "@/lib/tiendanube/normalize";
+import type { Product } from "@/lib/tiendanube/schemas";
 import { ProductGrid } from "@/components/product/product-grid";
 import { FilterBar } from "@/components/filters/filter-bar";
 import { ActiveFilters } from "@/components/filters/active-filters";
@@ -58,21 +66,54 @@ export default async function ProductsListPage({
     ? await getCategoryByHandle(parsed.categoryHandle).catch(() => null)
     : null;
 
-  const items = await getProducts({
-    category: category?.id,
-    q: parsed.q,
-    page: parsed.page,
-    per_page: PER_PAGE,
-    sort_by: parsed.sortBy,
-  }).catch((err) => {
-    console.error("[productos] getProducts failed", err);
-    return [];
-  });
+  const hasPriceFilter =
+    parsed.priceMinCents !== undefined || parsed.priceMaxCents !== undefined;
 
-  const filtered = applyLocalProductFilters(items, {
-    priceMinCents: parsed.priceMinCents,
-    priceMaxCents: parsed.priceMaxCents,
-  });
+  let pageItems: Product[];
+  let resultCount: number;
+  let hasNext: boolean;
+
+  if (hasPriceFilter) {
+    // Con filtro de precio, filtramos/ordenamos/paginamos sobre el catálogo
+    // COMPLETO (getAllPublishedProducts está cacheado) en vez de sobre una
+    // página de 24, para que el conteo y la paginación sean reales.
+    const all = await getAllPublishedProducts().catch((err) => {
+      console.error("[productos] getAllPublishedProducts failed", err);
+      return [] as Product[];
+    });
+    let set = all;
+    if (category) {
+      set = set.filter((p) => p.categories.some((c) => c.id === category.id));
+    }
+    if (parsed.q) {
+      const needle = parsed.q.toLowerCase();
+      set = set.filter((p) => matchQuery(p, needle));
+    }
+    set = applyLocalProductFilters(set, {
+      priceMinCents: parsed.priceMinCents,
+      priceMaxCents: parsed.priceMaxCents,
+    });
+    set = sortProducts(set, parsed.sortBy);
+    resultCount = set.length;
+    const start = (parsed.page - 1) * PER_PAGE;
+    pageItems = set.slice(start, start + PER_PAGE);
+    hasNext = start + PER_PAGE < set.length;
+  } else {
+    // Sin filtro de precio: paginación de la API (correcta y preserva el orden).
+    const items = await getProducts({
+      category: category?.id,
+      q: parsed.q,
+      page: parsed.page,
+      per_page: PER_PAGE,
+      sort_by: parsed.sortBy,
+    }).catch((err) => {
+      console.error("[productos] getProducts failed", err);
+      return [] as Product[];
+    });
+    pageItems = items;
+    resultCount = items.length;
+    hasNext = items.length === PER_PAGE;
+  }
 
   const activeFilters: {
     key: "categoria" | "precio_min" | "precio_max" | "orden" | "q";
@@ -114,8 +155,8 @@ export default async function ProductsListPage({
               : "Todos los productos"}
         </h1>
         <p className="text-ash fluid-base mt-3">
-          {filtered.length}{" "}
-          {filtered.length === 1 ? "producto encontrado" : "productos encontrados"}
+          {resultCount}{" "}
+          {resultCount === 1 ? "producto encontrado" : "productos encontrados"}
         </p>
       </div>
 
@@ -127,12 +168,12 @@ export default async function ProductsListPage({
       <ActiveFilters items={activeFilters} />
 
       <div className="mt-8">
-        <ProductGrid products={filtered} priorityFirst={4} />
+        <ProductGrid products={pageItems} priorityFirst={4} />
       </div>
 
       <Pagination
         currentPage={parsed.page}
-        hasNext={items.length === PER_PAGE}
+        hasNext={hasNext}
         buildHref={(p) =>
           buildProductsHref({
             q: parsed.q,
@@ -150,4 +191,36 @@ export default async function ProductsListPage({
       />
     </section>
   );
+}
+
+function matchQuery(p: Product, needle: string): boolean {
+  return (
+    p.name.toLowerCase().includes(needle) ||
+    p.handle.toLowerCase().includes(needle) ||
+    (p.tags ?? "").toLowerCase().includes(needle)
+  );
+}
+
+function sortProducts(products: Product[], sortBy: ProductSortBy): Product[] {
+  const arr = [...products];
+  switch (sortBy) {
+    case "price-ascending":
+      return arr.sort(
+        (a, b) =>
+          (productFromPriceCents(a) ?? Infinity) -
+          (productFromPriceCents(b) ?? Infinity),
+      );
+    case "price-descending":
+      return arr.sort(
+        (a, b) =>
+          (productFromPriceCents(b) ?? -1) - (productFromPriceCents(a) ?? -1),
+      );
+    case "name-ascending":
+      return arr.sort((a, b) => a.name.localeCompare(b.name));
+    case "name-descending":
+      return arr.sort((a, b) => b.name.localeCompare(a.name));
+    default:
+      // default / user / best-selling → orden del catálogo (cronológico).
+      return arr;
+  }
 }
