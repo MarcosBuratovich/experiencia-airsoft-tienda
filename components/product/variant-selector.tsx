@@ -24,7 +24,12 @@ export function VariantSelector({
   attributes: string[];
   snapshot: ProductSnapshotForCart;
 }) {
-  const [selectedId, setSelectedId] = useState<number>(variants[0]?.id);
+  // Arrancar en la primera variante CON stock (si hay alguna), no en
+  // variants[0]: si la primera está agotada pero otras no, evita mostrar
+  // "sin stock" como si el producto entero no estuviera disponible.
+  const [selectedId, setSelectedId] = useState<number>(
+    (variants.find((v) => variantHasStock(v)) ?? variants[0])?.id,
+  );
   const [qty, setQty] = useState(1);
   const selected = useMemo(
     () => variants.find((v) => v.id === selectedId) ?? variants[0],
@@ -38,6 +43,15 @@ export function VariantSelector({
   const stockLimited = selected?.stock_management === true;
   const maxQty = stockLimited ? selected?.stock ?? 0 : null;
   const inStock = variantHasStock(selected);
+
+  // Precio efectivo para el carrito: el promocional cuando aplica (igual que
+  // muestra PriceTag), no el de lista, para que carrito y checkout coincidan.
+  const precioEfectivo =
+    selected?.promotional_price != null &&
+    selected?.price != null &&
+    selected.promotional_price < selected.price
+      ? selected.promotional_price
+      : selected?.price ?? null;
 
   // Si cambia la variante y la cantidad excede el nuevo stock, ajustar.
   useEffect(() => {
@@ -121,11 +135,11 @@ export function VariantSelector({
         handle={snapshot.handle}
         productName={snapshot.productName}
         variantLabelText={variantLabel(selected, attributes)}
-        priceCents={selected.price}
+        priceCents={precioEfectivo}
         imageSrc={snapshot.imageSrc}
         maxQty={maxQty}
         qty={qty}
-        disabled={!inStock || selected.price === null}
+        disabled={!inStock || precioEfectivo === null}
       />
     </div>
   );
