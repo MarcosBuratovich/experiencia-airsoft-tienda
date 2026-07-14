@@ -7,6 +7,7 @@ import { ShopFooter } from "./_components/shop-footer";
 import { SHOP_URL } from "./_components/site-constants";
 import { CartDrawer } from "@/components/cart/cart-drawer";
 import { SiteJsonLd } from "@/components/seo/site-jsonld";
+import { MetaPixel } from "./_components/meta-pixel";
 
 const anton = Anton({
   variable: "--font-anton",
@@ -121,6 +122,7 @@ export default function RootLayout({
       className={`${anton.variable} ${oswald.variable} ${inter.variable} ${jetbrains.variable}`}
     >
       <body className="relative min-h-screen flex flex-col">
+        <MetaPixel />
         <SiteJsonLd />
         <ShopHeader />
         <main className="flex-1">{children}</main>
