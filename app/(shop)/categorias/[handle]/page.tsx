@@ -1,36 +1,35 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { Suspense } from "react";
 import { getCategoryByHandle, getCategories } from "@/lib/tiendanube/categories";
-import { getProductsByCategory } from "@/lib/tiendanube/products";
-import { applyLocalProductFilters, stripHtml } from "@/lib/tiendanube/normalize";
+import { getProductsInCategory } from "@/lib/tiendanube/products";
+import { stripHtml } from "@/lib/tiendanube/normalize";
+import type { Product } from "@/lib/tiendanube/types";
 import { ProductGrid } from "@/components/product/product-grid";
-import { FilterBar } from "@/components/filters/filter-bar";
-import { ActiveFilters } from "@/components/filters/active-filters";
-import { Pagination } from "@/components/ui/pagination";
+import { CategoryExplorer } from "@/components/product/category-explorer";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { BreadcrumbJsonLd } from "@/components/seo/site-jsonld";
 import { SHOP_URL } from "@/app/_components/site-constants";
-import { parseProductsSearch } from "@/lib/url";
-
-const PER_PAGE = 24;
 
 type Params = { handle: string };
-type SearchParams = {
-  precio_min?: string;
-  precio_max?: string;
-  orden?: string;
-  page?: string;
-};
+
+// Pre-renderiza en build el HTML de TODAS las categorías (mismo criterio que
+// productos/[handle]): servidas estáticas, Googlebot nunca espera a la API de
+// TN ni puede pisar su rate limit — antes, ráfagas de requests concurrentes
+// con cache fría tiraban estas páginas a 500/timeout. Los filtros
+// (?precio/?orden) se resuelven client-side en CategoryExplorer.
+export async function generateStaticParams() {
+  const categories = await getCategories().catch(() => []);
+  return categories.filter((c) => c.handle).map((c) => ({ handle: c.handle }));
+}
 
 export async function generateMetadata({
   params,
-  searchParams,
 }: {
   params: Promise<Params>;
-  searchParams: Promise<SearchParams>;
 }): Promise<Metadata> {
-  const [{ handle }, sp] = await Promise.all([params, searchParams]);
+  const { handle } = await params;
   const category = await getCategoryByHandle(handle).catch(() => null);
   if (!category) return { title: "Categoría no encontrada", robots: { index: false } };
 
@@ -43,65 +42,38 @@ export async function generateMetadata({
     cleanDesc ||
     `Productos de la categoría ${category.name} en Tienda Experiencia Airsoft.`;
 
-  // Vistas con filtro/orden/paginación: noindex,follow para no indexar duplicados
-  // de la categoría canónica (que sí queda index vía el canonical limpio).
-  const filtered = Boolean(
-    sp.orden || sp.precio_min || sp.precio_max || (sp.page && sp.page !== "1"),
-  );
-
+  // Las vistas con filtro/orden sirven este mismo HTML estático: el canonical
+  // limpio + el bloqueo de esos params en robots.txt evitan duplicados (la
+  // página ya no lee searchParams — es estática, no hay noindex condicional).
   return {
     title: category.name,
     description,
     alternates: { canonical: `/categorias/${handle}` },
-    ...(filtered ? { robots: { index: false, follow: true } } : {}),
   };
 }
 
 export default async function CategoryPage({
   params,
-  searchParams,
 }: {
   params: Promise<Params>;
-  searchParams: Promise<SearchParams>;
 }) {
-  const [{ handle }, rawSp] = await Promise.all([params, searchParams]);
+  const { handle } = await params;
   const category = await getCategoryByHandle(handle);
   if (!category) notFound();
-
-  const parsed = parseProductsSearch(rawSp);
 
   // Resolver subcategorias para enlace contextual (no usadas en query aun)
   const allCats = await getCategories().catch(() => []);
   const subcategories = allCats.filter((c) => c.parent === category.id);
 
-  const items = await getProductsByCategory(category.id, {
-    page: parsed.page,
-    per_page: PER_PAGE,
-    sort_by: parsed.sortBy,
-  }).catch((err) => {
-    console.error("[categoria]", err);
-    return [];
-  });
+  // Lista COMPLETA de la categoría, derivada del catálogo bulk cacheado (cero
+  // fetch a TN por categoría). Se renderiza entera —sin paginar— así cada
+  // producto queda enlazado desde su categoría en el HTML estático.
+  const items = await getProductsInCategory(category.id);
 
-  const filtered = applyLocalProductFilters(items, {
-    priceMinCents: parsed.priceMinCents,
-    priceMaxCents: parsed.priceMaxCents,
-  });
-
-  const activeFilters: {
-    key: "categoria" | "precio_min" | "precio_max" | "orden";
-    label: string;
-  }[] = [];
-  if (parsed.priceMinCents !== undefined)
-    activeFilters.push({
-      key: "precio_min",
-      label: `Desde $${(parsed.priceMinCents / 100).toLocaleString("es-AR")}`,
-    });
-  if (parsed.priceMaxCents !== undefined)
-    activeFilters.push({
-      key: "precio_max",
-      label: `Hasta $${(parsed.priceMaxCents / 100).toLocaleString("es-AR")}`,
-    });
+  // Al explorador client-side la lista viaja serializada en el payload RSC;
+  // le sacamos `description` (HTML pesado que las cards no usan) para no
+  // engordar la página.
+  const slim = items.map((p) => ({ ...p, description: "" }));
 
   return (
     <section className="max-w-[1400px] mx-auto fluid-gutter-x fluid-section-y">
@@ -138,34 +110,12 @@ export default async function CategoryPage({
         </div>
       ) : null}
 
-      <div className="mt-8">
-        <FilterBar
-          priceMin={parsed.priceMinCents ? parsed.priceMinCents / 100 : undefined}
-          priceMax={parsed.priceMaxCents ? parsed.priceMaxCents / 100 : undefined}
-          orden={parsed.rawOrden}
-        />
-        <ActiveFilters items={activeFilters} />
-      </div>
-
-      <div className="mt-8">
-        <ProductGrid products={filtered} priorityFirst={4} />
-      </div>
-
-      <Pagination
-        currentPage={parsed.page}
-        hasNext={items.length === PER_PAGE}
-        buildHref={(p) => {
-          const params = new URLSearchParams();
-          if (parsed.priceMinCents !== undefined)
-            params.set("precio_min", String(parsed.priceMinCents / 100));
-          if (parsed.priceMaxCents !== undefined)
-            params.set("precio_max", String(parsed.priceMaxCents / 100));
-          if (parsed.rawOrden) params.set("orden", parsed.rawOrden);
-          if (p > 1) params.set("page", String(p));
-          const qs = params.toString();
-          return `/categorias/${handle}${qs ? `?${qs}` : ""}`;
-        }}
-      />
+      {/* useSearchParams del explorador suspende en el prerender: el HTML
+          estático imprime el fallback (la grilla default completa) y al
+          hidratar se reemplaza por la versión filtrable. */}
+      <Suspense fallback={<ExplorerFallback products={items} />}>
+        <CategoryExplorer products={slim} />
+      </Suspense>
 
       <BreadcrumbJsonLd
         items={[
@@ -175,5 +125,19 @@ export default async function CategoryPage({
         ]}
       />
     </section>
+  );
+}
+
+// Lo que queda impreso en el HTML pre-renderizado (y ven bots / usuarios sin
+// JS): la grilla default completa más un espaciador con la altura de la barra
+// de filtros para no mover el layout al hidratar.
+function ExplorerFallback({ products }: { products: Product[] }) {
+  return (
+    <>
+      <div className="mt-8 border-y border-bone/10 py-4 min-h-[4.5rem]" aria-hidden />
+      <div className="mt-8">
+        <ProductGrid products={products} priorityFirst={4} />
+      </div>
+    </>
   );
 }

@@ -1,9 +1,13 @@
-import { readFileSync, existsSync } from "node:fs";
-import { resolve } from "node:path";
+import manifestJson from "@/public/brands/manifest.json";
 
 // ──────────────────────────────────────────────────────────────────────
-// Lookup de logos de marca. Lee public/brands/manifest.json que se genera
+// Lookup de logos de marca. Importa public/brands/manifest.json que se genera
 // con scripts/source-brand-logos.mjs (agente).
+//
+// Import ESTÁTICO (no node:fs): el bundler lo inlinea, así BrandLogo puede
+// usarse también dentro de client components (p. ej. las cards del explorador
+// de categorías). El manifest está commiteado; si se borrara, el build falla
+// en el import (antes degradaba silenciosamente a {}).
 //
 // Format del manifest:
 //   {
@@ -24,19 +28,8 @@ interface BrandManifestEntry {
   comment?: string;
 }
 
-const MANIFEST_PATH = resolve(process.cwd(), "public/brands/manifest.json");
-
-function loadManifest(): Record<string, BrandManifestEntry> {
-  if (!existsSync(MANIFEST_PATH)) return {};
-  try {
-    return JSON.parse(readFileSync(MANIFEST_PATH, "utf8"));
-  } catch {
-    return {};
-  }
-}
-
-// Cached at module load — manifest changes require a server restart.
-const manifest = loadManifest();
+// Regenerar el manifest requiere rebuild (antes: reinicio del server).
+const manifest = manifestJson as unknown as Record<string, BrandManifestEntry>;
 
 export interface BrandLogoInfo {
   logo: string;

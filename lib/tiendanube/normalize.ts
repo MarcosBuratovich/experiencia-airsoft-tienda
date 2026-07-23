@@ -1,4 +1,7 @@
 import type { Product, Variant } from "./schemas";
+// Solo el TIPO (se borra al compilar): un import de valor acá armaría un ciclo
+// products.ts → normalize.ts → products.ts.
+import type { ProductSortBy } from "./products";
 
 // ──────────────────────────────────────────────────────────────────────
 // Helpers de presentacion / filtrado para productos de Tiendanube.
@@ -82,6 +85,39 @@ export function applyLocalProductFilters<
     if (filters.priceMaxCents !== undefined && min > filters.priceMaxCents) return false;
     return true;
   });
+}
+
+/**
+ * Ordena productos en memoria replicando los sort_by de la API de TN.
+ * 'default' / 'user' / 'best-selling' no se pueden derivar localmente y caen
+ * al orden del catálogo (cronológico descendente, el default de TN).
+ * Compartido por /productos (filtro de precio) y las categorías (que derivan
+ * todo del catálogo bulk y ya no consultan a TN por combinación de orden).
+ */
+export function sortProducts<T extends { name: string; variants: Pick<Variant, "price">[] }>(
+  products: T[],
+  sortBy: ProductSortBy,
+): T[] {
+  const arr = [...products];
+  switch (sortBy) {
+    case "price-ascending":
+      return arr.sort(
+        (a, b) =>
+          (productFromPriceCents(a) ?? Infinity) -
+          (productFromPriceCents(b) ?? Infinity),
+      );
+    case "price-descending":
+      return arr.sort(
+        (a, b) =>
+          (productFromPriceCents(b) ?? -1) - (productFromPriceCents(a) ?? -1),
+      );
+    case "name-ascending":
+      return arr.sort((a, b) => a.name.localeCompare(b.name));
+    case "name-descending":
+      return arr.sort((a, b) => b.name.localeCompare(a.name));
+    default:
+      return arr;
+  }
 }
 
 // Quita HTML del campo description para uso en meta tags / JSON-LD

@@ -1,6 +1,7 @@
 import { cacheLife, cacheTag } from "next/cache";
 import { tnFetch } from "./client";
 import { TiendanubeNotFoundError } from "./errors";
+import { sortProducts } from "./normalize";
 import {
   ProductSchema,
   ProductsArraySchema,
@@ -163,9 +164,32 @@ export async function getAllProductHandles(): Promise<ProductHandleMeta[]> {
     .map((p) => ({ handle: p.handle, updatedAt: p.updated_at }));
 }
 
+/**
+ * TODOS los productos de una categoría, derivados del catálogo bulk cacheado
+ * (cero llamadas a TN por categoría). Antes cada categoría pegaba su propio
+ * fetch por combinación (categoría, página, orden): con la cache fría y
+ * requests concurrentes (Googlebot en ráfaga, la home que arma N heros) se
+ * drenaba el rate limit de TN (2 req/s) y las páginas devolvían 500.
+ * Orden = el del catálogo (cronológico desc, default de TN).
+ */
+export async function getProductsInCategory(
+  categoryId: number,
+): Promise<Product[]> {
+  const all = await getAllPublishedProducts();
+  return all.filter((p) => p.categories.some((c) => c.id === categoryId));
+}
+
+// Compat con la firma anterior: ordena y pagina LOCAL sobre el derivado bulk.
+// sort_by 'user'/'best-selling' no existen local y caen al orden del catálogo.
 export async function getProductsByCategory(
   categoryId: number,
   opts: Omit<GetProductsParams, "category"> = {},
 ): Promise<Product[]> {
-  return getProducts({ ...opts, category: categoryId });
+  const items = sortProducts(
+    await getProductsInCategory(categoryId),
+    opts.sort_by ?? "default",
+  );
+  const perPage = opts.per_page ?? 50;
+  const page = Math.max(1, opts.page ?? 1);
+  return items.slice((page - 1) * perPage, page * perPage);
 }

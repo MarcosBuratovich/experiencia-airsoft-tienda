@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-import {
-  getAllPublishedProducts,
-  getProducts,
-  type ProductSortBy,
-} from "@/lib/tiendanube/products";
+import { getAllPublishedProducts, getProducts } from "@/lib/tiendanube/products";
 import { getCategoryByHandle } from "@/lib/tiendanube/categories";
 import {
   applyLocalProductFilters,
-  productFromPriceCents,
+  sortProducts,
 } from "@/lib/tiendanube/normalize";
 import type { Product } from "@/lib/tiendanube/schemas";
 import { ProductGrid } from "@/components/product/product-grid";
@@ -199,28 +195,4 @@ function matchQuery(p: Product, needle: string): boolean {
     p.handle.toLowerCase().includes(needle) ||
     (p.tags ?? "").toLowerCase().includes(needle)
   );
-}
-
-function sortProducts(products: Product[], sortBy: ProductSortBy): Product[] {
-  const arr = [...products];
-  switch (sortBy) {
-    case "price-ascending":
-      return arr.sort(
-        (a, b) =>
-          (productFromPriceCents(a) ?? Infinity) -
-          (productFromPriceCents(b) ?? Infinity),
-      );
-    case "price-descending":
-      return arr.sort(
-        (a, b) =>
-          (productFromPriceCents(b) ?? -1) - (productFromPriceCents(a) ?? -1),
-      );
-    case "name-ascending":
-      return arr.sort((a, b) => a.name.localeCompare(b.name));
-    case "name-descending":
-      return arr.sort((a, b) => b.name.localeCompare(a.name));
-    default:
-      // default / user / best-selling → orden del catálogo (cronológico).
-      return arr;
-  }
 }
