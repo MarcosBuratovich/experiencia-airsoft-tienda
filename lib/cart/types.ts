@@ -9,6 +9,10 @@ export interface CartItemSnapshot {
   // null = stock infinito (stock_management false en TN). Si es number,
   // es el cap al momento de agregar — se valida en checkout final.
   maxQty: number | null;
+  // Para los items[] de analytics (GA4/Meta). Opcionales: carritos
+  // persistidos anteriores a este campo no los tienen.
+  brand?: string | null;
+  category?: string | null;
 }
 
 export interface CartItem {

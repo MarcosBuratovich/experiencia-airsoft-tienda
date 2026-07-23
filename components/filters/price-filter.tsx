@@ -2,6 +2,7 @@
 
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useState, useTransition, type FormEvent } from "react";
+import { track } from "@/lib/ga";
 
 export function PriceFilter({
   defaultMin,
@@ -24,6 +25,11 @@ export function PriceFilter({
     if (max) params.set("precio_max", max); else params.delete("precio_max");
     params.delete("page");
     const qs = params.toString();
+    track("filtrar_precio", {
+      precio_min: min || undefined,
+      precio_max: max || undefined,
+      page_context: pathname,
+    });
     startTransition(() => {
       router.push(qs ? `${pathname}?${qs}` : pathname);
     });

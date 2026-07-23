@@ -7,12 +7,14 @@ import {
   getProductByHandle,
 } from "@/lib/tiendanube/products";
 import {
+  productFromPriceCents,
   productPrimaryImage,
   stripHtml,
 } from "@/lib/tiendanube/normalize";
 import { ProductGallery } from "@/components/product/product-gallery";
 import { ProductGrid } from "@/components/product/product-grid";
 import { VariantSelector } from "@/components/product/variant-selector";
+import { TrackEvent } from "@/app/_components/track-event";
 import { BrandLogo } from "@/components/brand/brand-logo";
 import { ProductJsonLd } from "@/components/seo/product-jsonld";
 import { BreadcrumbJsonLd } from "@/components/seo/site-jsonld";
@@ -71,6 +73,8 @@ export default async function ProductPage({
   if (!product || !product.published) notFound();
 
   const primaryImage = productPrimaryImage(product);
+  const fromPriceCents = productFromPriceCents(product);
+  const fromPriceArs = fromPriceCents !== null ? fromPriceCents / 100 : null;
   const firstCategory = product.categories[0];
   const attributesEs = (product.attributes ?? []).filter((s) => s);
 
@@ -90,6 +94,25 @@ export default async function ProductPage({
 
   return (
     <article className="max-w-[1400px] mx-auto fluid-gutter-x fluid-section-y">
+      {/* Embudo e-commerce: vio el producto. */}
+      <TrackEvent
+        event="view_item"
+        params={{
+          currency: "ARS",
+          value: fromPriceArs ?? undefined,
+          items: [
+            {
+              item_id: String(product.id),
+              item_name: product.name,
+              ...(product.brand && product.brand !== "Genérico"
+                ? { item_brand: product.brand }
+                : {}),
+              ...(firstCategory ? { item_category: firstCategory.name } : {}),
+              ...(fromPriceArs !== null ? { price: fromPriceArs } : {}),
+            },
+          ],
+        }}
+      />
       <Breadcrumbs
         items={[
           { href: "/", label: "Tienda" },
@@ -137,6 +160,8 @@ export default async function ProductPage({
               productId: product.id,
               productName: product.name,
               imageSrc: primaryImage?.src ?? null,
+              brand: product.brand,
+              category: firstCategory?.name ?? null,
             }}
           />
 
@@ -170,7 +195,11 @@ export default async function ProductPage({
             ) : null}
           </div>
           <div className="mt-6">
-            <ProductGrid products={related} />
+            <ProductGrid
+              products={related}
+              listId="relacionados"
+              listName="Productos relacionados"
+            />
           </div>
         </section>
       ) : null}

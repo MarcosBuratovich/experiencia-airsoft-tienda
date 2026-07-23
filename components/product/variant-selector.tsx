@@ -5,6 +5,7 @@ import type { Variant } from "@/lib/tiendanube/types";
 import { PriceTag } from "./price-tag";
 import { StockBadge } from "./stock-badge";
 import { variantHasStock, variantLabel } from "@/lib/tiendanube/normalize";
+import { track } from "@/lib/ga";
 import { AddToCartButton } from "./add-to-cart-button";
 import { QuantityStepper } from "./quantity-stepper";
 
@@ -13,6 +14,9 @@ interface ProductSnapshotForCart {
   productId: number;
   productName: string;
   imageSrc: string | null;
+  // Para los items[] de analytics del carrito.
+  brand?: string | null;
+  category?: string | null;
 }
 
 export function VariantSelector({
@@ -92,7 +96,13 @@ export function VariantSelector({
                 <button
                   key={v.id}
                   type="button"
-                  onClick={() => setSelectedId(v.id)}
+                  onClick={() => {
+                    setSelectedId(v.id);
+                    track("select_variant", {
+                      item_id: String(snapshot.productId),
+                      item_variant: variantLabel(v, attributes),
+                    });
+                  }}
                   disabled={!inStock}
                   aria-pressed={isActive}
                   className={`px-4 py-2 clip-tag border fluid-xs uppercase tracking-wider transition-colors ${
@@ -137,6 +147,8 @@ export function VariantSelector({
         variantLabelText={variantLabel(selected, attributes)}
         priceCents={precioEfectivo}
         imageSrc={snapshot.imageSrc}
+        brand={snapshot.brand}
+        category={snapshot.category}
         maxQty={maxQty}
         qty={qty}
         disabled={!inStock || precioEfectivo === null}

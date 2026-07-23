@@ -31,13 +31,31 @@ const ItemSchema = z.object({
   handle: z.string().min(1).max(120).optional(),
 });
 
+// Puente de atribución: la venta cierra a mano en WhatsApp, así que el client
+// manda una referencia corta (viaja dentro del mensaje) + el client_id de GA
+// + el gclid de Ads. Con eso una venta concretada se puede importar como
+// conversión offline con monto real. Todo opcional: sin analytics el checkout
+// funciona igual.
+// .catch(undefined): si el campo viene malformado (cookie corrupta, cliente
+// viejo) se descarta la telemetría — un problema de analytics JAMÁS puede
+// responder 400 y voltear el checkout.
+const AnalyticsSchema = z
+  .object({
+    ref: z.string().regex(/^EA-[A-Z0-9]{4,12}$/).optional().catch(undefined),
+    gaClientId: z.string().max(64).nullish().catch(undefined),
+    gclid: z.string().max(512).nullish().catch(undefined),
+  })
+  .optional()
+  .catch(undefined);
+
 const RequestSchema = z.object({
   items: z.array(ItemSchema).min(1, "al menos un item").max(50, "demasiados items"),
+  analytics: AnalyticsSchema,
 });
 
 type ParsedItem = z.infer<typeof ItemSchema>;
 
-function buildMessage(items: ParsedItem[]): string {
+function buildMessage(items: ParsedItem[], ref?: string): string {
   const lines: string[] = [];
   lines.push("🛒 *PEDIDO — Experiencia Airsoft Tienda*");
   lines.push("");
@@ -66,6 +84,12 @@ function buildMessage(items: ParsedItem[]): string {
   lines.push(`${items.length} ${items.length === 1 ? "producto" : "productos"} · ${unitTotal} ${unitTotal === 1 ? "unidad" : "unidades"}`);
   lines.push("");
   lines.push("¿Coordinamos el pago? Transferencia o MercadoPago.");
+  if (ref) {
+    // Referencia de atribución: queda en el historial del chat y permite
+    // matchear la venta cerrada con su campaña (conversión offline en Ads).
+    lines.push("");
+    lines.push(`Ref: ${ref}`);
+  }
   return lines.join("\n");
 }
 
@@ -100,12 +124,26 @@ export async function POST(request: NextRequest) {
   }
 
   const phone = process.env.WHATSAPP_CHECKOUT_NUMBER || DEFAULT_NUMBER;
-  const message = buildMessage(parsed.data.items);
+  const analytics = parsed.data.analytics;
+  const message = buildMessage(parsed.data.items, analytics?.ref);
   const url = buildWhatsAppUrl(phone, message);
 
-  // Log para tracking básico (sin persistencia por ahora).
+  // Log estructurado del handoff con los datos de atribución. Sin
+  // persistencia todavía: el ref también viaja en el mensaje de WhatsApp,
+  // que funciona como registro durable del pedido.
+  const totalCents = parsed.data.items.reduce(
+    (acc, it) => acc + it.unitPriceCents * it.qty,
+    0,
+  );
   console.info(
-    `[checkout] WA handoff · items=${parsed.data.items.length} · phone=${phone}`,
+    "[checkout] WA handoff",
+    JSON.stringify({
+      ref: analytics?.ref ?? null,
+      gaClientId: analytics?.gaClientId ?? null,
+      gclid: analytics?.gclid ?? null,
+      items: parsed.data.items.length,
+      totalCents,
+    }),
   );
 
   return Response.json({ url });

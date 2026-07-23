@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ShoppingBag, X, Minus, Plus, ChevronRight } from "lucide-react";
 import { useCart } from "@/lib/cart/store";
+import { checkoutPorWhatsApp } from "@/lib/cart/checkout";
 import { formatARS } from "@/lib/format";
 
 export function CartDrawer() {
@@ -53,40 +54,17 @@ export function CartDrawer() {
     if (submitting || items.length === 0) return;
     setSubmitting(true);
     setErrorMsg(null);
-    try {
-      const res = await fetch("/api/cart/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          items: items.map((it) => ({
-            variantId: it.variantId,
-            qty: it.qty,
-            productName: it.snapshot.productName,
-            variantLabel: it.snapshot.variantLabel,
-            unitPriceCents: it.snapshot.priceCents,
-            handle: it.snapshot.handle,
-          })),
-        }),
-      });
-      const data = (await res.json()) as { url?: string; error?: string };
-      if (!res.ok || !data.url) {
-        setErrorMsg(
-          data.error ??
-            "No pudimos iniciar el checkout. Probá de nuevo o escribinos por WhatsApp.",
-        );
-        setSubmitting(false);
-        return;
-      }
-      // Abre WhatsApp y pasa al estado de handoff, con link de fallback por si
-      // el navegador bloqueó el popup.
-      window.open(data.url, "_blank", "noopener");
-      setSentUrl(data.url);
+    const res = await checkoutPorWhatsApp(items);
+    if ("error" in res) {
+      setErrorMsg(res.error);
       setSubmitting(false);
-    } catch (err) {
-      console.error("[cart] checkout failed", err);
-      setErrorMsg("No hay conexion con el servidor. Probá en un rato.");
-      setSubmitting(false);
+      return;
     }
+    // Abre WhatsApp y pasa al estado de handoff, con link de fallback por si
+    // el navegador bloqueó el popup.
+    window.open(res.url, "_blank", "noopener");
+    setSentUrl(res.url);
+    setSubmitting(false);
   };
 
   return (
@@ -262,6 +240,7 @@ export function CartDrawer() {
                   </p>
                   <a
                     href={sentUrl}
+                    data-ga-destino="checkout"
                     target="_blank"
                     rel="noopener"
                     className="w-full btn-wa clip-tag uppercase tracking-wider fluid-xs px-4 py-2.5 inline-flex items-center justify-center gap-2"

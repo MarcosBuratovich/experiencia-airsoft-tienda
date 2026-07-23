@@ -114,7 +114,11 @@ export default async function CategoryPage({
           estático imprime el fallback (la grilla default completa) y al
           hidratar se reemplaza por la versión filtrable. */}
       <Suspense fallback={<ExplorerFallback products={items} />}>
-        <CategoryExplorer products={slim} />
+        <CategoryExplorer
+          products={slim}
+          listId={`categoria_${handle}`}
+          listName={category.name}
+        />
       </Suspense>
 
       <BreadcrumbJsonLd

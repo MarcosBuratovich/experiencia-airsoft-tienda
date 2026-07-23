@@ -19,7 +19,15 @@ import { ActiveFilters } from "@/components/filters/active-filters";
  * la vista— y esas variantes quedan bloqueadas en robots.txt y canonicalizadas
  * a la categoría limpia, igual que en /productos.
  */
-export function CategoryExplorer({ products }: { products: Product[] }) {
+export function CategoryExplorer({
+  products,
+  listId,
+  listName,
+}: {
+  products: Product[];
+  listId: string;
+  listName: string;
+}) {
   const sp = useSearchParams();
   const parsed = parseProductsSearch(Object.fromEntries(sp.entries()));
 
@@ -55,7 +63,12 @@ export function CategoryExplorer({ products }: { products: Product[] }) {
         <ActiveFilters items={activeFilters} />
       </div>
       <div className="mt-8">
-        <ProductGrid products={items} priorityFirst={4} />
+        <ProductGrid
+          products={items}
+          priorityFirst={4}
+          listId={listId}
+          listName={listName}
+        />
       </div>
     </>
   );

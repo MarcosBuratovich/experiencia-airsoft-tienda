@@ -236,7 +236,12 @@ export default async function HomePage() {
           </Link>
         </div>
         {featured.length > 0 ? (
-          <ProductGrid products={featured} priorityFirst={2} />
+          <ProductGrid
+            products={featured}
+            priorityFirst={2}
+            listId="home_destacados"
+            listName="Destacados"
+          />
         ) : (
           <EmptyState
             title="Cargando catálogo"

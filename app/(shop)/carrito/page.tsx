@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ArrowLeft, Minus, Plus, ShoppingBag, X } from "lucide-react";
 import { useCart } from "@/lib/cart/store";
+import { checkoutPorWhatsApp } from "@/lib/cart/checkout";
+import { gaCartPayload, track } from "@/lib/ga";
 import { formatARS } from "@/lib/format";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { EmptyState } from "@/components/ui/empty-state";
@@ -27,44 +29,29 @@ export default function CartPage() {
     document.title = "Carrito · Tienda Experiencia Airsoft";
   }, []);
 
+  // view_cart de la página: recién con el store hidratado (persist) los
+  // items son reales. El view_cart del drawer se dispara en store.open().
+  useEffect(() => {
+    if (!mounted) return;
+    const its = useCart.getState().items;
+    if (its.length > 0) track("view_cart", gaCartPayload(its));
+  }, [mounted]);
+
   const startCheckout = async () => {
     if (submitting || items.length === 0) return;
     setSubmitting(true);
     setErrorMsg(null);
-    try {
-      const res = await fetch("/api/cart/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          items: items.map((it) => ({
-            variantId: it.variantId,
-            qty: it.qty,
-            productName: it.snapshot.productName,
-            variantLabel: it.snapshot.variantLabel,
-            unitPriceCents: it.snapshot.priceCents,
-            handle: it.snapshot.handle,
-          })),
-        }),
-      });
-      const data = (await res.json()) as { url?: string; error?: string };
-      if (!res.ok || !data.url) {
-        setErrorMsg(
-          data.error ??
-            "No pudimos iniciar el checkout. Probá de nuevo o escribinos por WhatsApp.",
-        );
-        setSubmitting(false);
-        return;
-      }
-      // Abrimos WhatsApp y pasamos al estado de handoff. Guardamos la URL por si
-      // el navegador bloqueó el popup (Safari / in-app), para ofrecer un link.
-      window.open(data.url, "_blank", "noopener");
-      setSentUrl(data.url);
+    const res = await checkoutPorWhatsApp(items);
+    if ("error" in res) {
+      setErrorMsg(res.error);
       setSubmitting(false);
-    } catch (err) {
-      console.error("[cart] checkout failed", err);
-      setErrorMsg("No hay conexion con el servidor. Probá en un rato.");
-      setSubmitting(false);
+      return;
     }
+    // Abrimos WhatsApp y pasamos al estado de handoff. Guardamos la URL por si
+    // el navegador bloqueó el popup (Safari / in-app), para ofrecer un link.
+    window.open(res.url, "_blank", "noopener");
+    setSentUrl(res.url);
+    setSubmitting(false);
   };
 
   return (
@@ -227,6 +214,7 @@ export default function CartPage() {
                 </p>
                 <a
                   href={sentUrl}
+                    data-ga-destino="checkout"
                   target="_blank"
                   rel="noopener"
                   className="w-full btn-wa clip-tag uppercase tracking-wider fluid-sm px-5 py-3 inline-flex items-center justify-center gap-2"

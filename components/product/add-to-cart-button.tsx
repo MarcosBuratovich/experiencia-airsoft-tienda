@@ -12,6 +12,8 @@ export function AddToCartButton({
   variantLabelText,
   priceCents,
   imageSrc,
+  brand,
+  category,
   maxQty,
   qty = 1,
   disabled,
@@ -23,6 +25,8 @@ export function AddToCartButton({
   variantLabelText: string;
   priceCents: number | null;
   imageSrc: string | null;
+  brand?: string | null;
+  category?: string | null;
   // null = stock infinito (stock_management=false en TN)
   maxQty: number | null;
   qty?: number;
@@ -45,6 +49,8 @@ export function AddToCartButton({
         priceCents,
         imageSrc,
         maxQty,
+        brand,
+        category,
       },
     });
     pulseOpen();

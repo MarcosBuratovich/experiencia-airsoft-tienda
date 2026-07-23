@@ -3,6 +3,7 @@
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useTransition } from "react";
 import { SORT_OPTIONS } from "@/lib/url";
+import { track } from "@/lib/ga";
 
 export function SortSelect({ defaultValue }: { defaultValue?: string }) {
   const router = useRouter();
@@ -25,6 +26,10 @@ export function SortSelect({ defaultValue }: { defaultValue?: string }) {
           }
           params.delete("page");
           const qs = params.toString();
+          track("ordenar_catalogo", {
+            orden: e.target.value,
+            page_context: pathname,
+          });
           startTransition(() => {
             router.push(qs ? `${pathname}?${qs}` : pathname);
           });

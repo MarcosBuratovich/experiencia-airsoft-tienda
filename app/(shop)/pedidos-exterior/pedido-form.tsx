@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { CheckCircle2, Loader2, Send, AlertTriangle } from "lucide-react";
+import { track } from "@/lib/ga";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -61,6 +62,9 @@ export function PedidoForm() {
         return;
       }
       if (data.url) {
+        // Lead real (el honeypot anti-bot devuelve ok SIN url: no cuenta).
+        // Se dispara ANTES del window.open para que el hit salga seguro.
+        track("generate_lead", { lead_type: "pedido_exterior" });
         setWhatsappUrl(data.url);
         // Intento de auto-open. Si el browser bloquea el popup, el botón
         // de fallback en el success state queda visible para el usuario.
@@ -92,6 +96,7 @@ export function PedidoForm() {
         {whatsappUrl ? (
           <a
             href={whatsappUrl}
+                    data-ga-destino="pedido_exterior"
             target="_blank"
             rel="noopener"
             className="mt-6 btn-wa clip-tag uppercase tracking-wider fluid-base px-5 py-3 inline-flex items-center justify-center gap-2"

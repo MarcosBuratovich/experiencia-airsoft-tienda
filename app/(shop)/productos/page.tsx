@@ -7,6 +7,7 @@ import {
 } from "@/lib/tiendanube/normalize";
 import type { Product } from "@/lib/tiendanube/schemas";
 import { ProductGrid } from "@/components/product/product-grid";
+import { TrackEvent } from "@/app/_components/track-event";
 import { FilterBar } from "@/components/filters/filter-bar";
 import { ActiveFilters } from "@/components/filters/active-filters";
 import { Pagination } from "@/components/ui/pagination";
@@ -132,6 +133,14 @@ export default async function ProductsListPage({
 
   return (
     <section className="max-w-[1400px] mx-auto fluid-gutter-x fluid-section-y">
+      {/* Captura los dos forms del header y los links directos con ?q=. */}
+      {parsed.q ? (
+        <TrackEvent
+          event="search"
+          params={{ search_term: parsed.q, result_count: resultCount }}
+          dedupeKey={parsed.q}
+        />
+      ) : null}
       <Breadcrumbs
         items={[
           { href: "/", label: "Tienda" },
@@ -164,7 +173,13 @@ export default async function ProductsListPage({
       <ActiveFilters items={activeFilters} />
 
       <div className="mt-8">
-        <ProductGrid products={pageItems} priorityFirst={4} />
+        <ProductGrid
+          products={pageItems}
+          priorityFirst={4}
+          listId={parsed.q ? "busqueda" : category ? `categoria_${category.handle}` : "productos"}
+          listName={parsed.q ? "Búsqueda" : category ? category.name : "Todos los productos"}
+          listKey={`${parsed.q ?? ""}|${category?.handle ?? ""}|p${parsed.page}`}
+        />
       </div>
 
       <Pagination

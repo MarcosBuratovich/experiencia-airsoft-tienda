@@ -15,10 +15,13 @@ export function ProductCard({
   product,
   priority = false,
   sizes = "(min-width: 1280px) 22vw, (min-width: 768px) 33vw, 50vw",
+  listId,
 }: {
   product: Product;
   priority?: boolean;
   sizes?: string;
+  /** Marca la card para que el ClickTracker global emita select_item. */
+  listId?: string;
 }) {
   const img = productPrimaryImage(product);
   const fromPrice = productFromPriceCents(product);
@@ -28,6 +31,14 @@ export function ProductCard({
   return (
     <Link
       href={`/productos/${product.handle}`}
+      {...(listId
+        ? {
+            "data-ga-select-item": "",
+            "data-ga-item-id": String(product.id),
+            "data-ga-item-name": product.name,
+            "data-ga-list": listId,
+          }
+        : {})}
       className="group block relative clip-notch border border-bone/10 bg-carbon transition-all duration-300 hover:border-bone/30 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.9)]"
     >
       {/* Image area */}
