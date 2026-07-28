@@ -1,6 +1,7 @@
 import { z } from "zod";
 import type { NextRequest } from "next/server";
 import { formatARS } from "@/lib/format";
+import { enviarEventoMeta, userDataDesdeRequest } from "@/lib/meta-capi";
 
 // ──────────────────────────────────────────────────────────────────────
 // POST /api/cart/checkout
@@ -42,6 +43,8 @@ const ItemSchema = z.object({
 const AnalyticsSchema = z
   .object({
     ref: z.string().regex(/^EA-[A-Z0-9]{4,12}$/).optional().catch(undefined),
+    eventId: z.string().max(80).optional().catch(undefined),
+    sourceUrl: z.string().max(500).optional().catch(undefined),
     gaClientId: z.string().max(64).nullish().catch(undefined),
     gclid: z.string().max(512).nullish().catch(undefined),
   })
@@ -145,6 +148,31 @@ export async function POST(request: NextRequest) {
       totalCents,
     }),
   );
+
+  // Espejo server-side del Lead hacia Meta: recupera las conversiones que el
+  // Pixel del navegador pierde por bloqueadores e iOS. Va con el mismo
+  // event_id que mandó el cliente, así Meta deduplica. Sin token configurado
+  // es un no-op. No se await-ea el resultado más allá de este punto: si Meta
+  // demora, el comprador ya tiene su URL igual (hay timeout de 3s adentro).
+  if (analytics?.eventId) {
+    await enviarEventoMeta({
+      eventName: "Lead",
+      eventId: analytics.eventId,
+      eventSourceUrl: analytics.sourceUrl,
+      userData: userDataDesdeRequest(request),
+      customData: {
+        currency: "ARS",
+        value: totalCents / 100,
+        content_type: "product",
+        num_items: parsed.data.items.length,
+        contents: parsed.data.items.map((it) => ({
+          id: String(it.variantId),
+          quantity: it.qty,
+          item_price: it.unitPriceCents / 100,
+        })),
+      },
+    }).catch(() => false);
+  }
 
   return Response.json({ url });
 }

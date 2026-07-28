@@ -1,6 +1,6 @@
 "use client";
 
-import { gaCartPayload, track } from "@/lib/ga";
+import { gaCartPayload, nuevoEventId, track } from "@/lib/ga";
 import type { CartItem } from "./types";
 
 // ──────────────────────────────────────────────────────────────────────
@@ -58,6 +58,9 @@ export async function checkoutPorWhatsApp(
   track("begin_checkout", payload);
 
   const ref = nuevoRef();
+  // Mismo id para el evento del navegador y el que manda el servidor por la
+  // API de Conversiones: Meta los une y cuenta la conversión una sola vez.
+  const eventId = nuevoEventId();
   try {
     const res = await fetch("/api/cart/checkout", {
       method: "POST",
@@ -75,8 +78,10 @@ export async function checkoutPorWhatsApp(
         // fuera de spec jamás debe poder voltear el checkout.
         analytics: {
           ref,
+          eventId,
           gaClientId: gaClientId()?.slice(0, 64) ?? null,
           gclid: gclid()?.slice(0, 512) ?? null,
+          sourceUrl: window.location.href.slice(0, 500),
         },
       }),
     });
@@ -88,7 +93,7 @@ export async function checkoutPorWhatsApp(
           "No pudimos iniciar el checkout. Probá de nuevo o escribinos por WhatsApp.",
       };
     }
-    track("whatsapp_checkout", { ...payload, checkout_ref: ref });
+    track("whatsapp_checkout", { ...payload, checkout_ref: ref }, { eventId });
     return { url: data.url };
   } catch (err) {
     console.error("[cart] checkout failed", err);
