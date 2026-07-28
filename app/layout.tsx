@@ -101,9 +101,15 @@ export const metadata: Metadata = {
   // Verificación de Google Search Console — setear GOOGLE_SITE_VERIFICATION
   // en Vercel con el código que da GSC al elegir "Etiqueta HTML".
   // Cuando no está, el meta tag no se renderiza.
-  verification: process.env.GOOGLE_SITE_VERIFICATION
-    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
-    : undefined,
+  verification: {
+    ...(process.env.GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+      : {}),
+    other: {
+      // Verificación del dominio en Meta Business (ver airsoft-app/app/layout.tsx).
+      "facebook-domain-verification": "ysrwo2z6tpr7h0rjtwgxn3k8orlzrs",
+    },
+  },
 };
 
 export const viewport: Viewport = {
