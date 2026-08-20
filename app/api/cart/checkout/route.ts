@@ -17,11 +17,13 @@ import { enviarEventoMeta, userDataDesdeRequest } from "@/lib/meta-capi";
 //
 // Configuración:
 //   WHATSAPP_CHECKOUT_NUMBER — número destino (formato internacional sin +,
-//   ej "541131069019"). Si no está, cae al default conocido.
+//   ej "5491131310742"). Si no está, cae al default de abajo.
 //   WHATSAPP_CHECKOUT_GREETING — opcional, override del saludo inicial.
 // ──────────────────────────────────────────────────────────────────────
 
-const DEFAULT_NUMBER = "541131069019";
+// Línea de contacto de la tienda (la misma que WHATSAPP_URL). Es solo el
+// fallback: si WHATSAPP_CHECKOUT_NUMBER está seteada en Vercel, manda esa.
+const DEFAULT_NUMBER = "5491131310742";
 
 const ItemSchema = z.object({
   variantId: z.number().int().positive(),

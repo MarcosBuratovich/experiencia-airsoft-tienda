@@ -44,15 +44,16 @@ function ClickTracker() {
       const d = a.dataset;
 
       if (/(^https?:\/\/)(wa\.me|api\.whatsapp\.com)\//.test(a.href)) {
-        // destino: el data-attribute manda (fallbacks de checkout/pedidos);
-        // matchear el número es frágil (cambia por env) y ambiguo.
+        // destino: lo dice el data-attribute y nada más. Antes había un
+        // fallback que miraba el número del link, pero la línea de contacto y
+        // la del checkout ahora son la misma: el número ya no distingue nada.
+        // Los links de checkout y de pedidos del exterior llevan
+        // data-ga-destino; el resto es contacto general.
         track("whatsapp_click", {
           page_context: window.location.pathname,
           // Sin query string: lleva el mensaje prefilled del pedido.
           link_url: `${a.origin}${a.pathname}`.slice(0, 200),
-          destino:
-            d.gaDestino ??
-            (a.href.includes("1131069019") ? "checkout" : "general"),
+          destino: d.gaDestino ?? "general",
         });
         return;
       }

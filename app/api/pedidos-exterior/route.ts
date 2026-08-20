@@ -15,10 +15,12 @@ import type { NextRequest } from "next/server";
 //
 // Configuración:
 //   WHATSAPP_CHECKOUT_NUMBER — destino (formato internacional sin "+").
-//   Si no está, usa el default conocido.
+//   Si no está, usa el default de abajo.
 // ──────────────────────────────────────────────────────────────────────
 
-const DEFAULT_NUMBER = "541131069019";
+// Línea de contacto de la tienda (la misma que WHATSAPP_URL). Es solo el
+// fallback: si WHATSAPP_CHECKOUT_NUMBER está seteada en Vercel, manda esa.
+const DEFAULT_NUMBER = "5491131310742";
 
 function isArsenalSportsUrl(value: string): boolean {
   try {

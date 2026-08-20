@@ -1,9 +1,10 @@
 import {
+  BRAND_TELEPHONE_E164,
   INSTAGRAM_MAIN_URL,
   INSTAGRAM_URL,
   SHOP_URL,
   SITE_URL,
-  WHATSAPP_NUMBER,
+  WHATSAPP_E164,
   YOUTUBE_URL,
 } from "@/app/_components/site-constants";
 
@@ -43,10 +44,14 @@ export function SiteJsonLd() {
       // nodo Organization de los 3 hosts sin tratarlos como entidades distintas.
       logo: `${SITE_URL}/img/00_logo_principal.png`,
       sameAs: SAME_AS,
+      // Teléfono de la MARCA, no el de la tienda: este nodo comparte @id con
+      // el que emite www, así que los dos hosts tienen que declarar el mismo
+      // número o la entidad unificada queda con dos teléfonos en conflicto.
+      // El de la tienda va abajo, en OnlineStore.
       contactPoint: [
         {
           "@type": "ContactPoint",
-          telephone: WHATSAPP_NUMBER,
+          telephone: BRAND_TELEPHONE_E164,
           contactType: "customer service",
           areaServed: "AR",
           availableLanguage: ["es", "es-AR"],
@@ -75,7 +80,8 @@ export function SiteJsonLd() {
       name: "Tienda Experiencia Airsoft",
       url: SHOP_URL,
       image: `${SHOP_URL}/icon.png`,
-      telephone: WHATSAPP_NUMBER,
+      // Acá sí va la línea propia de la tienda: este nodo es suyo (@id propio).
+      telephone: WHATSAPP_E164,
       priceRange: "$$",
       parentOrganization: { "@id": ORG_ID },
       sameAs: SAME_AS,
